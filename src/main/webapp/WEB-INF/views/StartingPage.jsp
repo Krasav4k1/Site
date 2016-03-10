@@ -14,22 +14,17 @@
     <div class="forms">
         <div class="forms_left-block">
             <p><label>Имя</label></p>
-            <input name = "lastNameUser"type="text" required> <span></span><br>
+            <input name = "lastNameUser" type="text" required> <span></span><br>
             <p><label>Фамилия</label></p>
             <input name ="firstNameUser" type="text" required> <span></span><br>
-            <p><label>Город</label></p>	<br>
-            <input name = "city" type = "text" required> <span></span><br>
             <p><label>Эл. почта</label></p>
-            <input type="emailUser" type = "text" required> <span></span><br>
+            <input name="emailUser" type = "text" required> <span></span><br>
             <p><label>Пароль</label></p>
-            <input type="password" required> <span></span><br>
-            <p><label>Повторите</label></p>
-            <input type="passwordUserReturn" required> <span></span><br>
-            <button type="submit">Зарегистироваться</button>
+            <input name="password" type="password" required> <span></span><br>
+            <input type="submit" value="add"/>
+
         </div>
     </div>
-
-
 </form>
 
 </body>

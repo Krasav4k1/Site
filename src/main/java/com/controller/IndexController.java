@@ -15,11 +15,11 @@ public class IndexController {
 
 	private List<Person> list = new ArrayList<Person>();
 
-/*	@RequestMapping("/")
+	@RequestMapping("/")
 	public String indexView(Model model) {
 		model.addAttribute("persons", list);
-		return "StartingPage";
-	}*/
+		return "index";
+	}
 
 	/*@RequestMapping(value = "/", method = RequestMethod.POST)
 	public String indexPost(@RequestParam(value="age") int age,

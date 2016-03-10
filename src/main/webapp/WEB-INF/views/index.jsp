@@ -12,6 +12,7 @@
 </head>
 <body>
 	<h2>Hello</h2>
+	<a href="user">user</a>
 	<a href = "country">Country</a>
 	<form method="post">
 	<table>

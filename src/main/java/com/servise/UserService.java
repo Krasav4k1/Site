@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     public void addUser(String lastName, String firstName, String password, String emailUser){
         User user = new User();
@@ -19,5 +19,6 @@ public class UserService {
         user.setEmail(emailUser);
         userRepository.save(user);
     }
+
 
 }
