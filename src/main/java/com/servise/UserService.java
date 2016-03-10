@@ -18,7 +18,6 @@ public class UserService {
         user.setPassword(password);
         user.setEmail(emailUser);
         userRepository.save(user);
-        System.out.println(user.getFirstName());
     }
 
 }
