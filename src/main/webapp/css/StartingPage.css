@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.forms {
+    padding: 20px 10px;
+    border: 1px solid #ccc;
+    margin: 20px auto 10px;
+    width: 80%;
+    max-width: 500px;
+    vertical-align: top;
+    font: 700 .9em Arial, serif;
+    overflow: auto;
+    border-radius: 3px;
+    height: 350px;
+}
+.forms_left-block, .forms_right-block {
+    display: inline-block;
+    float: left;
+}
+.forms_left-block {
+    width: 30%;
+}
+.forms_right-block {
+    width: 70%;
+}
+input, p  {
+    height: 20px;
+    margin-bottom: 10px;
+}
+input {
+    border-color: 1px solid #cccc;
+}
+
+.forms_bottom-block {
+    padding-top: 20px;
+    clear: both;
+}
+.capcha {
+    float: right;
+    margin-right: 0;
+    width: 70%;
+    display: inline-block;
+}
+.submit {
+    background: #E3E3E3;
+    margin: auto;
+    width: 80%;
+    max-width: 500px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+button {
+    margin-left: 30%;
+    width: 150px;
+    height: 25px;
+    border-radius: 15px;
+    background: radial-gradient(ellipse at center, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);
+    border: none;
+    color: #fff;
+}
+input:focus {
+    border: 2px solid green;
+}
+input:valid + span:after {
+    content: url(http://htmlbook.ru/example/images/ok.png);
+}
+input.number:invalid + span:after {
+    content: url(http://htmlbook.ru/example/images/nook.png)" Неправильное число";
+    color: red;
+    font-size: 12px;
+}
+
