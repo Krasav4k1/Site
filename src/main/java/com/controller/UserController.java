@@ -18,9 +18,20 @@ public class UserController {
         return "StartingPage";
     }
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public String addUser (@RequestParam String lastName, @RequestParam String firstName, @RequestParam String password, @RequestParam String emailUser){
+    public String comparisonUser (@RequestParam String password, @RequestParam String emailUser){
+        if (userService.comparisonUser(password,emailUser)){
+            return "MainPage";
+        }
+        return "ErrorEntrance";
+    }
+    @RequestMapping("/Register")
+    public String ShowRegister() {
+        return "Register";
+    }
+    @RequestMapping(value = "/Register", method = RequestMethod.POST)
+    public String addUserRegister (@RequestParam String lastName, @RequestParam String firstName, @RequestParam String password, @RequestParam String emailUser){
         userService.addUser(lastName,firstName,password,emailUser);
-        return "redirect:/";
+        return "MainPage";
     }
 
 }

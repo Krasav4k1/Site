@@ -13,20 +13,23 @@
 <body>
 	<form method="post">
 	<table align="center">
-		<h1>Hello</h1>
+		<tr>
+			<h1 align="center">Hello</h1>
+		</tr>
+
 		<tr>
 			<th>E-Mail</th>
-			<input name = "emailUser" type="text" required> <span></span><br>
+			<td><input name = "emailUser" type="text"/></td>
 		</tr>
 		<tr>
 			<th>Password:</th>
-			<input name = "password" type="password" required> <span></span><br>
+			<td><input name = "password" type="password"/></td>
 		</tr>
 		<tr>
-			<input type="submit" value="add"/>
+			<td align="right"><input type="submit" value="add"/></td>
 		</tr>
 		<tr>
-			<a href="Register">Register</a>
+			<td align="right"><a href="Register">Register</a></td>
 		</tr>
 	</table>
 	</form>
