@@ -38,6 +38,10 @@ public class UserController {
             model.addAttribute("dayMap", userService.mapUser.get("day"));
             model.addAttribute("mouthMap", userService.mapUser.get("mouth"));
             model.addAttribute("yearMap", userService.mapUser.get("year"));
+            model.addAttribute("cityMap", userService.mapUser.get("city"));
+            model.addAttribute("ragionMap", userService.mapUser.get("region"));
+            model.addAttribute("oblastMap", userService.mapUser.get("oblast"));
+            model.addAttribute("countryMap", userService.mapUser.get("country"));
             return "MainPage";
         }
         return "ErrorEntrance";
@@ -51,7 +55,7 @@ public class UserController {
     @RequestMapping(value = "/Register", method = RequestMethod.POST)
     public String addUserRegister (HttpServletResponse response, @RequestParam String lastName, @RequestParam String firstName,
                                    @RequestParam String password, @RequestParam String passwordRepid,@RequestParam String emailUser, @RequestParam String age,
-                                   @RequestParam String day, @RequestParam String mouth, @RequestParam String year,@RequestParam String city) throws IOException {//, @RequestParam String region, @RequestParam String oblast, @RequestParam String country
+                                   @RequestParam String day, @RequestParam String mouth, @RequestParam String year) throws IOException {//, @RequestParam String region, @RequestParam String oblast, @RequestParam String country
         if (lastName.equals("") || firstName.equals("") || password.equals("") ||
                 passwordRepid.equals("") || emailUser.equals("") || age.equals("") ||
                 day.equals("") || mouth.equals("") || year.equals("")){
