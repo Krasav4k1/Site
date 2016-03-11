@@ -41,6 +41,7 @@ public class UserService {
     }
 
     public boolean comparisonUser(String password, String Email) {
+        if()
         for (int d = 1; d <= userRepository.count();d++) {
            if(userRepository.findOne(d).getEmail().equals(Email) && userRepository.findOne(d).getPassword().equals(password)){
                idLoginUser = userRepository.findOne(d).getId();
@@ -51,10 +52,15 @@ public class UserService {
                mapUser.put("day", Integer.toString(userRepository.findOne(d).getDay()));
                mapUser.put("mouth", Integer.toString(userRepository.findOne(d).getMouth()));
                mapUser.put("year", Integer.toString(userRepository.findOne(d).getYear()));
+               mapUser.put("city", userRepository.findOne(d).getCity().getName());
+               mapUser.put("ragion", userRepository.findOne(d).getCity().getRagion().getName());
+               mapUser.put("oblast", userRepository.findOne(d).getCity().getRagion().getOblast().getName());
+               mapUser.put("country", userRepository.findOne(d).getCity().getRagion().getOblast().getCountry().getName());
                return true;
            }
         }
         return false;
     }
+
 
 }

@@ -31,6 +31,7 @@
         <tr>
             <th>Password:</th>
             <td><input name = "password" type="password"/></td>
+            <td><input name = "passwordRepid" type="password"/></td>
         </tr>
         <tr>
             <th>Born Birthday:</th>

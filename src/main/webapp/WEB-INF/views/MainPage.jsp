@@ -26,14 +26,33 @@
         <td>${lastNameMap}</td>
     </tr>
         <tr>
+            <th>City:</th>
+            <td>${city}</td>
+        </tr>
+        <tr>
+            <th>Ragion:</th>
+            <td>${ragion}</td>
+        </tr>
+        <tr>
+            <th>Oblast:</th>
+            <td>${oblast}</td>
+        </tr>
+        <tr>
+            <th>Country:</th>
+            <td>${country}</td>
+        </tr>
+
+        <tr>
             <th>Born birthday:</th>
             <th>${dayMap}</th>
             <th>${mouthMap}</th>
             <th>${yearMap}</th>
             <th>${ageMap}</th>
         </tr>
-
-        <table>
+        </table>
+    <tr>
+        <a href="/">exit</a>
+    </tr>
 </form>
 </body>
 </html>
