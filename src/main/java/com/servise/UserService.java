@@ -51,12 +51,13 @@ public class UserService {
         }
         return false;
     }
+
     //Дістає все
     public Iterable<User> getAll(){
         return userRepository.findAll();
     }
 
     public void dalete(String id) {
-        userRepository.delete(Integer.getInteger(id));
+        userRepository.delete(Integer.parseInt(id));
     }
 }

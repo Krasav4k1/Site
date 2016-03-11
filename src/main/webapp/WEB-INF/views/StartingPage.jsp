@@ -36,7 +36,7 @@
 	<table>
 	<c:forEach var="user" items="${users}"><tr>
 		<td>${user.getFirstName()}</td>
-		<td><c:url value="/" var = "url"/> <a href="${url}">dalete</a> </td>
+		<td><c:url value="/${user.id}" var = "url"/> <a href="${url}">dalete</a> </td>
 	</tr></c:forEach>
 		</table>
 </body>
