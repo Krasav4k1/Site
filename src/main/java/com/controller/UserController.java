@@ -22,7 +22,8 @@ public class UserController {
 
 
     @RequestMapping("/")
-    public String Show() {
+    public String Show(Model model) {
+        model.addAttribute("users", userService.getAll());
         System.out.println("start Page");
         return "StartingPage";
 

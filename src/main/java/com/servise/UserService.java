@@ -1,12 +1,10 @@
 package com.servise;
 
 import com.entity.*;
-import com.repository.CityRepository;
 import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -53,6 +51,9 @@ public class UserService {
         }
         return false;
     }
-
+    //Дістає все
+    public Iterable<User> getAll(){
+        return userRepository.findAll();
+    }
 
 }
