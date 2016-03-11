@@ -56,4 +56,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public void dalete() {
+
+    }
 }
