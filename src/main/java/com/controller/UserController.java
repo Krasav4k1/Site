@@ -29,6 +29,9 @@ public class UserController {
 
     }
 
+    public String dalete(){
+        return "redirect:/";
+    }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String comparisonUser (@RequestParam String password, @RequestParam String emailUser, Model model) {
