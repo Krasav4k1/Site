@@ -18,21 +18,25 @@ public class UserService {
     private int idLoginUser;
     public Map<String, String> mapUser = new HashMap<String, String>();
 
-    public void infoForUser(){
+/*    public void infoForUser(){
         for (int d = 1; d <= userRepository.count();d++) {
             if (idLoginUser == userRepository.findOne(d).getId()){
                 mapUser.put("firstName", userRepository.findOne(d).getFirstName());
                 mapUser.put("lastName", userRepository.findOne(d).getLastName());
             }
         }
-    }
+    }*/
 
-    public void addUser(String lastName, String firstName, String password, String emailUser){
+    public void addUser(String lastName, String firstName, String password, String emailUser,int age, int day, int mouth,int year){
         User user = new User();
         user.setLastName(lastName);
         user.setFirstName(firstName);
         user.setPassword(password);
         user.setEmail(emailUser);
+        user.setAge(age);
+        user.setDay(day);
+        user.setMouth(mouth);
+        user.setYear(year);
         userRepository.save(user);
     }
 
@@ -41,7 +45,12 @@ public class UserService {
            if(userRepository.findOne(d).getEmail().equals(Email) && userRepository.findOne(d).getPassword().equals(password)){
                idLoginUser = userRepository.findOne(d).getId();
                System.out.println(idLoginUser);
-               infoForUser();
+               mapUser.put("firstName", userRepository.findOne(d).getFirstName());
+               mapUser.put("lastName", userRepository.findOne(d).getLastName());
+               mapUser.put("age", Integer.toString(userRepository.findOne(d).getAge()));
+               mapUser.put("day", Integer.toString(userRepository.findOne(d).getDay()));
+               mapUser.put("mouth", Integer.toString(userRepository.findOne(d).getMouth()));
+               mapUser.put("year", Integer.toString(userRepository.findOne(d).getYear()));
                return true;
            }
         }

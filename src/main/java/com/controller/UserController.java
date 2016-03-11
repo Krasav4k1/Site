@@ -9,26 +9,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
 public class UserController {
 
     @Autowired
     UserService userService;
+    private Map<String,String> map = new HashMap<String, String>();
+
 
     @RequestMapping("/")
     public String Show() {
+        System.out.println("start Page");
         return "StartingPage";
     }
 
-    @RequestMapping(value = "MainPage" , method = RequestMethod.GET)
-    public String infoForUser(Model model) {
-        model.addAttribute("infoForUser", userService.mapUser.get("firsName"));
-        return "redirect:/MainPage";
-    }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public String comparisonUser (@RequestParam String password, @RequestParam String emailUser){
+    public String comparisonUser (@RequestParam String password, @RequestParam String emailUser, Model model) {
         if (userService.comparisonUser(password,emailUser)){
+            model.addAttribute("firstNameMap", userService.mapUser.get("firstName"));
+            model.addAttribute("lastNameMap", userService.mapUser.get("lastName"));
+            model.addAttribute("ageMap", userService.mapUser.get("age"));
+            model.addAttribute("dayMap", userService.mapUser.get("day"));
+            model.addAttribute("mouthMap", userService.mapUser.get("mouth"));
+            model.addAttribute("yearMap", userService.mapUser.get("year"));
             return "MainPage";
         }
         return "ErrorEntrance";
@@ -40,9 +49,17 @@ public class UserController {
         return "Register";
     }
     @RequestMapping(value = "/Register", method = RequestMethod.POST)
-    public String addUserRegister (@RequestParam String lastName, @RequestParam String firstName, @RequestParam String password, @RequestParam String emailUser){
-        userService.addUser(lastName,firstName,password,emailUser);
-        return "MainPage";
+    public String addUserRegister (HttpServletResponse response, @RequestParam String lastName, @RequestParam String firstName,
+                                   @RequestParam String password, @RequestParam String emailUser, @RequestParam String age,
+                                   @RequestParam String day, @RequestParam String mouth, @RequestParam String year) throws IOException {
+        int ageInt = Integer.parseInt(age);
+        int dayInt = Integer.parseInt(day);
+        int mouthInt = Integer.parseInt(mouth);
+        int yearInt = Integer.parseInt(year);
+
+        userService.addUser(lastName,firstName,password,emailUser,ageInt,dayInt,mouthInt,yearInt);
+        response.sendRedirect("/");
+        return "StartingPage";
     }
 
 }

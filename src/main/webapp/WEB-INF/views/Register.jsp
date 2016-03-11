@@ -33,6 +33,13 @@
             <td><input name = "password" type="password"/></td>
         </tr>
         <tr>
+            <th>Born Birthday:</th>
+            <th><p>Age:</p><input name = "age" type="text"/></th>
+            <th><p>Day:</p><input name = "day" type="text"/></th>
+            <th><p>Mouth:</p><input name = "mouth" type="text"/></th>
+            <th><p>Year:</p><input name = "year" type="text"/></th>
+        </tr>
+        <tr>
             <td align="right"><input type="submit" value="add"/></td>
         </tr>
     </table>

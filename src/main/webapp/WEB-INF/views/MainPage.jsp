@@ -16,6 +16,24 @@
 <body>
 <form method="post">
     <h>Main Page</h>
+    <table>
+    <tr>
+        <th>Last Name:</th>
+        <td>${firstNameMap}</td>
+    </tr>
+    <tr>
+        <th>First Name:</th>
+        <td>${lastNameMap}</td>
+    </tr>
+        <tr>
+            <th>Born birthday:</th>
+            <th>${dayMap}</th>
+            <th>${mouthMap}</th>
+            <th>${yearMap}</th>
+            <th>${ageMap}</th>
+        </tr>
+
+        <table>
 </form>
 </body>
 </html>
