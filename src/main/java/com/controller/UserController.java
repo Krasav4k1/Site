@@ -22,7 +22,7 @@ public class UserController {
 
     @RequestMapping(value = "MainPage" , method = RequestMethod.GET)
     public String infoForUser(Model model) {
-        model.addAttribute("last", userService.mapUser.get("firsName"));
+        model.addAttribute("infoForUser", userService.mapUser.get("firsName"));
         return "redirect:/MainPage";
     }
 
