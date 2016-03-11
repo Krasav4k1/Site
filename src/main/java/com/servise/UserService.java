@@ -17,7 +17,7 @@ public class UserService {
     private int idLoginUser;
     public Map<String, String> mapUser = new HashMap<String, String>();
 
-
+    //Метод додавання юзерів
     public void addUser(String lastName, String firstName, String password, String emailUser,int age, int day, int mouth,int year){
         User user = new User();
         user.setLastName(lastName);
@@ -31,6 +31,7 @@ public class UserService {
         userRepository.save(user);
     }
 
+    //Метод перевірки на наявність емайла і пароля і заповнення мапи
     public boolean comparisonUser(String password, String Email) {
         for (int d = 1; d <= userRepository.count();d++) {
            if(userRepository.findOne(d).getEmail().equals(Email) && userRepository.findOne(d).getPassword().equals(password)){
@@ -57,6 +58,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    //Видаляння
     public void dalete(String id) {
         userRepository.delete(Integer.parseInt(id));
     }
