@@ -31,8 +31,8 @@ public class UserController {
     }
 
     @RequestMapping("/{id}")
-    public String dalete(@PathVariable int id){
-        userService.dalete();
+    public String dalete(@PathVariable String id){
+        userService.dalete(id);
         return "redirect:/";
     }
 

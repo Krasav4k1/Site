@@ -56,7 +56,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void dalete() {
-
+    public void dalete(String id) {
+        userRepository.delete(Integer.getInteger(id));
     }
 }
