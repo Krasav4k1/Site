@@ -19,13 +19,13 @@ public class UserController {
 
     @Autowired
     UserService userService;
-    private Map<String,String> map = new HashMap<String, String>();
 
 
     @RequestMapping("/")
     public String Show() {
         System.out.println("start Page");
         return "StartingPage";
+
     }
 
 
@@ -38,10 +38,6 @@ public class UserController {
             model.addAttribute("dayMap", userService.mapUser.get("day"));
             model.addAttribute("mouthMap", userService.mapUser.get("mouth"));
             model.addAttribute("yearMap", userService.mapUser.get("year"));
-            model.addAttribute("city", userService.mapUser.get("city"));
-            model.addAttribute("ragion", userService.mapUser.get("ragion"));
-            model.addAttribute("oblast", userService.mapUser.get("oblast"));
-            model.addAttribute("country", userService.mapUser.get("country"));
             return "MainPage";
         }
         return "ErrorEntrance";
@@ -55,16 +51,28 @@ public class UserController {
     @RequestMapping(value = "/Register", method = RequestMethod.POST)
     public String addUserRegister (HttpServletResponse response, @RequestParam String lastName, @RequestParam String firstName,
                                    @RequestParam String password, @RequestParam String passwordRepid,@RequestParam String emailUser, @RequestParam String age,
-                                   @RequestParam String day, @RequestParam String mouth, @RequestParam String year) throws IOException {
-        int ageInt = Integer.parseInt(age);
-        int dayInt = Integer.parseInt(day);
-        int mouthInt = Integer.parseInt(mouth);
-        int yearInt = Integer.parseInt(year);
-        if(password.equals(passwordRepid)) {
-            userService.addUser(lastName, firstName, password, emailUser, ageInt, dayInt, mouthInt, yearInt);
-            response.sendRedirect("/");
-            return "StartingPage";
+                                   @RequestParam String day, @RequestParam String mouth, @RequestParam String year,@RequestParam String city) throws IOException {//, @RequestParam String region, @RequestParam String oblast, @RequestParam String country
+        if (lastName.equals("") || firstName.equals("") || password.equals("") ||
+                passwordRepid.equals("") || emailUser.equals("") || age.equals("") ||
+                day.equals("") || mouth.equals("") || year.equals("")){
+            return "redirect:/Register";
         }
+        try {
+            int ageInt = Integer.parseInt(age);
+            int dayInt = Integer.parseInt(day);
+            int mouthInt = Integer.parseInt(mouth);
+            int yearInt = Integer.parseInt(year);
+            if(password.equals(passwordRepid)) {
+                userService.addUser(lastName, firstName, password, emailUser, ageInt, dayInt, mouthInt, yearInt);//city,region,oblast,country
+                response.sendRedirect("/");
+                return "StartingPage";
+            }
+        } catch (NumberFormatException e) {
+            System.err.println(e);
+            return "Register";
+        }
+
+
         return "redirect:/Register";
     }
 

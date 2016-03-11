@@ -1,6 +1,7 @@
 package com.servise;
 
-import com.entity.User;
+import com.entity.*;
+import com.repository.CityRepository;
 import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,14 +19,6 @@ public class UserService {
     private int idLoginUser;
     public Map<String, String> mapUser = new HashMap<String, String>();
 
-/*    public void infoForUser(){
-        for (int d = 1; d <= userRepository.count();d++) {
-            if (idLoginUser == userRepository.findOne(d).getId()){
-                mapUser.put("firstName", userRepository.findOne(d).getFirstName());
-                mapUser.put("lastName", userRepository.findOne(d).getLastName());
-            }
-        }
-    }*/
 
     public void addUser(String lastName, String firstName, String password, String emailUser,int age, int day, int mouth,int year){
         User user = new User();
@@ -41,7 +34,6 @@ public class UserService {
     }
 
     public boolean comparisonUser(String password, String Email) {
-        if()
         for (int d = 1; d <= userRepository.count();d++) {
            if(userRepository.findOne(d).getEmail().equals(Email) && userRepository.findOne(d).getPassword().equals(password)){
                idLoginUser = userRepository.findOne(d).getId();
@@ -52,10 +44,6 @@ public class UserService {
                mapUser.put("day", Integer.toString(userRepository.findOne(d).getDay()));
                mapUser.put("mouth", Integer.toString(userRepository.findOne(d).getMouth()));
                mapUser.put("year", Integer.toString(userRepository.findOne(d).getYear()));
-               mapUser.put("city", userRepository.findOne(d).getCity().getName());
-               mapUser.put("ragion", userRepository.findOne(d).getCity().getRagion().getName());
-               mapUser.put("oblast", userRepository.findOne(d).getCity().getRagion().getOblast().getName());
-               mapUser.put("country", userRepository.findOne(d).getCity().getRagion().getOblast().getCountry().getName());
                return true;
            }
         }

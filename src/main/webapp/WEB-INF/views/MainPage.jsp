@@ -27,19 +27,19 @@
     </tr>
         <tr>
             <th>City:</th>
-            <td>${city}</td>
+            <td>${cityMap}</td>
         </tr>
         <tr>
             <th>Ragion:</th>
-            <td>${ragion}</td>
+            <td>${ragionMap}</td>
         </tr>
         <tr>
             <th>Oblast:</th>
-            <td>${oblast}</td>
+            <td>${oblastMap}</td>
         </tr>
         <tr>
             <th>Country:</th>
-            <td>${country}</td>
+            <td>${countryMap}</td>
         </tr>
 
         <tr>
