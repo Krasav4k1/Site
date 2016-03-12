@@ -33,6 +33,7 @@ public class UserService {
 
     }
 
+    //UpdateUser
     public void updateUser(String Email, String password){
         User user1 ;
         user1 = userRepository.findUserByEmailAndPassword(Email, password);

@@ -15,10 +15,15 @@
 </head>
 <body>
 <form method="post">
-    <h>Admin Page</h>
-        <table>
-            <td> <a href="AdminDaleteUser">DaleteUser</a></td>
-        </table>
+    <h>Dalete User Page</h>
+
+    <table>
+        <c:forEach var="user" items="${users}"><tr>
+            <td>${user.getFirstName()}</td>
+            <td><c:url value="/AdminDaleteUser/${user.id}" var = "url"/> <a href="${url}">dalete</a> </td>
+        </tr></c:forEach>
+    </table>
+
 </form>
 </body>
 </html>
