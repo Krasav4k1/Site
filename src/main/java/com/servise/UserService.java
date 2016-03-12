@@ -40,6 +40,7 @@ public class UserService {
 
 
 
+
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
     public int comparisonUser(String password, String Email) {
         try {
