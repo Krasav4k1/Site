@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Service
@@ -30,7 +29,6 @@ public class UserService {
         user.setMouth(mouth);
         user.setYear(year);
         userRepository.save(user);
-
     }
 
     //UpdateUser
@@ -41,31 +39,34 @@ public class UserService {
     }
 
 
+
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
     public int comparisonUser(String password, String Email) {
-               try {
-                   idForUserLogin = userRepository.findUserByEmailAndPassword(Email, password).getId();
-                   System.out.println(userRepository.findOne(idForUserLogin).getStatys());
-                   if (userRepository.findOne(idForUserLogin).getStatys() == 0) {
-                       mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
-                       mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
-                       try {
-                           mapUser.put("age", Integer.toString(userRepository.findOne(idForUserLogin).getAge()));
-                           mapUser.put("day", Integer.toString(userRepository.findOne(idForUserLogin).getDay()));
-                           mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
-                           mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
-                           mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
-                           mapUser.put("region", userRepository.findOne(idForUserLogin).getCity().getRagion().getName());
-                           mapUser.put("oblast", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getName());
-                           mapUser.put("country", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getCountry().getName());
-                       } catch (NullPointerException e) {}
-                       return 0;
-                   }else {
-                       return 1;
-                   }
-               }catch (NullPointerException e){
-                   return 9;}
-
+        try {
+            idForUserLogin = userRepository.findUserByEmailAndPassword(Email, password).getId();
+            System.out.println(userRepository.findOne(idForUserLogin).getStatys());
+            if (userRepository.findOne(idForUserLogin).getStatys() == 0) {
+                mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
+                mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
+                try {
+                    mapUser.put("age", Integer.toString(userRepository.findOne(idForUserLogin).getAge()));
+                    mapUser.put("day", Integer.toString(userRepository.findOne(idForUserLogin).getDay()));
+                    mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
+                    mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
+                    mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
+                    mapUser.put("region", userRepository.findOne(idForUserLogin).getCity().getRagion().getName());
+                    mapUser.put("oblast", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getName());
+                    mapUser.put("country", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getCountry().getName());
+                } catch (NullPointerException e) {
+                }
+                return 0;
+            } else if (userRepository.findOne(idForUserLogin).getStatys() == 1) {
+                return 1;
+            }
+        } catch (NullPointerException e) {
+            return 9;
+        }
+        return 9;
     }
 
     //Дістає все

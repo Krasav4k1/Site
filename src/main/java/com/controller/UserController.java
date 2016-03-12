@@ -21,26 +21,25 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value = "/ll", method = RequestMethod.POST)
-    public String comparisonUser (@RequestParam String password, @RequestParam String emailUser, Model model) {
-        if (userService.comparisonUser(password,emailUser) == 0){
-            model.addAttribute("firstNameMap", userService.mapUser.get("firstName"));
-            model.addAttribute("lastNameMap", userService.mapUser.get("lastName"));
-            model.addAttribute("ageMap", userService.mapUser.get("age"));
-            model.addAttribute("dayMap", userService.mapUser.get("day"));
-            model.addAttribute("mouthMap", userService.mapUser.get("mouth"));
-            model.addAttribute("yearMap", userService.mapUser.get("year"));
-            model.addAttribute("cityMap", userService.mapUser.get("city"));
-            model.addAttribute("ragionMap", userService.mapUser.get("region"));
-            model.addAttribute("oblastMap", userService.mapUser.get("oblast"));
-            model.addAttribute("countryMap", userService.mapUser.get("country"));
+    @RequestMapping(value = "/MainPage")
+    public String ShowUser ( Model model ) {
+        model.addAttribute("firstNameMap", userService.mapUser.get("firstName"));
+        model.addAttribute("lastNameMap", userService.mapUser.get("lastName"));
+        model.addAttribute("ageMap", userService.mapUser.get("age"));
+        model.addAttribute("dayMap", userService.mapUser.get("day"));
+        model.addAttribute("mouthMap", userService.mapUser.get("mouth"));
+        model.addAttribute("yearMap", userService.mapUser.get("year"));
+        model.addAttribute("cityMap", userService.mapUser.get("city"));
+        model.addAttribute("ragionMap", userService.mapUser.get("region"));
+        model.addAttribute("oblastMap", userService.mapUser.get("oblast"));
+        model.addAttribute("countryMap", userService.mapUser.get("country"));
+        return "MainPage";
+    }
+
+
+    @RequestMapping(value = "/MainPage", method = RequestMethod.POST)
+    public String comparisonUser (@RequestParam String emailUser, @RequestParam String password, Model model) {
             return "MainPage";
-        }else if (userService.comparisonUser(password,emailUser) == 1){
-            return "redirect:/AdminPage";
-        }else if (userService.comparisonUser(password,emailUser) == 9) {
-            return "ErrorEntrance";
-        }
-        return "ErrorEntrance";
     }
 
 

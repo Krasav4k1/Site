@@ -20,7 +20,9 @@
     <table>
         <c:forEach var="user" items="${users}"><tr>
             <td>${user.getFirstName()}</td>
-            <td><c:url value="/AdminDaleteUser/${user.id}" var = "url"/> <a href="${url}">dalete</a> </td>
+            <td><c:url value="/MainPage/${user.email}" var = "url"/>  <a href="${url}" >Show</a>  </td>
+            <td>||</td>
+            <td><c:url value="/AdminDaleteUse/${user.id}" var = "url"/> <a href="${url}">dalete</a> </td>
         </tr></c:forEach>
     </table>
 
