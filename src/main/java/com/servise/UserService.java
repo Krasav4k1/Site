@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -14,7 +15,7 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-    private int idLoginUser;
+    private int idForUserLogin;
     public Map<String, String> mapUser = new HashMap<String, String>();
 
     //Метод додавання юзерів
@@ -29,28 +30,41 @@ public class UserService {
         user.setMouth(mouth);
         user.setYear(year);
         userRepository.save(user);
+
     }
 
+    public void updateUser(String Email, String password){
+        User user1 ;
+        user1 = userRepository.findUserByEmailAndPassword(Email, password);
+        userRepository.save(user1);
+    }
+
+
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
-    public boolean comparisonUser(String password, String Email) {
-        for (int d = 1; d <= userRepository.count();d++) {
-           if(userRepository.findOne(d).getEmail().equals(Email) && userRepository.findOne(d).getPassword().equals(password)){
-               idLoginUser = userRepository.findOne(d).getId();
-               System.out.println(idLoginUser);
-               mapUser.put("firstName", userRepository.findOne(d).getFirstName());
-               mapUser.put("lastName", userRepository.findOne(d).getLastName());
-               mapUser.put("age", Integer.toString(userRepository.findOne(d).getAge()));
-               mapUser.put("day", Integer.toString(userRepository.findOne(d).getDay()));
-               mapUser.put("mouth", Integer.toString(userRepository.findOne(d).getMouth()));
-               mapUser.put("year", Integer.toString(userRepository.findOne(d).getYear()));
-               mapUser.put("city", userRepository.findOne(d).getCity().getName());
-               mapUser.put("region", userRepository.findOne(d).getCity().getRagion().getName());
-               mapUser.put("oblast", userRepository.findOne(d).getCity().getRagion().getOblast().getName());
-               mapUser.put("country",userRepository.findOne(d).getCity().getRagion().getOblast().getCountry().getName());
-               return true;
-           }
-        }
-        return false;
+    public int comparisonUser(String password, String Email) {
+               try {
+                   idForUserLogin = userRepository.findUserByEmailAndPassword(Email, password).getId();
+                   System.out.println(userRepository.findOne(idForUserLogin).getStatys());
+                   if (userRepository.findOne(idForUserLogin).getStatys() == 0) {
+                       mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
+                       mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
+                       try {
+                           mapUser.put("age", Integer.toString(userRepository.findOne(idForUserLogin).getAge()));
+                           mapUser.put("day", Integer.toString(userRepository.findOne(idForUserLogin).getDay()));
+                           mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
+                           mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
+                           mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
+                           mapUser.put("region", userRepository.findOne(idForUserLogin).getCity().getRagion().getName());
+                           mapUser.put("oblast", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getName());
+                           mapUser.put("country", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getCountry().getName());
+                       } catch (NullPointerException e) {}
+                       return 0;
+                   }else {
+                       return 1;
+                   }
+               }catch (NullPointerException e){
+                   return 9;}
+
     }
 
     //Дістає все

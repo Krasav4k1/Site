@@ -38,7 +38,7 @@ public class UserController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String comparisonUser (@RequestParam String password, @RequestParam String emailUser, Model model) {
-        if (userService.comparisonUser(password,emailUser)){
+        if (userService.comparisonUser(password,emailUser) == 0){
             model.addAttribute("firstNameMap", userService.mapUser.get("firstName"));
             model.addAttribute("lastNameMap", userService.mapUser.get("lastName"));
             model.addAttribute("ageMap", userService.mapUser.get("age"));
@@ -50,15 +50,19 @@ public class UserController {
             model.addAttribute("oblastMap", userService.mapUser.get("oblast"));
             model.addAttribute("countryMap", userService.mapUser.get("country"));
             return "MainPage";
+        }else if (userService.comparisonUser(password,emailUser) == 1){
+            return "AdminPage";
+        }else if (userService.comparisonUser(password,emailUser) == 9) {
+            return "ErrorEntrance";
         }
         return "ErrorEntrance";
-
     }
 
     @RequestMapping("/Register")
     public String ShowRegister() {
         return "Register";
     }
+
     @RequestMapping(value = "/Register", method = RequestMethod.POST)
     public String addUserRegister (HttpServletResponse response, @RequestParam String lastName, @RequestParam String firstName,
                                    @RequestParam String password, @RequestParam String passwordRepid,@RequestParam String emailUser, @RequestParam String age,

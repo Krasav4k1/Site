@@ -3,6 +3,7 @@ package com.entity;
 import javax.persistence.*;
 import java.util.List;
 @Entity
+@Table(name = "Country")
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
