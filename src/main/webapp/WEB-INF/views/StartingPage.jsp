@@ -6,8 +6,6 @@
 <html>
 <head>
 <style type="text/css">
-span.error{
-	color: red;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -22,13 +20,11 @@ span.error{
 
 		<tr>
 			<th>E-Mail</th>
-			<td><input name = "emailUser" type="text"/></td>
-			<td><span class="error"><form:errors path="emailUser"/></span></td>
+			<td><input pattern = "^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name = "emailUser" type="text"/></td>
 		</tr>
 		<tr>
 			<th>Password:</th>
-			<td><input name = "password" type="password"/></td>
-			<td><span class="error"><form:errors path="password"/></span></td>
+			<td><input pattern = "^[a-zA-Z0-9]+$" name = "password" type="password"/></td>
 		</tr>
 		<tr>
 			<td align="right"><input type="submit" value="add"/></td>

@@ -26,12 +26,12 @@
         </tr>
         <tr>
             <th>E-Mail</th>
-            <td><input name = "emailUser" type="text"/></td>
+            <td><input  pattern = "^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name = "emailUser" type="text"/></td>
         </tr>
         <tr>
             <th>Password:</th>
-            <td><input name = "password" type="password"/></td>
-            <td><input name = "passwordRepid" type="password"/></td>
+            <td><input pattern = "^[a-zA-Z0-9]+$" name = "password" type="password"/></td>
+            <td><input pattern = "^[a-zA-Z0-9]+$" name = "passwordRepid" type="password"/></td>
         </tr>
         <tr>
             <th>Born Birthday:</th>
