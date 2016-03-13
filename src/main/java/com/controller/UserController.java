@@ -14,11 +14,11 @@ public class UserController {
 
     @Autowired
     UserService userService;
-    @Autowired
-    UserRepository userRepository;
+
 
     @RequestMapping(value = {"/{url}/id{id}","/{url}"})
     public String ShowUserPrivate ( Model model , @PathVariable String url) {
+
         model.addAttribute("firstNameMap", userService.mapUser.get("firstName"));
         model.addAttribute("lastNameMap", userService.mapUser.get("lastName"));
         model.addAttribute("ageMap", userService.mapUser.get("age"));
@@ -42,10 +42,10 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/id{id}", method = RequestMethod.GET)
-    public String ShowUserVIsit (@PathVariable("id") int email) {
+    @RequestMapping(value = {"/id{id}","/AdminVisit/id{id}"}, method = RequestMethod.GET)
+    public String ShowUserVIsit (@PathVariable("id") int id) {
         userService.mapUser.clear();
-        userService.comparisonUserVisit(email);
+        userService.comparisonUserVisit(id);
             return "redirect:/VisitUser/id{id}";
     }
 

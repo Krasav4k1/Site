@@ -2,15 +2,20 @@ package com.entity;
 
 import javax.persistence.*;
 import java.util.List;
+
 @Entity
-@Table(name = "Country")
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
     private String name;
+
+    private String currency_code;
+
+    private String currency;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "country")
-    private List<Oblast> oblasts;
+    private List<City> citys;
 
     public int getId() {
         return id;
@@ -28,15 +33,27 @@ public class Country {
         this.name = name;
     }
 
-    public List<Oblast> getOblasts() {
-        return oblasts;
+    public String getCurrency_code() {
+        return currency_code;
     }
 
-    public void setOblasts(List<Oblast> oblasts) {
-        this.oblasts = oblasts;
+    public void setCurrency_code(String currency_code) {
+        this.currency_code = currency_code;
     }
 
+    public String getCurrency() {
+        return currency;
+    }
 
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
 
+    public List<City> getCitys() {
+        return citys;
+    }
 
+    public void setCitys(List<City> citys) {
+        this.citys = citys;
+    }
 }

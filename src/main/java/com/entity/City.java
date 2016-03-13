@@ -2,18 +2,34 @@ package com.entity;
 
 import javax.persistence.*;
 import java.util.List;
+
 @Entity
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
-    private String name;
+
     @ManyToOne
     @JoinColumn
-    private Ragion ragion;
+    private Country country;
+
+    private String name;
+
+    private String region;
+
+    private String oblast;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "city")
     private List<User> user;
 
+
+    public List<User> getUser() {
+        return user;
+    }
+
+    public void setUser(List<User> user) {
+        this.user = user;
+    }
 
     public int getId() {
         return id;
@@ -21,6 +37,14 @@ public class City {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
     public String getName() {
@@ -31,21 +55,21 @@ public class City {
         this.name = name;
     }
 
-    public Ragion getRagion() {
-        return ragion;
+    public String getRegion() {
+        return region;
     }
 
-    public void setRagion(Ragion ragion) {
-        this.ragion = ragion;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
-    public List<User> getUser() {
-        return user;
+    public String getOblast() {
+        return oblast;
     }
 
-    public void setUser(List<User> user) {
-        this.user = user;
+    public void setOblast(String oblast) {
+        this.oblast = oblast;
     }
-
-
 }
+
+

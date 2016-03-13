@@ -60,9 +60,6 @@ public class UserService {
                     mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
                     mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
                     mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
-                    mapUser.put("region", userRepository.findOne(idForUserLogin).getCity().getRagion().getName());
-                    mapUser.put("oblast", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getName());
-                    mapUser.put("country", userRepository.findOne(idForUserLogin).getCity().getRagion().getOblast().getCountry().getName());
                 } catch (NullPointerException e) {
                 }
                 return 0;

@@ -47,7 +47,6 @@ public class User {
     @JoinColumn(name = "fk_video"))
     private List<Video> videos;
 
-
     public List<Video> getVideos() {
         return videos;
     }
