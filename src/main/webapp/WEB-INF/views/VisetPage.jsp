@@ -15,16 +15,16 @@
 </head>
 <body>
 <form method="post">
-    <h>Main Page</h>
+    <h>Viset Page</h>
     <table>
-        <tr>
-            <th>Last Name:</th>
-            <td>${firstNameMap}</td>
-        </tr>
-        <tr>
-            <th>First Name:</th>
-            <td>${lastNameMap}</td>
-        </tr>
+    <tr>
+        <th>Last Name:</th>
+        <td>${firstNameMap}</td>
+    </tr>
+    <tr>
+        <th>First Name:</th>
+        <td>${lastNameMap}</td>
+    </tr>
         <tr>
             <th>City:</th>
             <td>${cityMap}</td>
@@ -49,7 +49,7 @@
             <th>${yearMap}</th>
             <th>${ageMap}</th>
         </tr>
-    </table>
+        </table>
     <tr>
         <a href="/">exit</a>
     </tr>

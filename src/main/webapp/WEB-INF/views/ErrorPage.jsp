@@ -15,16 +15,7 @@
 </head>
 <body>
 <form method="post">
-    <h>Dalete User Page</h>
-
-    <table>
-        <c:forEach var="user" items="${users}"><tr>
-            <td>${user.getFirstName()}</td>
-            <td><c:url value="/AdminVisit/id${user.id}" var = "url"/>  <a href="${url}" >Show</a>  </td>
-            <td>||</td>
-            <td><c:url value="/AdminDaleteUser/${user.id}" var = "url"/> <a href="${url}">dalete</a> </td>
-        </tr></c:forEach>
-    </table>
+    <h>Error Page</h>
 
 </form>
 </body>

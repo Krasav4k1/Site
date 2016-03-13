@@ -44,12 +44,14 @@ public class UserService {
             mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
     }
 
+    public int comparisonUser(String password, String Email) {
+
+    }
 
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
-    public int comparisonUser(String password, String Email) {
+    public int Search() {
         try {
-            idForUserLogin = userRepository.findUserByEmailAndPassword(Email, password).getId();
-            System.out.println(userRepository.findOne(idForUserLogin).getStatys());
+            idForUserLogin = u
             if (userRepository.findOne(idForUserLogin).getStatys() == 0) {
                 mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
                 mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());

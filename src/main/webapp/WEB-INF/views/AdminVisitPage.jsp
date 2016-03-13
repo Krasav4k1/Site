@@ -15,8 +15,8 @@
 </head>
 <body>
 <form method="post">
-    <h>Main Page</h>
-    <table>
+    <h>Admin Page</h>
+    <table class="table">
         <tr>
             <th>Last Name:</th>
             <td>${firstNameMap}</td>
