@@ -29,7 +29,7 @@ public class StartingController {
             return "redirect:/MainPage";
         }
         if (userService.comparisonUser(password, emailUser) == 1){
-            return "redirect:/AdminPage";
+            return "AdminPage";
         }
         return "ErrorEntrance";
     }

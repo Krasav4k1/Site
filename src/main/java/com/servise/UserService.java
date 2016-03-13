@@ -38,7 +38,11 @@ public class UserService {
         userRepository.save(user1);
     }
 
-
+        public void comparisonUserVisit(int id){
+            idForUserLogin=  userRepository.findUserById(id).getId();
+            mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
+            mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
+    }
 
 
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
