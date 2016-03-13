@@ -1,38 +1,44 @@
+<%@ page import="java.sql.ResultSet" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+    <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+    <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+    <!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-<style type="text/css">
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Вход</title>
+    <style>
+        <%@include file='cssForJsp/MainPage.css' %>
+    </style>
+
 </head>
 <body>
-	<form method="post">
-	<table align="center">
-		<tr>
-			<h1 align="center">Hello</h1>
-		</tr>
 
-		<tr>
-			<th>E-Mail</th>
-			<td><input pattern = "^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name = "emailUser" type="text"/></td>
-		</tr>
-		<tr>
-			<th>Password:</th>
-			<td><input pattern = "^[a-zA-Z0-9]+$" name = "password" type="password"/></td>
-		</tr>
-		<tr>
-			<td align="right"><input type="submit" value="add"/></td>
-		</tr>
-		<tr>
-			<td align="right"><a href="Register">Register</a></td>
-		</tr>
-	</table>
-	</form>
+
+<form method="post" action="" class="login">
+    <p>
+        <label for="login">Логин:</label>
+        <input type="text" required pattern = "^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"name="emailUser" id="login" >
+    </p>
+
+    <p>
+        <label for="password">Пароль:</label>
+        <input pattern = "^[a-zA-Z0-9]+$" min = "5" required type="password" name="password" id="password" >
+    </p>
+
+    <p class="login-submit">
+        <button type="submit" class="login-button">Войти</button>
+    </p>
+
+    <p class="forgot-password"><a href="index.html">Забыл пароль?</a></p>
+</form>
 </body>
 </html>

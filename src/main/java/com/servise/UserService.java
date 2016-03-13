@@ -45,7 +45,10 @@ public class UserService {
 
     //Search for login user
     public int comparisonUser(String password, String Email) {
-       return SearchInfo(userRepository.findUserByEmailAndPassword(Email, password).getId());
+        try {return SearchInfo(userRepository.findUserByEmailAndPassword(Email, password).getId());
+        }catch (NullPointerException e){
+        }
+       return 9;
     }
 
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
