@@ -38,20 +38,19 @@ public class UserService {
         userRepository.save(user1);
     }
 
-        public void comparisonUserVisit(int id){
-            idForUserLogin=  userRepository.findUserById(id).getId();
-            mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
-            mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
+    //Search for visit people
+    public void comparisonUserVisit(int id){
+            SearchInfo(userRepository.findUserById(id).getId());
     }
 
+    //Search for login user
     public int comparisonUser(String password, String Email) {
-
+       return SearchInfo(userRepository.findUserByEmailAndPassword(Email, password).getId());
     }
 
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
-    public int Search() {
+    public int SearchInfo(int idForUserLogin) {
         try {
-            idForUserLogin = u
             if (userRepository.findOne(idForUserLogin).getStatys() == 0) {
                 mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
                 mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
