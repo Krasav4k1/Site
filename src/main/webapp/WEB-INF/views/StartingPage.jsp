@@ -1,4 +1,5 @@
 <%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.entity.City" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 
@@ -39,6 +40,17 @@
     </p>
 
     <p class="forgot-password"><a href="index.html">Забыл пароль?</a></p>
+
+    <form method = "POST">
+
+        <select name = "countryM">
+            <c:forEach var="country" items="${country}">
+                <option value="${country.id}">${country.name}</option>
+            </c:forEach>
+        </select>
+        <input type = "submit" value = "Ответить">
+    </form>
+
 </form>
 </body>
 </html>

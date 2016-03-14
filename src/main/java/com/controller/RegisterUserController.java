@@ -1,6 +1,5 @@
 package com.controller;
 
-import com.repository.UserRepository;
 import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
