@@ -18,13 +18,12 @@ public class UserService {
     public Map<String, String> mapUser = new HashMap<String, String>();
 
     //Метод додавання юзерів
-    public void addUser(String lastName, String firstName, String password, String emailUser,int age, int day, int mouth,int year){
+    public void addUser(String lastName, String firstName, String password, String emailUser, int day, int mouth,int year){
         User user = new User();
         user.setLastName(lastName);
         user.setFirstName(firstName);
         user.setPassword(password);
         user.setEmail(emailUser);
-        user.setAge(age);
         user.setDay(day);
         user.setMouth(mouth);
         user.setYear(year);

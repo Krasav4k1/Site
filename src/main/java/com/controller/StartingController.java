@@ -1,6 +1,9 @@
 package com.controller;
 
+import com.entity.City;
+import com.entity.Country;
 import com.repository.CityRepository;
+import com.repository.CountryRepository;
 import com.servise.CityService;
 import com.servise.CountryService;
 import com.servise.UserService;
@@ -15,33 +18,33 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Controller
+
+
 public class StartingController {
+
+    @RequestMapping("/")
+    public String redirectUrlLodin(){
+        return "redirect:/login";
+    }
 
     @Autowired
     UserService userService;
-    @Autowired
-    CountryService countryService;
-    @Autowired
-    CityService cityService;
 
-    @RequestMapping("/")
+
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String Show(Model model) {
-        model.addAttribute("country", countryService.getAll());
+       // long start = System.currentTimeMillis();
+       // System.out.println(System.currentTimeMillis()-start);
         return "StartingPage";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public String comparisonUser(Model model,@RequestParam int countryM,@RequestParam String password, @RequestParam String emailUser, HttpServletResponse response) throws IOException {
+
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public String comparisonUser(@RequestParam String password, @RequestParam String emailUser, HttpServletResponse response) throws IOException {
         userService.mapUser.clear();
 
-        System.out.println(countryM);
-        if (userService.comparisonUser(password, emailUser) == 0) {
-            return "redirect:/MainPage";
-        }
-        if (userService.comparisonUser(password, emailUser) == 1){
-            return "AdminPage";
-        }
-
+        if (userService.comparisonUser(password, emailUser) == 0) return "redirect:/MainPage";
+        if (userService.comparisonUser(password, emailUser) == 1)return "AdminPage";
         return "ErrorEntrance";
     }
 }

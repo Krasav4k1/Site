@@ -1,5 +1,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="com.entity.City" %>
+<%@ page import="com.repository.CountryRepository" %>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 
@@ -22,12 +24,12 @@
 
 </head>
 <body>
-
+<h1 style="text-align: center; color:#a8a7a8; padding: 40px">WTable</h1>
 
 <form method="post" action="" class="login">
     <p>
-        <label for="login">Логин:</label>
-        <input type="text" required pattern = "^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"name="emailUser" id="login" >
+        <label for="login">E-mail, тел:</label>
+        <input type="text" required pattern = "\d{3}\d{3}\d{4}|^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"name="emailUser" id="login" >
     </p>
 
     <p>
@@ -38,18 +40,8 @@
     <p class="login-submit">
         <button type="submit" class="login-button">Войти</button>
     </p>
+    <p class="forgot-password"><a href="/register">Регістрація</a></p>
 
-    <p class="forgot-password"><a href="index.html">Забыл пароль?</a></p>
-
-    <form method = "POST">
-
-        <select name = "countryM">
-            <c:forEach var="country" items="${country}">
-                <option value="${country.id}">${country.name}</option>
-            </c:forEach>
-        </select>
-        <input type = "submit" value = "Ответить">
-    </form>
 
 </form>
 </body>

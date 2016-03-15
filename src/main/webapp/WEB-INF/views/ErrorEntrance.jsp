@@ -29,7 +29,10 @@
             <td align="right"><input type="submit" value="add"/></td>
         </tr>
         <tr>
-            <td align="right" style="text-align: left"><a href="Register" style="text-align: center">Register</a></td>
+            <th align="right" style="text-align: left"><a href="forgot-password" style="text-align: center">Забыл пароль?</a></th>
+        </tr>
+        <tr>
+        <td align="right" style="text-align: left"><a href="register" style="text-align: center">Register</a></td>
         </tr>
     </table>
 </form>
