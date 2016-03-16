@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import static org.apache.commons.lang.StringEscapeUtils.escapeHtml;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -22,9 +23,7 @@ public class RegisterUserController {
 
     @RequestMapping(value = "/register",method = RequestMethod.GET)
     public String ShowRegisterPage(Model model) {
-        long start = System.currentTimeMillis();
         model.addAttribute("countryModel", countryService.getAll());
-        System.out.println(System.currentTimeMillis() - start);
         return "Register";
     }
 
@@ -46,8 +45,10 @@ public class RegisterUserController {
             int mouthInt = Integer.parseInt(mouth);
             int yearInt = Integer.parseInt(year);
             if (password.equals(passwordRepid)) {
-                userService.addUser(lastName, firstName, password, emailUser, dayInt, mouthInt, yearInt);//city,region,oblast,country
-                return "/login";
+                userService.addUser(escapeHtml(lastName),escapeHtml( firstName),
+                        escapeHtml(password),escapeHtml( emailUser),
+                        dayInt, mouthInt, yearInt);//city,region,oblast,country
+                return "redirect:/";
             }
 
         } catch (NumberFormatException e) {

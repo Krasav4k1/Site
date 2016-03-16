@@ -15,7 +15,7 @@ public interface UserRepository extends CrudRepository<User,Integer> {
     User findUserByEmailAndPassword (@RequestParam String emailUser, @RequestParam String password);
 
     @Query(value = "select u from User u where u.id = ?1")
-    User findUserById (int emailUser);
+    User findUserById (int id);
 
 
 }

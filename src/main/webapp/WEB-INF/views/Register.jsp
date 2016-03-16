@@ -14,7 +14,9 @@
 <!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
+    <script   src="https://code.jquery.com/jquery-2.2.1.min.js" ></script>
 
+</head>
 <body>
 <form method="post">
     <table align="center">
@@ -44,12 +46,20 @@
         <tr>
             <th>Країна</th>
             <td>
-                <select name = "RequestParamCountryId">
-                    <c:forEach var="countryModel" items="${countryModel}">
-                        <option value="${countryModel.id}">${countryModel.name}</option>
-                    </c:forEach>
-                </select>
+                <div id="countryDiv">
+                    <select id="option" name = "IdCountry">
+                        <c:forEach var="countryModel" items="${countryModel}">
+                            <option value="${countryModel.id}">${countryModel.name}</option>
+                        </c:forEach>
+                    </select>
+                    <br>
+                    <div id="select"></div>
+                    <div id="selectObl"></div>
+                    <div id="selectCity"></div>
+                    <div id="selectId"></div>
+                </div>
             </td>
+
         </tr>
         <tr>
             <th>День народження:</th>
@@ -68,5 +78,20 @@
         </tr>
     </table>
 </form>
+<script>
+
+    $("#option").change(function(){
+//        $.ajax({url: "searchRegionyByIdCountry", success: function(result){
+//            $("#countryDiv").append(result);
+//        }});
+        var id = $("#option").val();
+        index = "obl";
+        $.get("searchRegionyByIdCountry" + index + "/"+ id, {}, function(result){
+            $("#select").html(result);
+
+        });
+    });
+
+</script>
 </body>
 </html>
