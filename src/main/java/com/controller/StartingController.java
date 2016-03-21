@@ -1,11 +1,5 @@
 package com.controller;
 
-import com.entity.City;
-import com.entity.Country;
-import com.repository.CityRepository;
-import com.repository.CountryRepository;
-import com.servise.CityService;
-import com.servise.CountryService;
 import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,11 +34,11 @@ public class StartingController {
 
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String comparisonUser(@RequestParam String password, @RequestParam String emailUser, HttpServletResponse response) throws IOException {
+    public String comparisonUser(@RequestParam String password, @RequestParam String username, HttpServletResponse response) throws IOException {
         userService.mapUser.clear();
 
-        if (userService.comparisonUser(password, emailUser) == 0) return "redirect:/MainPage";
-        if (userService.comparisonUser(password, emailUser) == 1)return "AdminPage";
-        return "ErrorEntrance";
+        if (userService.comparisonUser(password, username) == 0) return "redirect:/MainPage";
+        if (userService.comparisonUser(password, username) == 1)return "AdminPage";
+        return "redirect:/";
     }
 }

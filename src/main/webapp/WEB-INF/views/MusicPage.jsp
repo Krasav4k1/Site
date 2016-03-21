@@ -1,4 +1,7 @@
 <%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.entity.City" %>
+<%@ page import="com.repository.CountryRepository" %>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 
@@ -6,11 +9,10 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="uk"> <![endif]-->
-<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="uk"> <![endif]-->
-<!--[if IE 8]> <html class="lt-ie9" lang="uk"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="uk9=5211"> <!--<![endif]-->
-<head>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]--><head>
     <style>
         <%--<%@include file='cssForJsp/MainPage.css' %>--%>
     </style>
@@ -19,11 +21,11 @@
 </head>
 <body>
 <form method="post">
-    <h>Main Page</h>
+    <h>Music page</h>
     <table>
-        <tr>
-            <th>Last Name:</th>
-            <td>${firstNameMap}</td>
+            <tr>
+                <th>Last Name:</th>
+                <td>${firstNameMap}</td>
         </tr>
         <tr>
             <th>First Name:</th>
@@ -54,11 +56,9 @@
             <th>${ageMap}</th>
         </tr>
     </table>
-
-    <form action="/logout" method="post">
-        <input  type="submit" value="Вихід"/>
-    </form>
-
+    <tr>
+        <a href="/">exit</a>
+    </tr>
 </form>
 </body>
 </html>

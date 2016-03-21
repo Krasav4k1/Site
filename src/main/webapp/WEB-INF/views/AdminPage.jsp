@@ -19,6 +19,7 @@
         <table>
             <td> <a href="AdminDaleteUser">DaleteUser</a></td>
         </table>
+    <a href="/">exit</a>
 </form>
 </body>
 </html>

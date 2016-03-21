@@ -57,6 +57,7 @@
                     <div id="selectObl"></div>
                     <div id="selectCity"></div>
                     <div id="selectId"></div>
+                    <tr>${IdCity}</tr>
                 </div>
             </td>
 

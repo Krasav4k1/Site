@@ -3,6 +3,7 @@ package com.controller;
 import com.servise.CountryService;
 import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,8 @@ public class RegisterUserController {
     UserService userService;
     @Autowired
     CountryService countryService;
+    @Autowired
+    CityController cityController;
 
     @RequestMapping(value = "/register",method = RequestMethod.GET)
     public String ShowRegisterPage(Model model) {
@@ -30,7 +33,7 @@ public class RegisterUserController {
 
     //Registrations User
     @RequestMapping(value = "/register",method = RequestMethod.POST)
-    public String addUserRegister(HttpServletResponse response, @RequestParam String lastName, @RequestParam String firstName,
+    public String addUserRegister(Model model, @RequestParam String lastName, @RequestParam String firstName,
                                   @RequestParam String password, @RequestParam String passwordRepid, @RequestParam String emailUser,
                                   @RequestParam String day, @RequestParam String mouth, @RequestParam String year) throws IOException {//, @RequestParam String region, @RequestParam String oblast, @RequestParam String country
 
@@ -39,7 +42,6 @@ public class RegisterUserController {
                 day.equals("") || mouth.equals("") || year.equals("")) {
             return "redirect:/register";
         }
-
         try {
             int dayInt = Integer.parseInt(day);
             int mouthInt = Integer.parseInt(mouth);

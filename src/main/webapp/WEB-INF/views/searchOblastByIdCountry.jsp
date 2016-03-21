@@ -30,7 +30,7 @@
     <c:when test="${index.equals('ray')}">
         <select id="optionReg" name = "oblastName">
             <c:forEach var="ragionOblast" items="${ragionOblast}">
-                <optioqn >${ragionOblast}</optioqn>
+                <option >${ragionOblast}</option>
             </c:forEach>
         </select>
     </c:when>
@@ -38,8 +38,8 @@
     <c:when test="${index.equals('city')}">
         <select id="optionCity" name = "cityName">
             <c:forEach var="cityRegion" items="${cityRegion}">
-                <option >${cityRegion}</option>
-            </c:forEach>
+                <option>${cityRegion}</option>
+            </c:forEach><h1>${IdCity}</h1>
         </select>
     </c:when>
 

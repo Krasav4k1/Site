@@ -23,12 +23,17 @@ public interface CityRepository extends CrudRepository<City,Integer> {
     @Query(value = "select name from City c where c.region =:region")
     Set<City> findByRegion(@Param("region") String region);
 
-    @Query(value = "select id from City c where c.name =:name")
+    @Query(value = "select c from City c where c.name =:name")
     Set<City> findByCity(@Param("name") String name);
 
-//    @Query(value = "select id from City b where b.name like %:name%")
-//    List<City> findByCity(@Param("name") String name);
-//
+    @Query(value = "select region from City c where c.name =:name")
+    String findRegionByName(@Param("name") String name);
+
+    @Query(value = "select oblast from City c where c.name =:name")
+    String findOblastByName(@Param("name") String name);
+
+
+
 
 }
 

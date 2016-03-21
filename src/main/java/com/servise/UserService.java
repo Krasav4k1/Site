@@ -1,6 +1,9 @@
 package com.servise;
 
+import com.controller.CityController;
 import com.entity.*;
+import com.repository.CityRepository;
+import com.repository.CountryRepository;
 import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,13 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    CityController cityController;
+    @Autowired
+    CityRepository  cityRepository;
+    @Autowired
+    CountryRepository countryRepository;
+
     private int idForUserLogin;
     public Map<String, String> mapUser = new HashMap<String, String>();
 
@@ -27,13 +37,15 @@ public class UserService {
         user.setDay(day);
         user.setMouth(mouth);
         user.setYear(year);
+        user.setCity(cityController.cityId);
         userRepository.save(user);
     }
 
     //UpdateUser
     public void updateUser(String Email, String password){
         User user1 ;
-        user1 = userRepository.findUserByEmailAndPassword(Email, password);
+        user1 = userRepository.findUserByEmailAndPassword("Andriubliznuk@mail.ru", "Andriu1997");
+        user1.setRole(Role.ROLE_ADMIN);
         userRepository.save(user1);
     }
 
@@ -53,9 +65,12 @@ public class UserService {
         return 9;
     }
 
+
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
     public int SearchInfo(int idForUserLogin) {
+
         try {
+
             if (userRepository.findOne(idForUserLogin).getStatys() == 0) {
                 mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
                 mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
@@ -65,6 +80,9 @@ public class UserService {
                     mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
                     mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
                     mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
+                    mapUser.put("region",userRepository.findOne(idForUserLogin).getCity().getRegion());
+                    mapUser.put("oblast",userRepository.findOne(idForUserLogin).getCity().getOblast());
+                    mapUser.put("country",userRepository.findOne(idForUserLogin).getCity().getCountry().getName());
                 } catch (NullPointerException e) {
                 }
                 return 0;

@@ -9,5 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface CountryRepository extends CrudRepository<Country,Integer>{
 
 
+    @Query(value = "select name from Country c where c.id =:id")
+    String findCountryById(@Param("id") int id);
+
 
 }

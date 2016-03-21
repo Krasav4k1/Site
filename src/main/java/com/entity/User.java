@@ -20,6 +20,8 @@ public class User {
     private int day;
     private int onlineUser;
     private int statuFrendship;
+    @Enumerated(EnumType.ORDINAL)
+    private Role role;
 
     @ManyToOne
     @JoinColumn
@@ -215,4 +217,11 @@ public class User {
         this.musicAlboms = musicAlboms;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }

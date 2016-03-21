@@ -4,7 +4,6 @@
 <%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -24,12 +23,18 @@
 
 </head>
 <body>
+
+
 <h1 style="text-align: center; color:#a8a7a8; padding: 40px">WTable</h1>
 
-<form method="post" action="" class="login">
+
+<c:url value="/login" var="login"/>
+<form method="post"  class="login" action="${login}?${_csrf.parameterName}=${_csrf.token}" >
+  
     <p>
         <label for="login">E-mail, тел:</label>
-        <input type="text" required pattern = "\d{3}\d{3}\d{4}|^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"name="emailUser" id="login" >
+        <input type="text" required pattern = "\d{3}\d{3}\d{4}|^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name="username"
+               id="login" >
     </p>
 
     <p>

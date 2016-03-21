@@ -8,7 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Set;
 
 @Controller
 public class CityController {
@@ -17,6 +18,7 @@ public class CityController {
     CityService cityService;
     @Autowired
     CityRepository cityRepository;
+    public City cityId;
 
     @RequestMapping("/searchRegionyByIdCountry{index}/{id}")
     public String controlUrlCountry(Model model,@PathVariable String id,@PathVariable String index){
@@ -31,7 +33,7 @@ public class CityController {
             searchRegionByOblast(model,id);
         }else
         if (index.equals("city")){
-            searchRegionByRegion(model,id);
+            searchCityByRegion(model,id);
         }else
         if (index.equals("cityId")){
             searchIdByCity(model, id);
@@ -42,20 +44,23 @@ public class CityController {
 
     public void searchOblastByIdCountry(Model model,int id){
         model.addAttribute("oblastCountry",cityService.getOblast(id));
+        System.out.println(id);
 
     }
 
     public void searchRegionByOblast(Model model,String id){
         model.addAttribute("ragionOblast", cityService.getRegion(id));
+        System.out.println(id);
 
     }
 
-    public void searchRegionByRegion(Model model, String id){
+    public void searchCityByRegion(Model model, String id){
         model.addAttribute("cityRegion", cityService.getCity(id));
+        System.out.println(id);
     }
 
     public void searchIdByCity(Model model, String id){
-        model.addAttribute("IdCity", cityRepository.findByCity(id));
+        cityId =cityRepository.findByCity(id).iterator().next();
     }
 
 
