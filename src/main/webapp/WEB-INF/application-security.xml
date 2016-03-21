@@ -6,9 +6,12 @@
            http://www.springframework.org/schema/security
            http://www.springframework.org/schema/security/spring-security.xsd">
 
+	<beans:bean id="authenticationSuccessHandler"
+				class="com.servise.SystemAuthenticationSuccessHandler" />
+
 	<http use-expressions="true">
 
-		<form-login login-page="/" login-processing-url="/login" authentication-failure-url="/?authfail=true"/>
+		<form-login login-page="/" login-processing-url="/login" authentication-success-handler-ref="authenticationSuccessHandler" authentication-failure-url="/?authfail=true" default-target-url="/MainPage"/>
 		<logout logout-url="/logout" logout-success-url="/"/>
 	</http>
 	<beans:bean id="encoder"

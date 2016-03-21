@@ -18,7 +18,8 @@
 
 </head>
 <body>
-<form method="post">
+
+<form method="post" action="?${_csrf.parameterName}=${_csrf.token}">
     <table align="center">
         <tr>
             <h1 align="center">Регістрація</h1>

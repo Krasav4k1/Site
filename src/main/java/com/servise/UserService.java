@@ -6,6 +6,7 @@ import com.repository.CityRepository;
 import com.repository.CountryRepository;
 import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
@@ -15,6 +16,8 @@ import java.util.Map;
 @Service
 public class UserService {
 
+    //Prisipal
+
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -23,6 +26,9 @@ public class UserService {
     CityRepository  cityRepository;
     @Autowired
     CountryRepository countryRepository;
+    @Autowired
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+
 
     private int idForUserLogin;
     public Map<String, String> mapUser = new HashMap<String, String>();
@@ -32,7 +38,7 @@ public class UserService {
         User user = new User();
         user.setLastName(lastName);
         user.setFirstName(firstName);
-        user.setPassword(password);
+        user.setPassword(bCryptPasswordEncoder.encode(password));
         user.setEmail(emailUser);
         user.setDay(day);
         user.setMouth(mouth);

@@ -27,18 +27,16 @@ public class StartingController {
 
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String Show(Model model) {
-       // long start = System.currentTimeMillis();
-       // System.out.println(System.currentTimeMillis()-start);
         return "StartingPage";
     }
 
 
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
+/*    @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String comparisonUser(@RequestParam String password, @RequestParam String username, HttpServletResponse response) throws IOException {
         userService.mapUser.clear();
 
         if (userService.comparisonUser(password, username) == 0) return "redirect:/MainPage";
         if (userService.comparisonUser(password, username) == 1)return "AdminPage";
         return "redirect:/";
-    }
+    }*/
 }
