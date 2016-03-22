@@ -43,6 +43,7 @@ public class UserService {
         user.setDay(day);
         user.setMouth(mouth);
         user.setYear(year);
+        user.setRole(Role.ROLE_USER);
         user.setCity(cityController.cityId);
         userRepository.save(user);
     }
@@ -63,24 +64,12 @@ public class UserService {
 
     }
 
-    //Search for login user
-    public int comparisonUser(String password, String Email) {
-        if (userRepository.findUserByEmailAndPassword(Email, password) != null) {
-            return SearchInfo(userRepository.findUserByEmailAndPassword(Email, password).getId());
-        }
-        return 9;
-    }
-
 
     //Метод перевірки на наявність емайла і пароля і заповнення мапи
-    public int SearchInfo(int idForUserLogin) {
-
-        try {
-
-            if (userRepository.findOne(idForUserLogin).getStatys() == 0) {
+    public void SearchInfo(int idForUserLogin) {
                 mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
                 mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
-                try {
+
                     mapUser.put("age", Integer.toString(userRepository.findOne(idForUserLogin).getAge()));
                     mapUser.put("day", Integer.toString(userRepository.findOne(idForUserLogin).getDay()));
                     mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
@@ -89,17 +78,7 @@ public class UserService {
                     mapUser.put("region",userRepository.findOne(idForUserLogin).getCity().getRegion());
                     mapUser.put("oblast",userRepository.findOne(idForUserLogin).getCity().getOblast());
                     mapUser.put("country",userRepository.findOne(idForUserLogin).getCity().getCountry().getName());
-                } catch (NullPointerException e) {
-                }
-                return 0;
-            } else if (userRepository.findOne(idForUserLogin).getStatys() == 1) {
-                return 1;
             }
-        } catch (NullPointerException e) {
-            return 9;
-        }
-        return 9;
-    }
 
     //Дістає все
     public Iterable<User> getAll(){

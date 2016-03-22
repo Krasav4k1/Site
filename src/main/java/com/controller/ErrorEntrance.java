@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ErrorEntrance {
 
-    @RequestMapping("/login?error=true")
+    @RequestMapping("/ErrorEntrance")
     public String ShowErrorEntrance(){
         return "ErrorEntrance";
     }

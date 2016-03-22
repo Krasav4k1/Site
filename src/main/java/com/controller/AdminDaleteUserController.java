@@ -13,14 +13,14 @@ public class AdminDaleteUserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping("/AdminDaleteUser")
+    @RequestMapping("/AdminPage/AdminDaleteUser")
     public String Show(Model model) {
         model.addAttribute("users", userService.getAll());
         return "AdminDaleteUser";
     }
 
 
-    @RequestMapping("/AdminDaleteUser/{id}")
+    @RequestMapping("/AdminPage/AdminDaleteUser/{id}")
     public String dalete(@PathVariable String id){
         userService.dalete(id);
         return "redirect:/AdminDaleteUser";

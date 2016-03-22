@@ -54,11 +54,12 @@
             <th>${ageMap}</th>
         </tr>
     </table>
-    <c:url value="/logout" var="logout"/>
-    <form method="post" action="${logout}?${_csrf.parameterName}=${_csrf.token}">
-        <input  type="submit" value="Вихід"/>
-    </form>
 
+</form>
+<c:url value="/logout" var="logout"/>
+<form method="post" action="${logout}">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+    <input  type="submit" value="Вихід"/>
 </form>
 </body>
 </html>

@@ -20,7 +20,7 @@ public class AdminPageCountroller {
         return "AdminPage";
     }
 
-    @RequestMapping("/AdminVisit/{id}")
+    @RequestMapping("/AdminPage/AdminVisit/{id}")
     public String ShowPageUser(Model model,@PathVariable int id){
         userService.comparisonUserVisit(id);
         modelFillingController.FillingModelUser(model);

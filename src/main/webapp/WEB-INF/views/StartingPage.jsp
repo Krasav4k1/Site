@@ -29,7 +29,8 @@
 
 
 <c:url value="/login" var="login"/>
-<form method="post"  class="login" action="${login}?${_csrf.parameterName}=${_csrf.token}" >
+<form method="post"  class="login" action="${login}" >
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     <input type="hidden" >
     <p>
         <label for="login">E-mail, тел:</label>

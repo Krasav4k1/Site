@@ -17,9 +17,13 @@
 <form method="post">
     <h>Admin Page</h>
         <table>
-            <td> <a href="AdminDaleteUser">DaleteUser</a></td>
+            <td> <a href="AdminPage/AdminDaleteUser">DaleteUser</a></td>
         </table>
-    <a href="/">exit</a>
+</form>
+<c:url value="/logout" var="logout"/>
+<form method="post" action="${logout}">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+    <input  type="submit" value="Вихід"/>
 </form>
 </body>
 </html>
