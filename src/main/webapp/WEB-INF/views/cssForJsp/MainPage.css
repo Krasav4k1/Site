@@ -48,7 +48,7 @@ table {
 }
 
 body, .login-submit, .login-submit:before, .login-submit:after {
-    background: #373737 url("WEB-INF/views/cssForJsp/bg.png") 0 0 repeat;
+    background: #373737 url("/WEB-INF/views/cssForJsp/bg.png") 0 0 repeat;
 }
 
 body {

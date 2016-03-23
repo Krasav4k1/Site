@@ -10,17 +10,23 @@
 
 	<beans:bean id="authenticationSuccessHandler"
 				class="com.servise.SystemAuthenticationSuccessHandler" />
-
+<!--Socet-->
 
 	<http use-expressions="true">
+		<access-denied-handler error-page="/accessDenied"/>
+
 		<intercept-url pattern = "/MainPage/**" access="hasAnyRole('USER','ADMIN')" />
 		<intercept-url pattern = "/AdminPage/**" access="hasRole('ADMIN')"/>
+
 		<form-login
 				login-page="/login"
 				authentication-success-handler-ref="authenticationSuccessHandler"
 				authentication-failure-url="/login?error=true"
 				username-parameter="username"
-				password-parameter="password"/>
+				password-parameter="password"
+
+		/>
+
 
 		<logout logout-url="/logout" logout-success-url="/login"/>
 
