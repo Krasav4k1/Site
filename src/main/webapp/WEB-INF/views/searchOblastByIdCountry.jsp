@@ -39,7 +39,7 @@
         <select id="optionCity" name = "cityName">
             <c:forEach var="cityRegion" items="${cityRegion}">
                 <option>${cityRegion}</option>
-            </c:forEach><h1>${IdCity}</h1>
+            </c:forEach>
         </select>
     </c:when>
 

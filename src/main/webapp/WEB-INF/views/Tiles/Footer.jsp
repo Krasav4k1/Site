@@ -1,18 +1,35 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Andrii
-  Date: 25.03.2016
-  Time: 17:43
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        <%@include file="/WEB-INF/views/cssForJsp/StyleForFooter.css"%>
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-<footer>
-    <p>footer</p>
-</footer>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-sm-5 col-md-4 col-sm-5 col-xs-8 col-xs-offset-2 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 " id="firstLine">
+            <div class="col-lg-1 hidden-sm"></div>
+            <a href="/about" class="navbar-brand aFoot">Про сайт</a>
+            <a href="/abs" class="navbar-brand aFoot">Рекалама</a>
+            <a href="/help" class="navbar-brand aFoot help">Допомога</a>
+            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pFood ">Wtable</p>
+            <a class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author aFoot" href="">Близнюк Андрій</a>
+        </div>
+    </div>
+</div>
+
 </body>
+
 </html>

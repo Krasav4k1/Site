@@ -37,8 +37,8 @@ public class UserController {
         if ( owner == null ){
             return "NonUser";
         }
-
         model.addAttribute("user", owner);
+        userService.SearchInfo(id);
         modelFillingController.FillingModelUser(model);
         return "MainPage";
     }

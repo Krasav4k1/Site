@@ -12,9 +12,11 @@
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="uk"> <![endif]-->
 <!--[if IE 8]> <html class="lt-ie9" lang="uk"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="uk9=5211"> <!--<![endif]-->
+<head>
+    <title>Головна сторінка ${user.firstName} ${user.lastName}</title>
+</head>
 <body>
 <%--<form method="post">
-    <h>Main Page</h>
     <table>
         <tr>
             <th>Last Name:</th>
@@ -49,32 +51,94 @@
             <th>${ageMap}</th>
         </tr>
     </table>
-
-</form>--%>
-<%--<c:url value="/logout" var="logout"/>
-<form method="post" action="${logout}">
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-    <input  type="submit" value="Вихід"/>
-</form>--%>
-
+--%>
 
 <security:authorize
         access="isAuthenticated() and hasRole('ROLE_ADMIN')">
     <h1>Це буде бачити тільки адмін</h1>
     <%--Це буде бачити тільки адмін--%>
 </security:authorize>
+
 <security:authorize access="!isAuthenticated()">
     <%--Це буде бачити користувач який не залогінився--%>
     <h1>Це буде бачити користувач який не залогінився</h1>
 </security:authorize>
-<security:authorize
-        access="isAuthenticated() and principal.username!='${user.id}' and !hasRole('ROLE_ADMIN')">
+
+<security:authorize access="isAuthenticated() and principal.username!='${user.id}' and !hasRole('ROLE_ADMIN')">
     <%--Це буде бачити користувач який залогінився він не являється власником сторінки і він не адмін--%>
     <h1>Це буде бачити користувач який залогінився він не являється власником сторінки і він не адмін</h1>
+    <table>
+        <tr>
+            <th>Last Name:</th>
+            <td>${firstNameMap}</td>
+        </tr>
+        <tr>
+            <th>First Name:</th>
+            <td>${lastNameMap}</td>
+        </tr>
+        <tr>
+            <th>City:</th>
+            <td>${cityMap}</td>
+        </tr>
+        <tr>
+            <th>Ragion:</th>
+            <td>${ragionMap}</td>
+        </tr>
+        <tr>
+            <th>Oblast:</th>
+            <td>${oblastMap}</td>
+        </tr>
+        <tr>
+            <th>Country:</th>
+            <td>${countryMap}</td>
+        </tr>
+
+        <tr>
+            <th>Born birthday:</th>
+            <th>${dayMap}</th>
+            <th>${mouthMap}</th>
+            <th>${yearMap}</th>
+            <th>${ageMap}</th>
+        </tr>
+    </table>
 </security:authorize>
-<security:authorize
-        access="isAuthenticated() and principal.username=='${user.id}'">
+
+<security:authorize access="isAuthenticated() and principal.username=='${user.id}'">
     <%--Це буде бачити користувач який є власником сторінки--%>
+    <table>
+        <tr>
+            <th>Last Name:</th>
+            <td>${firstNameMap}</td>
+        </tr>
+        <tr>
+            <th>First Name:</th>
+            <td>${lastNameMap}</td>
+        </tr>
+        <tr>
+            <th>City:</th>
+            <td>${cityMap}</td>
+        </tr>
+        <tr>
+            <th>Ragion:</th>
+            <td>${ragionMap}</td>
+        </tr>
+        <tr>
+            <th>Oblast:</th>
+            <td>${oblastMap}</td>
+        </tr>
+        <tr>
+            <th>Country:</th>
+            <td>${countryMap}</td>
+        </tr>
+
+        <tr>
+            <th>Born birthday:</th>
+            <th>${dayMap}</th>
+            <th>${mouthMap}</th>
+            <th>${yearMap}</th>
+            <th>${ageMap}</th>
+        </tr>
+    </table>
 </security:authorize>
 
 

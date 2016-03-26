@@ -1,0 +1,44 @@
+
+#firstLine {
+
+    bottom: 0;
+}
+
+#SecontLine {
+    position: absolute;
+    bottom: 0;
+}
+
+.aFoot {
+    height: 20px !important;
+    font-size: 15px !important;
+    padding-top: 0px !important;
+    text-align: center;
+}
+
+
+.pFood {
+    font-size: 15px !important;
+    text-align: center;
+}
+
+.wtable {
+    height: 20px !important;
+    margin-top: -2px !important;
+}
+
+.author {
+    margin-top: -11px;
+    font-size: 13px !important;
+    
+        
+}
+.author:hover{
+    text-decoration: none;
+}
+
+
+
+.help {
+    width: 90px !important;
+}

@@ -10,7 +10,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
     <style>
         <%@include file='/WEB-INF/views/cssForJsp/StyleForHeadr.css' %>
     </style>
@@ -62,7 +61,7 @@
                     <a href="/seach"><i class="glyphicon glyphicon-search"></i></a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
-                    <a href="/se"><i class="glyphicon glyphicon-cog"></i></a>
+                    <a href="/settings"><i class="glyphicon glyphicon-cog"></i></a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <form method="post" action="/logout">

@@ -44,19 +44,17 @@ public class CityController {
 
     public void searchOblastByIdCountry(Model model,int id){
         model.addAttribute("oblastCountry",cityService.getOblast(id));
-        System.out.println(id);
+
 
     }
 
     public void searchRegionByOblast(Model model,String id){
         model.addAttribute("ragionOblast", cityService.getRegion(id));
-        System.out.println(id);
 
     }
 
     public void searchCityByRegion(Model model, String id){
         model.addAttribute("cityRegion", cityService.getCity(id));
-        System.out.println(id);
     }
 
     public void searchIdByCity(Model model, String id){

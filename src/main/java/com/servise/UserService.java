@@ -61,23 +61,20 @@ public class UserService {
         if(userRepository.findOne(id) != null){
             SearchInfo(userRepository.findUserById(id).getId());
         }
-
     }
 
 
-    //Метод перевірки на наявність емайла і пароля і заповнення мапи
     public void SearchInfo(int idForUserLogin) {
                 mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
                 mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
-
-                    mapUser.put("age", Integer.toString(userRepository.findOne(idForUserLogin).getAge()));
-                    mapUser.put("day", Integer.toString(userRepository.findOne(idForUserLogin).getDay()));
-                    mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
-                    mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
-                    mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
-                    mapUser.put("region",userRepository.findOne(idForUserLogin).getCity().getRegion());
-                    mapUser.put("oblast",userRepository.findOne(idForUserLogin).getCity().getOblast());
-                    mapUser.put("country",userRepository.findOne(idForUserLogin).getCity().getCountry().getName());
+                mapUser.put("age", Integer.toString(userRepository.findOne(idForUserLogin).getAge()));
+                mapUser.put("day", Integer.toString(userRepository.findOne(idForUserLogin).getDay()));
+                mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
+                mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
+                mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
+                mapUser.put("region",userRepository.findOne(idForUserLogin).getCity().getRegion());
+                mapUser.put("oblast",userRepository.findOne(idForUserLogin).getCity().getOblast());
+                mapUser.put("country",userRepository.findOne(idForUserLogin).getCity().getCountry().getName());
             }
 
     //Дістає все
