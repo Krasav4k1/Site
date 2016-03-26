@@ -15,13 +15,17 @@
 	<http use-expressions="true">
 		<access-denied-handler error-page="/accessDenied"/>
 
-		<intercept-url pattern = "/MainPage/**" access="hasAnyRole('USER','ADMIN')" />
+		<intercept-url pattern = "/setting" access="hasAnyRole('USER','ADMIN')" />
+		<intercept-url pattern = "/music" access="hasAnyRole('USER','ADMIN')" />
+		<intercept-url pattern = "/video" access="hasAnyRole('USER','ADMIN')" />
+		<intercept-url pattern = "/message" access="hasAnyRole('USER','ADMIN')" />
+		<intercept-url pattern = "/friends" access="hasAnyRole('USER','ADMIN')" />
 		<intercept-url pattern = "/AdminPage/**" access="hasRole('ADMIN')"/>
 
 		<form-login
 				login-page="/login"
 				authentication-success-handler-ref="authenticationSuccessHandler"
-				authentication-failure-url="/login?error=true"
+				authentication-failure-url="/ErrorEntrance"
 				username-parameter="username"
 				password-parameter="password"
 

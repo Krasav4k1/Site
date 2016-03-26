@@ -24,7 +24,7 @@ public class AdminPageCountroller {
     public String ShowPageUser(Model model,@PathVariable int id){
         userService.comparisonUserVisit(id);
         modelFillingController.FillingModelUser(model);
-        return "AdminVisitPage";
+        return "redirect:/id" + id;
     }
 
 }

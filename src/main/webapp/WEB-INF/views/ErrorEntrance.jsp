@@ -11,7 +11,11 @@
     <title>Insert title here</title>
 </head>
 <body>
-<form method="post">
+
+<c:url value="/login" var="login"/>
+<form method="post"  class="login" action="${login}">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+
     <table align="center">
         <tr>
             <h1 align="center" style="color: red; font-family: Arial;" >Неправильний пароль або логін</h1>
@@ -19,11 +23,11 @@
 
         <tr>
             <th style="color: red; font-family: Arial">E-Mail:</th>
-            <td><input name = "emailUser" type="text" /></td>
+            <td><input type="text" required pattern = "\d{3}\d{3}\d{4}|^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name="username" id="login" ></td>
         </tr>
         <tr>
             <th style="color: red; font-family: Arial">Password:</th>
-            <td><input name = "password" type="password"/></td>
+            <td><input pattern = "^[a-zA-Z0-9]+$" min = "5" required type="password" name="password" id="password" ></td>
         </tr>
         <tr>
             <td align="right"><input type="submit" value="add"/></td>

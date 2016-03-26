@@ -44,33 +44,5 @@ public class URLController {
     }
 
 
-/*
-
-    @RequestMapping(value="/logout", method = RequestMethod.GET)
-    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null){
-            new SecurityContextLogoutHandler().logout(request, response, auth);
-        }
-        return "redirect:/login?logout";//You can redirect wherever you want, but generally it's a good practice to show login screen again.
-    }
-*/
-
 }
 
-/*
-
-    @RequestMapping(value = {"/{url}/id{id}","/{url}"})
-    public String ShowUserPrivate (Model model , @PathVariable String url) {
-        userService.mapUser.clear();
-        if (url.equals("MainPage")) return "redirect:/MainPage";
-        if (url.equals("VisitUser"))return "redirect:/VisitUser";
-        if (url.equals("register")) return "redirect:/register";
-        if (url.equals("forgot-Password")) return "redirect:/forgotPassword";
-        return "ErrorPage";
-
-
-    }
-
-}
-*/

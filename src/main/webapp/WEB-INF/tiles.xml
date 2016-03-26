@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <!-- Description of template web page that will have 3 attributes: header, footer
+        and main content (body) -->
+    <!-- Опис шаблонної веб сторінки, на якій буде 3 параметри: хедер, футер
+        і головний контент -->
+
+    <definition name="withoutHeader.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
+        <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/views/Tiles/Footer.jsp"></put-attribute>
+        <!-- Here body must be empty, values will come in child definitions -->
+        <!-- Задаєм пустим, значення будуть приходити в наступних definition -->
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+
+    <definition name="base.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/Tiles/Header.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/views/Tiles/Footer.jsp"></put-attribute>
+        <!-- Here body must be empty, values will come in child definitions -->
+        <!-- Задаєм пустим, значення будуть приходити в наступних definition -->
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+
+    <definition name="withoutHeaderAndFooter.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
+        <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="footer" value=""></put-attribute>
+        <!-- Here body must be empty, values will come in child definitions -->
+        <!-- Задаєм пустим, значення будуть приходити в наступних definition -->
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+
+    <definition name="StartingPage" extends="withoutHeader.definition">
+        <put-attribute name="body" value="/WEB-INF/views/StartingPage.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+
+    <definition name="MainPage" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/MainPage.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="AdminPage" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/AdminPage.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="ErrorEntrance" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/ErrorEntrance.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="AdminDaleteUser" extends="withoutHeader.definition">
+        <put-attribute name="body" value="/WEB-INF/views/AdminDaleteUser.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="AccessDenied" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/AccessDenied.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="Register" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Register.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="ForgotPassword" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/ForgotPassword.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="NonUser" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/NonUser.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="searchOblastByIdCountry" extends="withoutHeaderAndFooter.definition">
+        <put-attribute name="body" value="/WEB-INF/views/searchOblastByIdCountry.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="Message" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Message.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="Friends" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Friends.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="Music" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Music.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="Video" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Video.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="Settings" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Settings.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+
+
+
+</tiles-definitions>

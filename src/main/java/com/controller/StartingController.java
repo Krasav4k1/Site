@@ -31,12 +31,4 @@ public class StartingController {
     }
 
 
-/*    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String comparisonUser(@RequestParam String password, @RequestParam String username, HttpServletResponse response) throws IOException {
-        userService.mapUser.clear();
-
-        if (userService.comparisonUser(password, username) == 0) return "redirect:/MainPage";
-        if (userService.comparisonUser(password, username) == 1)return "AdminPage";
-        return "redirect:/";
-    }*/
 }

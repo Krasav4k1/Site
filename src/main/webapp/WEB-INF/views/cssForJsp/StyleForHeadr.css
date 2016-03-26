@@ -1,0 +1,41 @@
+
+.buttonLogout {
+    background:none;
+    border:none;
+    width: 50px;
+    height: 50px;
+    color:#d6d6d6;
+    margin-top: -4px;
+}
+
+div.container > div i{
+    font-size: 30px;
+        margin-top: 8px;
+    color:#dbd6d6
+}
+
+i{
+   font-size: 30px;
+    margin-top: 8px;
+    color:#dbd6d6;
+    margin-left: -5px;
+}
+div.container .row .navbar-inverse>div>a{
+ font-size: 30px;
+    color: #e0e0e0
+}
+
+
+
+.headerContainer {
+    margin-top: 10px;
+    margin-bottom: -20px
+}
+
+.sidebar {
+    width: 50px;
+    background: #222;
+    margin-top: -10px !important;
+}
+
+

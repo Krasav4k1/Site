@@ -34,8 +34,7 @@
     <input type="hidden" >
     <p>
         <label for="login">E-mail, тел:</label>
-        <input type="text" required pattern = "\d{3}\d{3}\d{4}|^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name="username"
-               id="login" >
+        <input type="text" required pattern = "\d{3}\d{3}\d{4}|^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name="username" id="login" >
     </p>
 
     <p>

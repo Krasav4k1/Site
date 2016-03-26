@@ -8,14 +8,23 @@
 						http://www.springframework.org/schema/context/spring-context-3.2.xsd ">
 	
 	<context:component-scan base-package="com.controller" />
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/views/</value>
+	<bean id="viewResolver"
+		  class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.tiles3.TilesView</value>
 		</property>
-		<property name="suffix">
-			<value>.jsp</value>
+	</bean>
+
+	<!-- Bean tilesConfigurer demands xml, in which tiles definitions are defined -->
+	<!-- Bean tilesConfigurer вимагає xml, в якому є описані tiles definitions -->
+	<bean id="tilesConfigurer"
+		  class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
 		</property>
-	</bean> 
+	</bean>
 	
 
 	
