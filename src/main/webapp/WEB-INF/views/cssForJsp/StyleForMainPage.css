@@ -1,0 +1,130 @@
+
+.name {
+    text-align: center; 
+}
+
+.tabl {
+   margin-left: 25%;   
+   width: 50%;
+    
+    
+}
+
+
+
+.imgAva {
+    width: 200px !important;
+    height: 200px !important;
+    top: 25px;
+    left: 140px;
+   border-radius: 40px !important;
+    border: 2px solid #333 !important;
+  position: absolute;
+}
+
+.imgBack {
+    margin-top: 1px;
+    margin-left: -15px;
+    height: 250px;
+    width: 487px;
+    float: left;
+    border: 2px solid;
+    margin-bottom: 10px;
+}
+@media all and (max-width: 1200px){
+    .imgBack{
+        width: 404px;
+    }
+    .moreInfo {
+    text-decoration: none !important;
+    margin-left: 100px !important;
+    }
+    .imgAva {
+    left: 100px;
+    }
+}
+
+@media all and (max-width: 990px)  {
+    .moreInfo {
+    text-decoration: none !important;
+    margin-left: 280px !important;
+    }
+    .imgAva {
+    left: 270px;
+    }
+    .imgBack{
+     margin-left: 150px;
+    }
+    .tableInMoreAbout{
+        width: 79% !important;
+        margin-left: 160px;
+    }
+}
+
+@media all and (max-width: 768px){
+    .imgBack{
+        margin-left: 22%;
+    }
+    .imgAva{
+        left:37%;
+    }
+}
+
+
+div.container div.rowMain a {
+    color: #333;
+}
+
+.caruselCastom {
+    width: 200px !important;
+}
+
+.caraselImg {
+    height: 246px !important;
+    width: 498px !important;
+}
+
+.nameInfo {
+    margin-top: 0px;
+    text-align: center;
+    
+}
+
+.moreInfo {
+    text-decoration: none !important;
+    margin-left: 150px;
+}
+
+.panelMoreInfo {
+    background: #ededed !important;
+}
+
+.h5Info {
+    text-align: center;
+}
+
+
+
+.infa {
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.nameInfoMoreAbout {
+    text-align: center;
+    width: 200px;
+    
+    
+}
+
+.rezInfoMoreAbout {
+    padding-left: 10px;
+}
+
+.nameInfoMoreAboutGlav {
+    text-align: center;
+}
+
+.nextFotoCarusel{
+    position: absolute;
+}

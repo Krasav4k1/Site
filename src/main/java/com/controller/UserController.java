@@ -15,9 +15,6 @@ import java.security.Principal;
 public class UserController {
 
     @Autowired
-    ModelFillingController modelFillingController;
-
-    @Autowired
     UserService userService;
 
     @Autowired
@@ -37,9 +34,8 @@ public class UserController {
         if ( owner == null ){
             return "NonUser";
         }
+        userService.updateUser(id);
         model.addAttribute("user", owner);
-        userService.SearchInfo(id);
-        modelFillingController.FillingModelUser(model);
         return "MainPage";
     }
 

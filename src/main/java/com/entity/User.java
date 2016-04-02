@@ -1,6 +1,13 @@
 package com.entity;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -8,20 +15,31 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Size(max = 15, min = 2, message = "Введіть фамілію (від 2 до 15 снаків)")
     private String lastName;
+    @Size(max = 15, min = 2, message = "Введіть ім'я (від 2 до 15 снаків)")
     private String firstName;
     private String password;
+    @Email(message = "Не правильно введений e-mail")
     private String email;
     private String foto;
     private int age;
     private int statys;
+    @Min(value = 1990,message = "Некорекний ввід")
+    @Max(value = 2016, message = "Некорекний ввід")
     private int year;
+    @Min(value = 1,message = "Некорекний ввід")
+    @Max(value = 12, message = "Некорекний ввід")
     private int mouth;
+    @Min(value = 1,message = "Некорекний ввід")
+    @Max(value = 31, message = "Некорекний ввід")
     private int day;
     private int onlineUser;
     private int statuFrendship;
     @Enumerated(EnumType.ORDINAL)
     private Role role;
+    @Enumerated(EnumType.ORDINAL)
+    private MaritalStatus maritalStatus;
 
     @ManyToOne
     @JoinColumn
@@ -34,10 +52,12 @@ public class User {
     private List<Publication> publications;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<MusicAlbom> musicAlboms;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
     private List<AlbomFotoUser> albomFotoUsers;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
+    private List<Language> languages;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_grup", joinColumns =
     @JoinColumn(name = "fk_user"), inverseJoinColumns =
     @JoinColumn(name = "fk_grup"))
@@ -48,6 +68,22 @@ public class User {
     @JoinColumn(name = "fk_user"), inverseJoinColumns =
     @JoinColumn(name = "fk_video"))
     private List<Video> videos;
+
+    public MaritalStatus getMaritalStatus() {
+        return maritalStatus;
+    }
+
+    public void setMaritalStatus(MaritalStatus maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
+
+    public List<Language> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(List<Language> languages) {
+        this.languages = languages;
+    }
 
     public List<Video> getVideos() {
         return videos;

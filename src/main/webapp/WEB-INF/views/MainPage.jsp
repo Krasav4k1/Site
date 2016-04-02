@@ -5,6 +5,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -14,44 +16,13 @@
 <!--[if gt IE 8]><!--> <html lang="uk9=5211"> <!--<![endif]-->
 <head>
     <title>Головна сторінка ${user.firstName} ${user.lastName}</title>
+    <style>
+        <%@include file="cssForJsp/StyleForMainPage.css"%>
+
+    </style>
 </head>
 <body>
-<%--<form method="post">
-    <table>
-        <tr>
-            <th>Last Name:</th>
-            <td>${firstNameMap}</td>
-        </tr>
-        <tr>
-            <th>First Name:</th>
-            <td>${lastNameMap}</td>
-        </tr>
-        <tr>
-            <th>City:</th>
-            <td>${cityMap}</td>
-        </tr>
-        <tr>
-            <th>Ragion:</th>
-            <td>${ragionMap}</td>
-        </tr>
-        <tr>
-            <th>Oblast:</th>
-            <td>${oblastMap}</td>
-        </tr>
-        <tr>
-            <th>Country:</th>
-            <td>${countryMap}</td>
-        </tr>
 
-        <tr>
-            <th>Born birthday:</th>
-            <th>${dayMap}</th>
-            <th>${mouthMap}</th>
-            <th>${yearMap}</th>
-            <th>${ageMap}</th>
-        </tr>
-    </table>
---%>
 
 <security:authorize
         access="isAuthenticated() and hasRole('ROLE_ADMIN')">
@@ -66,79 +37,228 @@
 
 <security:authorize access="isAuthenticated() and principal.username!='${user.id}' and !hasRole('ROLE_ADMIN')">
     <%--Це буде бачити користувач який залогінився він не являється власником сторінки і він не адмін--%>
-    <h1>Це буде бачити користувач який залогінився він не являється власником сторінки і він не адмін</h1>
-    <table>
-        <tr>
-            <th>Last Name:</th>
-            <td>${firstNameMap}</td>
-        </tr>
-        <tr>
-            <th>First Name:</th>
-            <td>${lastNameMap}</td>
-        </tr>
-        <tr>
-            <th>City:</th>
-            <td>${cityMap}</td>
-        </tr>
-        <tr>
-            <th>Ragion:</th>
-            <td>${ragionMap}</td>
-        </tr>
-        <tr>
-            <th>Oblast:</th>
-            <td>${oblastMap}</td>
-        </tr>
-        <tr>
-            <th>Country:</th>
-            <td>${countryMap}</td>
-        </tr>
+    Текущая дата: <%= new java.util.Date()%>
 
-        <tr>
-            <th>Born birthday:</th>
-            <th>${dayMap}</th>
-            <th>${mouthMap}</th>
-            <th>${yearMap}</th>
-            <th>${ageMap}</th>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="row rowMain">
+            <div class="col-lg-5 col-md-5 wallLeft ">
+                <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+
+                        <c:forEach items="${user.albomFotoUsers.get(1).fotos}" var="fotos" varStatus="vs">
+
+
+                            <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
+                                <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
+                            </div>
+
+                            <div class="item">
+                                <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c624228/v624228891/3f656/TbtPDL0aKCU.jpg-->
+                            </div>
+                        </c:forEach>
+                    </div>
+                </div>
+
+                <a href="/"><img src="${user.foto}" class="imgAva"></a>
+
+                <div class="row"></div>
+                <h3 class="name">${user.firstName} ${user.lastName}</h3>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="nameInfo">Місто<h5 class="h5Info">${user.city.name}</h5></h4>
+                        <h4 class="nameInfo">Сімейний стан<h5 class="h5Info">В активному пошуку</h5></h4>
+                    </div>
+                    <div class="lg-6">
+                        <h4 class="nameInfo">Мови<h5 class="h5Info">Українська, Російська</h5></h4>
+                        <h4 class="nameInfo">Місце навчання<h5 class="h5Info">НУ «ЛП»</h5></h4>
+                    </div>
+                </div>
+
+                <div class="panel panelMoreInfo">
+
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a class="moreInfo" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Дізнатися більше
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+
+                            <h4 class="nameInfoMoreAboutGlav">Контакти:</h4>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Телефон:</th>
+                                    <td class="rezInfoMoreAbout">555 77 854</td>
+                                </tr>
+                                <tr>
+                                    <td class="rezInfoMoreAbout">555 77 855</td>
+                                </tr>
+                            </table>
+
+                            <h4 class="nameInfoMoreAboutGlav">Освіта:</h4>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">ВНЗ:</th>
+                                    <td class="rezInfoMoreAbout">НУ «ЛП»</td>
+                                </tr>
+                            </table>
+
+                            <h4 class="nameInfoMoreAboutGlav">Життєва позиція:</h4>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Політ. вподобання:</th>
+                                    <td class="rezInfoMoreAbout">Монархiчнi</td>
+                                </tr>
+                            </table>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Світогляд:</th>
+                                    <td class="rezInfoMoreAbout">Вірю в Бога</td>
+                                </tr>
+                            </table>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Ставл. до паління:</th>
+                                    <td class="rezInfoMoreAbout">Різко негативне</td>
+                                </tr>
+                            </table>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Ставл. до алкоголю:</th>
+                                    <td class="rezInfoMoreAbout">Різко негативне</td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 wallRight col-lg-offset-1 col-md-offset-1"></div>
+        </div>
+    </div>
 </security:authorize>
 
-<security:authorize access="isAuthenticated() and principal.username=='${user.id}'">
+<security:authorize access="isAuthenticated() and principal.username =='${user.id}'">
     <%--Це буде бачити користувач який є власником сторінки--%>
-    <table>
-        <tr>
-            <th>Last Name:</th>
-            <td>${firstNameMap}</td>
-        </tr>
-        <tr>
-            <th>First Name:</th>
-            <td>${lastNameMap}</td>
-        </tr>
-        <tr>
-            <th>City:</th>
-            <td>${cityMap}</td>
-        </tr>
-        <tr>
-            <th>Ragion:</th>
-            <td>${ragionMap}</td>
-        </tr>
-        <tr>
-            <th>Oblast:</th>
-            <td>${oblastMap}</td>
-        </tr>
-        <tr>
-            <th>Country:</th>
-            <td>${countryMap}</td>
-        </tr>
+    Текущая дата: <%= new java.util.Date()%>
 
-        <tr>
-            <th>Born birthday:</th>
-            <th>${dayMap}</th>
-            <th>${mouthMap}</th>
-            <th>${yearMap}</th>
-            <th>${ageMap}</th>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="row rowMain">
+            <div class="col-lg-5 col-md-5 wallLeft ">
+                <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+
+                        <c:forEach items="${user.albomFotoUsers.get(1).fotos}" var="fotos" varStatus="vs">
+
+
+                            <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
+                                <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
+                            </div>
+
+                            <div class="item">
+                            <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c624228/v624228891/3f656/TbtPDL0aKCU.jpg-->
+                        </div>
+                            </c:forEach>
+                    </div>
+                </div>
+
+                <a href="/"><img src="${user.foto}" class="imgAva"></a>
+
+                <div class="row"></div>
+                <h3 class="name">${user.firstName} ${user.lastName}</h3>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="nameInfo">Місто<h5 class="h5Info">${user.city.name}</h5></h4>
+                        <h4 class="nameInfo">Сімейний стан<h5 class="h5Info">В активному пошуку</h5></h4>
+                    </div>
+                    <div class="lg-6">
+                        <h4 class="nameInfo">Мови<h5 class="h5Info">Українська, Російська</h5></h4>
+                        <h4 class="nameInfo">Місце навчання<h5 class="h5Info">НУ «ЛП»</h5></h4>
+                    </div>
+                </div>
+
+                <div class="panel panelMoreInfo">
+
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a class="moreInfo" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Дізнатися більше
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+
+                            <h4 class="nameInfoMoreAboutGlav">Контакти:</h4>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Телефон:</th>
+                                    <td class="rezInfoMoreAbout">555 77 854</td>
+                                </tr>
+                                <tr>
+                                    <td class="rezInfoMoreAbout">555 77 855</td>
+                                </tr>
+                            </table>
+
+                            <h4 class="nameInfoMoreAboutGlav">Освіта:</h4>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">ВНЗ:</th>
+                                    <td class="rezInfoMoreAbout">НУ «ЛП»</td>
+                                </tr>
+                            </table>
+
+                            <h4 class="nameInfoMoreAboutGlav">Життєва позиція:</h4>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Політ. вподобання:</th>
+                                    <td class="rezInfoMoreAbout">Монархiчнi</td>
+                                </tr>
+                            </table>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Світогляд:</th>
+                                    <td class="rezInfoMoreAbout">Вірю в Бога</td>
+                                </tr>
+                            </table>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Ставл. до паління:</th>
+                                    <td class="rezInfoMoreAbout">Різко негативне</td>
+                                </tr>
+                            </table>
+
+                            <table style="width:100%" class="tableInMoreAbout">
+                                <tr>
+                                    <th rowspan="3" class="nameInfoMoreAbout">Ставл. до алкоголю:</th>
+                                    <td class="rezInfoMoreAbout">Різко негативне</td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 wallRight col-lg-offset-1 col-md-offset-1"></div>
+        </div>
+    </div>
 </security:authorize>
 
 

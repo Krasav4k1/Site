@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminPageCountroller {
 
     @Autowired
-    ModelFillingController modelFillingController;
-    @Autowired
     UserService userService;
 
     @RequestMapping("/AdminPage")
@@ -22,8 +20,7 @@ public class AdminPageCountroller {
 
     @RequestMapping("/AdminPage/AdminVisit/{id}")
     public String ShowPageUser(Model model,@PathVariable int id){
-        userService.comparisonUserVisit(id);
-        modelFillingController.FillingModelUser(model);
+        model.addAttribute("user", userService.findById(id));
         return "redirect:/id" + id;
     }
 

@@ -1,12 +1,9 @@
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="com.entity.City" %>
-<%@ page import="com.repository.CountryRepository" %>
-<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -15,71 +12,88 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <script   src="https://code.jquery.com/jquery-2.2.1.min.js" ></script>
-
+    <style>
+        .errorblock{
+            width: 400px;
+            color:#000;
+            background-color: #b74c4c;
+            border: 2px solid #333;
+            padding: 8px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .error{
+            color: red;
+            font-size: 20px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
 
-<form method="post" action="?${_csrf.parameterName}=${_csrf.token}">
-    <table align="center">
-        <tr>
-            <h1 align="center">Регістрація</h1>
-        </tr>
-        <tr>
-            <th>Ім'я:</th>
-            <td><input name = "firstName" type="text"/></td>
-        </tr>
-        <tr>
-            <th>Фамілія:</th>
-            <td><input name = "lastName" type="text"/></td>
-        </tr>
-        <tr>
-            <th>E-Mail</th>
-            <td><input  pattern = "^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" name = "emailUser" type="text"/></td>
-        </tr>
-        <tr>
-            <th>Пароль:</th>
-            <td><input pattern = "^[a-zA-Z0-9]+$" name = "password" type="password"/></td>
-           </tr>
-        <tr>
-            <th>Повторіть пароль:</th>
-            <td><input pattern = "^[a-zA-Z0-9]+$" name = "passwordRepid" type="password"/></td>
-        </tr>
-        <tr>
-            <th>Країна</th>
-            <td>
-                <div id="countryDiv">
-                    <select id="option" name = "IdCountry">
-                        <c:forEach var="countryModel" items="${countryModel}">
-                            <option value="${countryModel.id}">${countryModel.name}</option>
-                        </c:forEach>
-                    </select>
-                    <br>
-                    <div id="select"></div>
-                    <div id="selectObl"></div>
-                    <div id="selectCity"></div>
-                    <div id="selectId"></div>
-                    <tr>${IdCity}</tr>
-                </div>
+
+<sf:form method="post" modelAttribute="userObject" action="/register=user+add" >
+    <sf:input path="id" id="id" type ="hidden"/>
+<fieldset>
+        <table align="center">
+            <sf:errors path="*" element="div" cssClass="errorblock"/>
+            <tr>
+                <h1 align="center">Регістрація</h1>
+            </tr>
+            <tr>
+                <th>Ім'я:</th>
+                <td><sf:input path="firstName"/><sf:errors cssClass="error" path="firstName"/></td>
+            </tr>
+            <tr>
+                <th>Фамілія:</th>
+                <td><sf:input path="lastName"/><sf:errors cssClass="error" path="lastName"/></td>
+            </tr>
+            <tr>
+                <th>E-Mail</th>
+                <td><sf:input  path="email"/><sf:errors cssClass="error" path="email"/></td>
+            </tr>
+            <tr>
+                <th>Пароль:</th>
+                <td><sf:input path="password" type="password"/><sf:errors cssClass="error" path="password"/> </td>
+            </tr>
+            <tr>
+                <th>Країна</th>
+                <td>
+                    <div id="countryDiv">
+                        <select id="option" name = "IdCountry">
+                            <c:forEach var="countryModel" items="${countryModel}">
+                                <option value="${countryModel.id}">${countryModel.name}</option>
+                            </c:forEach>
+                        </select>
+                        <br>
+                        <div id="select"></div>
+                        <div id="selectObl"></div>
+                        <div id="selectCity"></div>
+                        <div id="selectId"></div>
+            <%--<tr>${IdCit}</tr>--%>
+            </div>
             </td>
 
-        </tr>
-        <tr>
-            <th>День народження:</th>
-            <td><input name = "day" type="text"/></td>
-        </tr>
-        <tr>
-            <th>Місяць:</th>
-            <td><input name = "mouth" type="text"/></td>
-        </tr>
-        <tr>
-            <th>Рік:</th>
-            <td><input name = "year" type="text"/></td>
-        </tr>
-        <tr>
-            <td align="right"><input type="submit" value="Зареєструватися"/></td>
-        </tr>
-    </table>
-</form>
+            </tr>
+            <tr>
+                <th>День народження:</th>
+                <td><sf:input path= "day" type="text"/><sf:errors cssClass="error" path="day"/><td>
+            </tr>
+            <tr>
+                <th>Місяць:</th>
+                <td><sf:input path="mouth" type="text"/><sf:errors cssClass="error" path="mouth"/> </td>
+            </tr>
+            <tr>
+                <th>Рік:</th>
+                <td><sf:input path="year" type="text"/><sf:errors cssClass="error" path="year"/></td>
+            </tr>
+            <tr>
+                <td align="right"><input type="submit" value="Зареєструватися"/></td>
+            </tr>
+        </table>
+        </fieldset>
+</sf:form>
+
 <script>
 
     $("#option").change(function(){
@@ -95,5 +109,6 @@
     });
 
 </script>
+
 </body>
 </html>

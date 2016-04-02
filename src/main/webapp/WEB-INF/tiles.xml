@@ -93,6 +93,14 @@
         <put-attribute name="body" value="/WEB-INF/views/Settings.jsp"></put-attribute>
         <put-attribute name="title" value=""></put-attribute>
     </definition>
+    <definition name="Albom" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Albom.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
+    <definition name="Foto" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/Foto.jsp"></put-attribute>
+        <put-attribute name="title" value=""></put-attribute>
+    </definition>
 
 
 

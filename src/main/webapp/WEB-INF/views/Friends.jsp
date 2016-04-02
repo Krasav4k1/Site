@@ -14,10 +14,30 @@
 <head>
     <title>Друзі ${user.firstName} ${user.lastName}</title>
 </head>
+<style>
+    <%@include file="cssForJsp/StyleForFrend.css"%>
+</style>
 <body>
 
 
-<h1>Friends</h1>
+<div class="container">
+    <div class="row">
+        <c:forEach items="${friends}" var="fr">
+        <div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-7 col-sm-offset-2 col-lg-offset-1 col-xs-7 col-xs-offset-1 boxFrend">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 boxImgFriend">
+                <img src="${fr.foto}" class="imgFriend">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 infoFrend">
+                <p class="nameFrend">${fr.firstName} ${fr.lastName}</p>
+                <p>${fr.city.name}</p>
+                <p>тел. 380964106766</p>
+                <p class="sendMassege"><a href="/messege" class="sendMassege" >надіслати</a></p>
+            </div>
+        </div>
+        </c:forEach>
+    </div>
+</div>
+
 
 
 </body>

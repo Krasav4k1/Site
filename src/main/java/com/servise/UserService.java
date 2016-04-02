@@ -2,16 +2,13 @@ package com.servise;
 
 import com.controller.CityController;
 import com.entity.*;
-import com.repository.CityRepository;
-import com.repository.CountryRepository;
-import com.repository.UserRepository;
+import com.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class UserService {
@@ -19,7 +16,7 @@ public class UserService {
     //Prisipal
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
     @Autowired
     CityController cityController;
     @Autowired
@@ -28,54 +25,23 @@ public class UserService {
     CountryRepository countryRepository;
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
-
-
-    private int idForUserLogin;
-    public Map<String, String> mapUser = new HashMap<String, String>();
-
-    //Метод додавання юзерів
-    public void addUser(String lastName, String firstName, String password, String emailUser, int day, int mouth,int year){
-        User user = new User();
-        user.setLastName(lastName);
-        user.setFirstName(firstName);
-        user.setPassword(bCryptPasswordEncoder.encode(password));
-        user.setEmail(emailUser);
-        user.setDay(day);
-        user.setMouth(mouth);
-        user.setYear(year);
-        user.setRole(Role.ROLE_USER);
-        user.setCity(cityController.cityId);
-        userRepository.save(user);
-    }
+    @Autowired
+    LanguageRepository languageRepository;
+    @Autowired
+    AlbomFotoUserRepository albomFotoUserRepository;
+    @Autowired
+    FotoRepository fotoRepository;
 
     //UpdateUser
-    public void updateUser(String Email, String password){
+    public void updateUser(int id){
         User user1 ;
-        user1 = userRepository.findUserByEmailAndPassword("Andriubliznuk@mail.ru", "Andriu1997");
-        user1.setRole(Role.ROLE_ADMIN);
+        user1 = userRepository.findOne(id);
+/*
         userRepository.save(user1);
+        System.out.println(user1.getFirstName());
+        System.out.println(user1.getLanguages());
+*/
     }
-
-    //Search for visit people
-    public void comparisonUserVisit(int id){
-        if(userRepository.findOne(id) != null){
-            SearchInfo(userRepository.findUserById(id).getId());
-        }
-    }
-
-
-    public void SearchInfo(int idForUserLogin) {
-                mapUser.put("firstName", userRepository.findOne(idForUserLogin).getFirstName());
-                mapUser.put("lastName", userRepository.findOne(idForUserLogin).getLastName());
-                mapUser.put("age", Integer.toString(userRepository.findOne(idForUserLogin).getAge()));
-                mapUser.put("day", Integer.toString(userRepository.findOne(idForUserLogin).getDay()));
-                mapUser.put("mouth", Integer.toString(userRepository.findOne(idForUserLogin).getMouth()));
-                mapUser.put("year", Integer.toString(userRepository.findOne(idForUserLogin).getYear()));
-                mapUser.put("city", userRepository.findOne(idForUserLogin).getCity().getName());
-                mapUser.put("region",userRepository.findOne(idForUserLogin).getCity().getRegion());
-                mapUser.put("oblast",userRepository.findOne(idForUserLogin).getCity().getOblast());
-                mapUser.put("country",userRepository.findOne(idForUserLogin).getCity().getCountry().getName());
-            }
 
     //Дістає все
     public Iterable<User> getAll(){
@@ -86,4 +52,34 @@ public class UserService {
     public void dalete(String id) {
         userRepository.delete(Integer.parseInt(id));
     }
+
+    public void save(User user) {
+        user.setRole(Role.ROLE_USER);
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setCity(cityController.cityId);
+        user.setAlbomFotoUsers(addFotoAlbomDefauld(user));
+        userRepository.save(user);
+    }
+
+
+    public User findById(int id) {
+        return userRepository.findOne(id);
+    }
+
+    public User editUser(User user) {
+        User savedUser = userRepository.save(user);
+        return savedUser;
+    }
+
+    public List<AlbomFotoUser> addFotoAlbomDefauld(User user) {
+        List<AlbomFotoUser> list = new ArrayList<AlbomFotoUser>();
+        AlbomFotoUser albomFotoUser = new AlbomFotoUser();
+        albomFotoUser.setAlbomName("carusel");
+        albomFotoUser.setUser(user);
+        list.add(albomFotoUser);
+        return list;
+    }
+
+
+
 }

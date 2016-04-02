@@ -56,7 +56,9 @@
             <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
 
         <security:authorize access="isAuthenticated()">
-                <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <a href="/albom"><i class="glyphicon glyphicon-picture"></i></a>
+                </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <a href="/seach"><i class="glyphicon glyphicon-search"></i></a>
                 </div>

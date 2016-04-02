@@ -1,5 +1,6 @@
 package com.repository;
 
+import com.entity.MusicAlbom;
 import com.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -11,16 +12,20 @@ import java.util.List;
 
 public interface UserRepository extends CrudRepository<User,Integer> {
 
-    @Query(value = "select u from User u where u.email = ?1 and u.password = ?2")
-    User findUserByEmailAndPassword (@RequestParam String emailUser, @RequestParam String password);
+    @Query(value = "SELECT u FROM User u WHERE u.email = ?1 AND u.password = ?2")
+    User findUserByEmailAndPassword(@RequestParam String emailUser, @RequestParam String password);
 
-    @Query(value = "select u from User u where u.id = ?1")
-    User findUserById (int id);
+    @Query(value = "SELECT u FROM User u WHERE u.id = ?1")
+    User findUserById(int id);
 
-    @Query(value = "select u from User u where u.email =:email")
+    @Query(value = "SELECT u FROM User u WHERE u.email =:email")
     User findOneByEMail(@Param("email") String email);
 
-    @Query(value = "select u from User u where u.firstName =:firstname")
+    @Query(value = "SELECT u FROM User u WHERE u.firstName =:firstname")
     User findOneByUserName(@Param("firstname") String firstname);
+
+    @Query(value = "SELECT u FROM User u WHERE (u.id LIKE concat(:id))")
+    MusicAlbom findAlbomMusicBuIdUser(@Param("id") int id);
+
 
 }

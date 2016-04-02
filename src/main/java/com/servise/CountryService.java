@@ -17,4 +17,9 @@ public class CountryService {
     public Iterable<Country> getAll(){
         return countryRepository.findAll();
     }
+
+
+    public Country findById(int id) {
+        return countryRepository.findOne(id);
+    }
 }

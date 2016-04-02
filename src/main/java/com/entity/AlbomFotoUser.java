@@ -12,7 +12,7 @@ public class AlbomFotoUser {
 
     private String albomName;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "albomFotoUser")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "albomFotoUser")
     private List<Foto> fotos;
 
     @ManyToOne
