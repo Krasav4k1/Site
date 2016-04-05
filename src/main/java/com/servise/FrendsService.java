@@ -16,8 +16,12 @@ public class FrendsService {
     @Autowired
     FrendsRepository frendsRepository;
 
-    public void daleteByIdLine(Frends frends){
+    public void daleteByObjectLine(Frends frends){
         frendsRepository.delete(frends);
+    }
+
+    public Frends findRecivedAndSend(int idR, int idS){
+        return frendsRepository.findRecivedAndSend(idR,idS);
     }
 
     public void save(Frends frends){

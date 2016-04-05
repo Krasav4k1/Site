@@ -49,15 +49,9 @@ public class UserController {
     }
 
     private void auditOnFrenship(Principal principal, User user, Model model) {
-        boolean friendsPresent = false;
-        for (Frends friends : user.getRecivedFrendses()){
-            if (user == friends.getUserRecived() || user == friends.getUserSend()){
-                friendsPresent =  true;
-                break;
-            }
-        }
-        if (friendsPresent){
-            System.out.println(friendsPresent);
+        if (frendsService.findRecivedAndSend(user.getId(),Integer.parseInt(principal.getName())) != null){
+            model.addAttribute("friendsPresent", true);
+        }else if(frendsService.findRecivedAndSend(Integer.parseInt(principal.getName()),user.getId()) != null){
             model.addAttribute("friendsPresent", true);
         }
 

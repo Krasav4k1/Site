@@ -2,6 +2,7 @@ package com.controller;
 
 import com.entity.Frends;
 import com.entity.User;
+import com.repository.FrendsRepository;
 import com.servise.FrendsService;
 import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ public class FriendsController {
     FrendsService frendsService;
     @Autowired
     UserService userService;
+    @Autowired
+    FrendsRepository frendsRepository;
 
     @RequestMapping("/friends")
     public String ShowFriends(){
@@ -44,28 +47,26 @@ public class FriendsController {
         frend.setRecivedFrendsip(1);
         frend.setSendFrendship(1);
         frend.setSpesialStatys(1);
-/*        List<Frends> f = new ArrayList<Frends>();
-        f.add(frend);
-        user.setSendFrendses(f);
-        userService.save(user);*/
         frendsService.save(frend);
-        System.out.println(id+"доданий");
         return "redirect:/id{id}";
     }
 
     @RequestMapping("/daleteFrend/{id}")
     public String daleteFriend(@PathVariable("id") int id, Principal principal){
         User user = userService.findById(Integer.parseInt(principal.getName()));
-/*        for (Frends friends: user.getSendFrendses()){
-            if (id == friends.getUserRecived().getId()){
-                friends.setUserSend(null);
-                friends.setUserRecived(null);
-                frendsService.daleteByIdLine(friends);
-                break;
-            }
-            break;
-        }*/
-
+        Frends friends = frendsService.findRecivedAndSend(id,user.getId());
+        Frends friends2 = frendsService.findRecivedAndSend(user.getId(),id);
+        if (friends != null){
+            friends.setUserSend(null);
+            friends.setUserRecived(null);
+            frendsService.daleteByObjectLine(friends);
+            frendsRepository.delete(friends.getId());
+        }else if(friends2 != null){
+            friends2.setUserSend(null);
+            friends2.setUserRecived(null);
+            frendsService.daleteByObjectLine(friends2);
+            frendsRepository.delete(friends2.getId());
+        }
         return "redirect:/id{id}";
     }
 

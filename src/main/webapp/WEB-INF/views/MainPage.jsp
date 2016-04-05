@@ -81,19 +81,17 @@
                         </c:if>
 
 
+
+
                 <div class="dropup"  style="display: none" id="addsFriends">
-
-
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Написати повідомлення
+                        У вас в друзях
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                        <li><a href="#">Добавити в чорний список</a></li>
+                        <li><a href="#"></a>Подарити подарок</li>
+                        <li ><a href="/daleteFrend/${user.id}">Видалити з друзів</a></li>
                     </ul>
                 </div>
 
@@ -333,6 +331,7 @@
         })
     });
 </script>
+
 
 
 </html>
