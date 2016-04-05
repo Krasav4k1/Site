@@ -1,12 +1,11 @@
 package com.entity;
 
+import com.servise.CustomValidation.CustomValidationEmailUser;
 import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.List;
 
@@ -20,11 +19,11 @@ public class User {
     @Size(max = 15, min = 2, message = "Введіть ім'я (від 2 до 15 снаків)")
     private String firstName;
     private String password;
+    @CustomValidationEmailUser(message = "Такий користувач вже існує")
     @Email(message = "Не правильно введений e-mail")
     private String email;
     private String foto;
     private int age;
-    private int statys;
     @Min(value = 1990,message = "Некорекний ввід")
     @Max(value = 2016, message = "Некорекний ввід")
     private int year;
@@ -34,16 +33,16 @@ public class User {
     @Min(value = 1,message = "Некорекний ввід")
     @Max(value = 31, message = "Некорекний ввід")
     private int day;
-    private int onlineUser;
-    private int statuFrendship;
     @Enumerated(EnumType.ORDINAL)
     private Role role;
     @Enumerated(EnumType.ORDINAL)
     private MaritalStatus maritalStatus;
 
+
     @ManyToOne
     @JoinColumn
     private City city;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userSentMessager")
     private List<Messages> sentMessages;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userReceivedMessages")
@@ -56,6 +55,11 @@ public class User {
     private List<AlbomFotoUser> albomFotoUsers;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<Language> languages;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userSend")
+    private List<Frends> sendFrendses;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userRecived")
+    private List<Frends> recivedFrendses;
+
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_grup", joinColumns =
@@ -68,6 +72,23 @@ public class User {
     @JoinColumn(name = "fk_user"), inverseJoinColumns =
     @JoinColumn(name = "fk_video"))
     private List<Video> videos;
+
+
+    public List<Frends> getSendFrendses() {
+        return sendFrendses;
+    }
+
+    public void setSendFrendses(List<Frends> sendFrendses) {
+        this.sendFrendses = sendFrendses;
+    }
+
+    public List<Frends> getRecivedFrendses() {
+        return recivedFrendses;
+    }
+
+    public void setRecivedFrendses(List<Frends> recivedFrendses) {
+        this.recivedFrendses = recivedFrendses;
+    }
 
     public MaritalStatus getMaritalStatus() {
         return maritalStatus;
@@ -157,14 +178,6 @@ public class User {
         this.age = age;
     }
 
-    public int getStatys() {
-        return statys;
-    }
-
-    public void setStatys(int statys) {
-        this.statys = statys;
-    }
-
     public int getYear() {
         return year;
     }
@@ -229,21 +242,7 @@ public class User {
         this.publications = publications;
     }
 
-    public int getStatuFrendship() {
-        return statuFrendship;
-    }
 
-    public void setStatuFrendship(int statuFrendship) {
-        this.statuFrendship = statuFrendship;
-    }
-
-    public int getOnlineUser() {
-        return onlineUser;
-    }
-
-    public void setOnlineUser(int onlineUser) {
-        this.onlineUser = onlineUser;
-    }
 
     public List<MusicAlbom> getMusicAlboms() {
         return musicAlboms;

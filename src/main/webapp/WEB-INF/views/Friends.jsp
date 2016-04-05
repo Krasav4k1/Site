@@ -22,23 +22,68 @@
 
 <div class="container">
     <div class="row">
-        <c:forEach items="${friends}" var="fr">
+        <c:forEach items="${friends}" var="fr" varStatus="vs">
         <div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-7 col-sm-offset-2 col-lg-offset-1 col-xs-7 col-xs-offset-1 boxFrend">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 boxImgFriend">
-                <img src="${fr.foto}" class="imgFriend">
+                <a href="/id${fr.id}"><img src="${fr.foto}" class="imgFriend"></a>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 infoFrend">
-                <p class="nameFrend">${fr.firstName} ${fr.lastName}</p>
+                <a href="/id${fr.id}"><p class="nameFrend">${fr.firstName} ${fr.lastName}</p></a>
                 <p>${fr.city.name}</p>
                 <p>тел. 380964106766</p>
-                <p class="sendMassege"><a href="/messege" class="sendMassege" >надіслати</a></p>
+                <p class="sendMassege"><a class="sendMassege" data-toggle="modal" data-target="#exampleModal" data-whatever="${fr.firstName} ${fr.lastName}" >Hадіслати</a></p>
             </div>
         </div>
+
+
         </c:forEach>
     </div>
 </div>
 
 
+
+
+
+
+<%--modalMassege--%>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Надіслати повідомнення</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Кому:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Повідомлення:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                <button type="button" class="btn btn-primary">Надіслати</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        var recipient = button.data('whatever')
+        var modal = $(this)
+        modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body input').val(recipient)
+    })
+
+</script>
 
 </body>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

@@ -20,33 +20,21 @@ public class UserService {
     @Autowired
     CityController cityController;
     @Autowired
-    CityRepository  cityRepository;
-    @Autowired
-    CountryRepository countryRepository;
-    @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
-    @Autowired
-    LanguageRepository languageRepository;
-    @Autowired
-    AlbomFotoUserRepository albomFotoUserRepository;
-    @Autowired
-    FotoRepository fotoRepository;
+
 
     //UpdateUser
     public void updateUser(int id){
         User user1 ;
         user1 = userRepository.findOne(id);
-/*
-        userRepository.save(user1);
-        System.out.println(user1.getFirstName());
-        System.out.println(user1.getLanguages());
-*/
+
     }
 
     //Дістає все
     public Iterable<User> getAll(){
         return userRepository.findAll();
     }
+
 
     //Видаляння
     public void dalete(String id) {
@@ -79,7 +67,6 @@ public class UserService {
         list.add(albomFotoUser);
         return list;
     }
-
 
 
 }

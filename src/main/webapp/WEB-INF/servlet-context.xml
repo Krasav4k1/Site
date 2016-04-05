@@ -31,6 +31,6 @@
 
 	<mvc:annotation-driven validator="validator"/>
 
-	<bean name="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 
 </beans>

@@ -20,6 +20,7 @@
         <%@include file="cssForJsp/StyleForMainPage.css"%>
 
     </style>
+    <script   src="https://code.jquery.com/jquery-2.2.1.min.js" ></script>
 </head>
 <body>
 
@@ -39,6 +40,7 @@
     <%--Це буде бачити користувач який залогінився він не являється власником сторінки і він не адмін--%>
     Текущая дата: <%= new java.util.Date()%>
 
+
     <div class="container">
         <div class="row rowMain">
             <div class="col-lg-5 col-md-5 wallLeft ">
@@ -47,19 +49,59 @@
 
                         <c:forEach items="${user.albomFotoUsers.get(1).fotos}" var="fotos" varStatus="vs">
 
-
                             <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
                                 <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
                             </div>
-
-                            <div class="item">
-                                <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c624228/v624228891/3f656/TbtPDL0aKCU.jpg-->
-                            </div>
                         </c:forEach>
                     </div>
+                    <a href="/"><img src="${user.foto}" id="avatar" class="imgAva"></a>
                 </div>
 
-                <a href="/"><img src="${user.foto}" class="imgAva"></a>
+
+                    <%--<div id="btn-friends">--%>
+
+                        <c:if test="${!friendsPresent}">
+                            <button  id="addFriends" frid="${user.id}" type="button" class="btn">
+                                Добавити до друзі</button>
+                        </c:if>
+
+                        <c:if test="${friendsPresent}">
+                            <div></div>
+                            <div class="dropup">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    У вас в друзях
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                    <li><a href="#">Добавити в чорний список</a></li>
+                                    <li><a href="#"></a>Подарити подарок</li>
+                                    <li ><a href="/daleteFrend/${user.id}">Видалити з друзів</a></li>
+                                </ul>
+                            </div>
+                        </c:if>
+
+
+                <div class="dropup"  style="display: none" id="addsFriends">
+
+
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Написати повідомлення
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+
+
+
+
+
+
 
                 <div class="row"></div>
                 <h3 class="name">${user.firstName} ${user.lastName}</h3>
@@ -146,6 +188,8 @@
             <div class="col-lg-6 col-md-6 wallRight col-lg-offset-1 col-md-offset-1"></div>
         </div>
     </div>
+
+
 </security:authorize>
 
 <security:authorize access="isAuthenticated() and principal.username =='${user.id}'">
@@ -165,14 +209,12 @@
                                 <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
                             </div>
 
-                            <div class="item">
-                            <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c624228/v624228891/3f656/TbtPDL0aKCU.jpg-->
-                        </div>
                             </c:forEach>
                     </div>
+                    <a href="/"><img src="${user.foto}" id="avatar" class="imgAva"></a>
                 </div>
 
-                <a href="/"><img src="${user.foto}" class="imgAva"></a>
+
 
                 <div class="row"></div>
                 <h3 class="name">${user.firstName} ${user.lastName}</h3>
@@ -266,7 +308,31 @@
 
 </body>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#avatar").stop().fadeOut(3000);
+        $(".imgBack").hover(function(e){
+            $("#avatar").stop().fadeIn(800);
+        }, function(e){
+            $("#avatar").stop().fadeOut(800);
+        })
+    });
+</script>
+
+<script>
+    $( document ).ready(function() {
+        $("#addFriends").click(function () {
+            var id = $(this).attr("frid");
+            $.get("/addFriends/"+id,{},function () {
+              $("#addFriends").css("display","none");
+                $("#addsFriends").css("display","block");
+            })
+        })
+    });
+</script>
+
 
 </html>
