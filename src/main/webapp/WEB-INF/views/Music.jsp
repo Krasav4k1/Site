@@ -6,6 +6,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -18,21 +19,15 @@
 </head>
 <body>
 
+<form:form action="/musicUplodate" enctype="multipart/form-data" method="post">
+
+    <input type="file" name="files">
+    <input type="submit" value="add">
+
+</form:form>
 
 <h1>Music</h1>
 
-<sf:form action="/musicAddMusicAlbom" method="post" modelAttribute="albomMusicAdd">
-    <sf:input path="id" id="id" type ="hidden"/>
-    <fieldset>
-        <table>
-            <tr>
-            <th>Add PlayList</th>
-
-            </tr>
-
-        <input type="submit" value="addd">
-    </fieldset>
-</sf:form>
 
 
 </body>

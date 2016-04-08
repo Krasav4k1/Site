@@ -1,0 +1,263 @@
+
+.boxFrend {
+    height: 150px;
+    margin-top: 15px;
+    background: #333;
+    float: left;
+    border: 2px solid #333;
+    left: 50px;
+    border-radius: 30px;
+
+}
+
+.boxImgFriend {
+    height: 90%;
+    margin-top: 8px;
+}
+
+.imgFriend {
+    height: 130px;
+    width: 118px;
+    margin-left: -15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.infoFrend {
+    height: 90%;
+    margin-top: 8px;
+    padding-left: 5px;
+}
+
+
+.nameFrend {
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.sendMassege {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+
+}
+.sendMassege:hover {
+    text-align: center;
+    text-decoration: none;
+}
+@media all and (max-width: 1200px) and (min-width:990px){
+    .infoFrend {
+        height: 90%;
+        margin-top: 8px;
+        padding-left: 40px !important;
+    }
+}
+.modalImg {
+    width: 100%
+}
+
+.headerFriend {
+    margin-top: 10px;
+    background: #333;
+    padding-left: 10px !important;
+
+}
+
+.headerFriend button{
+    background: transparent;
+    color: white;
+    border: 0px !important;
+    margin-left: 4px !important;
+
+
+}
+.seach button{
+    float: right;
+    margin-top: -32px;
+    margin-right: 60px !important;
+
+}
+
+.seachInput {
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    width: 250px !important;
+    height: 32px !important;
+    margin-left: -10px;
+    font-weight: bold;
+
+}
+.boxLeft {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 460px !important;
+}
+
+.boxRight{
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.boxCenter{
+    width: 395px !important;
+}
+
+.seach {
+    height: 32px;
+
+}
+
+.selectGrupFriend {
+    height: 32px !important;
+    font-weight: bold;
+}
+
+
+
+.buttomSendMessege {
+    border-radius: 6px;
+    font-weight: bold;
+    background: #9d9d9d;
+}
+
+.boxFrend p {
+    color: white;
+    font-weight: bold;
+}
+
+.boxFrend a {
+    color: white;
+}
+.boxFrend a:hover{
+    color: #e0d6d6;
+}
+
+.verticalLine {
+    position: absolute;
+    height: 90%;
+    width: 10px;
+    background: #333;
+    left: 50%;
+    top: 120px;
+}
+@media all and (max-width: 1200px){
+    .seachInput {
+        border-top-right-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        border-bottom-left-radius: 10px !important;
+        border-top-left-radius: 10px !important;
+        width: 200px !important;
+        height: 32px !important;
+        margin-left: -10px;
+        font-weight: bold;
+    }
+    .headerFriend {
+        margin-top: 10px;
+        background: #330px !important;
+
+    }
+
+    .seach button{
+        float: right;
+        margin-top: -32px;
+        margin-right: -14px !important;
+
+    }
+    .boxLeft {
+        border-bottom-left-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+
+    .boxRight{
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 6px;
+        width: 210px !important;
+    }
+    .boxCenter{
+        width: 270px !important;
+    }
+
+}
+@media all and (max-width: 990px)  {
+    .seachInput {
+        border-top-right-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        border-bottom-left-radius: 10px !important;
+        border-top-left-radius: 10px !important;
+        width: 280px !important;
+        height: 32px !important;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    .headerFriend button{
+        background: transparent;
+        color: white;
+        border: 0px !important;
+        margin-left: 4px !important;
+        width: 129px;
+    }
+    .seach button{
+        float: right;
+        margin-top: -32px;
+        margin-right: 30px !important;
+        width: 70px;
+
+    }
+    .boxLeft {
+        border-radius: 6px;
+        width: 100% !important;
+    }
+    .boxCenter{
+        border-bottom-left-radius: 6px;
+        border-top-left-radius: 6px;
+        width: 60% !important;
+    }
+    .boxRight{
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 6px;
+        width: 40% !important;
+    }
+}
+
+@media all and (max-width: 767px)  {
+    .seachInput {
+        border-top-right-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        border-bottom-left-radius: 10px !important;
+        border-top-left-radius: 10px !important;
+        width: 280px !important;
+        height: 32px !important;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    .headerFriend button{
+        background: transparent;
+        color: white;
+        border: 0px !important;
+        margin-left: 4px !important;
+        width: 106px ;
+    }
+    .seach button{
+        float: right;
+        margin-top: -32px;
+        margin-right: 30px !important;
+        width: 70px;
+
+    }
+    .boxLeft {
+        border-radius: 6px;
+    }
+    .boxCenter{
+        border-bottom-left-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+    .boxRight{
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+}
+

@@ -13,7 +13,6 @@
 <!--Socet-->
 
 	<http use-expressions="true">
-		<access-denied-handler error-page="/accessDenied"/>
 
 		<intercept-url pattern = "/setting" access="hasAnyRole('USER','ADMIN')" />
 		<intercept-url pattern = "/music" access="hasAnyRole('USER','ADMIN')" />

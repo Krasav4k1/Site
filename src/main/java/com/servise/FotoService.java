@@ -19,9 +19,7 @@ public class FotoService {
     @Autowired
     AlbomFotoUserRepository albomFotoUserRepository;
 
-    Principal principal;
-
-    public void addFoto(String foto,String fotoAlbomName){
+    public void addFoto(String foto,String fotoAlbomName, Principal principal){
         Foto f = new Foto();
         AlbomFotoUser albomFotoUser = albomFotoUserRepository.findAlbomByAlbomNameAndPrincipal(fotoAlbomName,Integer.parseInt(principal.getName()));
         f.setAlbomFotoUser(albomFotoUser);
@@ -29,9 +27,12 @@ public class FotoService {
         fotoRepository.save(f);
     }
 
-      public Iterable<Foto> getAllFotoPrincipal(Principal principal, int id){
+      public Iterable<Foto> getAllFotoPrincipal(int id){
       return  fotoRepository.getAllFotoFromAlbom(id);
     }
 
 
+    public void save(Foto foto) {
+        fotoRepository.save(foto);
+    }
 }

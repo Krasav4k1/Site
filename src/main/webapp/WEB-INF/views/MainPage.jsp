@@ -5,6 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -16,10 +17,7 @@
 <!--[if gt IE 8]><!--> <html lang="uk9=5211"> <!--<![endif]-->
 <head>
     <title>Головна сторінка ${user.firstName} ${user.lastName}</title>
-    <style>
-        <%@include file="cssForJsp/StyleForMainPage.css"%>
-
-    </style>
+    <link rel="stylesheet" href="/resources/allForSite/cssForJsp/StyleForMainPage.css">
     <script   src="https://code.jquery.com/jquery-2.2.1.min.js" ></script>
 </head>
 <body>
@@ -49,13 +47,16 @@
 
                         <c:forEach items="${user.albomFotoUsers.get(1).fotos}" var="fotos" varStatus="vs">
 
+
                             <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
                                 <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
                             </div>
+
                         </c:forEach>
                     </div>
                     <a href="/"><img src="${user.foto}" id="avatar" class="imgAva"></a>
                 </div>
+
 
 
                     <%--<div id="btn-friends">--%>
@@ -200,14 +201,12 @@
                 <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
 
-                        <c:forEach items="${user.albomFotoUsers.get(1).fotos}" var="fotos" varStatus="vs">
-
-
+                        <c:forEach items="${user.albomFotoUsers.get(0).fotos}" var="fotos" varStatus="vs">
                             <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
                                 <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
                             </div>
+                        </c:forEach>
 
-                            </c:forEach>
                     </div>
                     <a href="/"><img src="${user.foto}" id="avatar" class="imgAva"></a>
                 </div>

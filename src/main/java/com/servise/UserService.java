@@ -21,6 +21,10 @@ public class UserService {
     CityController cityController;
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    AlbomFotoService albomFotoService;
+    @Autowired
+    FotoService fotoService;
 
 
     //UpdateUser
@@ -45,8 +49,9 @@ public class UserService {
         user.setRole(Role.ROLE_USER);
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setCity(cityController.cityId);
-        user.setAlbomFotoUsers(addFotoAlbomDefauld(user));
+        user.setFoto("/resources/allForSite/default/defaultFoto.png");
         userRepository.save(user);
+        addFotoAlbomDefauld(user);
     }
 
 
@@ -59,13 +64,15 @@ public class UserService {
         return savedUser;
     }
 
-    public List<AlbomFotoUser> addFotoAlbomDefauld(User user) {
-        List<AlbomFotoUser> list = new ArrayList<AlbomFotoUser>();
+    public void addFotoAlbomDefauld(User user) {
         AlbomFotoUser albomFotoUser = new AlbomFotoUser();
-        albomFotoUser.setAlbomName("carusel");
+        Foto foto = new Foto();
+        albomFotoUser.setAlbomName("Фотослайдер");
         albomFotoUser.setUser(user);
-        list.add(albomFotoUser);
-        return list;
+        albomFotoService.save(albomFotoUser);
+        foto.setAlbomFotoUser(albomFotoUser);
+        foto.setFoto("resources/allForSite/default/defaultFoto.png");
+        fotoService.save(foto);
     }
 
 

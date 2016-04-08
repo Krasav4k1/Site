@@ -14,11 +14,33 @@
 <head>
     <title>Друзі ${user.firstName} ${user.lastName}</title>
 </head>
-<style>
-    <%@include file="cssForJsp/StyleForFrend.css"%>
-</style>
+<link rel="stylesheet" href="/resources/allForSite/cssForJsp/StyleForFrend.css">
 <body>
 
+<div class="container">
+    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 headerFriend boxLeft">
+        <button class="btn btn-default">Мої друзі</button>
+        <button class="btn btn-default">Друзі онлайн</button>
+        <button class="btn btn-default">Друзі друзів </button>
+        <button class="btn btn-default">Заяви</button>
+        <button class="btn btn-default">Всі</button>
+
+    </div>
+    <div class="col-lg-5 col-md-4 col-sm-7 col-xs-7 headerFriend seach boxCenter">
+        <div class="form-group">
+            <input type="text" class="form-control seachInput"/>
+            <button class="btn btn-default">Пошук</button>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-5 headerFriend boxRight">
+        <select name="FrendGrup" class="form-control selectGrupFriend " id="">
+            <option value="" class="optionGrup">Групи друзів</option>
+            <option value="" class="optionGrup">Однокласники</option>
+            <option value="" class="optionGrup">Рідні</option>
+            <option value="" class="optionGrup">Любимі</option>
+        </select>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
@@ -31,7 +53,7 @@
                 <a href="/id${fr.id}"><p class="nameFrend">${fr.firstName} ${fr.lastName}</p></a>
                 <p>${fr.city.name}</p>
                 <p>тел. 380964106766</p>
-                <p class="sendMassege"><a class="sendMassege" data-toggle="modal" data-target="#exampleModal" data-whatever="${fr.firstName} ${fr.lastName}" >Hадіслати</a></p>
+                <p class="sendMassege"><button class="buttomSendMessege"><a class="sendMassege" data-toggle="modal" data-target="#exampleModal" data-whatever="${fr.firstName} ${fr.lastName}" >Hадіслати</a></button></p>
             </div>
         </div>
 

@@ -4,15 +4,16 @@ import com.entity.Frends;
 import com.entity.User;
 import com.repository.FrendsRepository;
 import com.repository.UserRepository;
+import com.servise.FileSaveService;
 import com.servise.FrendsService;
 import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.security.Principal;
 import java.util.List;
 
@@ -27,6 +28,10 @@ public class UserController {
 
     @Autowired
     FrendsService frendsService;
+
+    @Autowired
+    FileSaveService fileSaveService;
+
 
     @RequestMapping("/MainPage")
     public String ShowMainPage(Model model, Principal principal){
@@ -56,6 +61,7 @@ public class UserController {
         }
 
     }
+
 
 
 }

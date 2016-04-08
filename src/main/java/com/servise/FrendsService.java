@@ -20,6 +20,10 @@ public class FrendsService {
         frendsRepository.delete(frends);
     }
 
+    public void daleteByIdLine(int id){
+        frendsRepository.delete(id);
+    }
+
     public Frends findRecivedAndSend(int idR, int idS){
         return frendsRepository.findRecivedAndSend(idR,idS);
     }

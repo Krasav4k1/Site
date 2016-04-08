@@ -12,42 +12,118 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Альбоми</title>
+    <link rel="stylesheet" href="/resources/allForSite/cssForJsp/StyleForAlbom.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js" ></script>
 </head>
 <body>
-<h1>Albom</h1>
 
+<div class="container">
+    <div class="row">
+        <div class="addMenu"><i class="glyphicon glyphicon-plus addPlus"></i>
+            <div class="form-group">
+                    <sf:form cssClass="formm" action="/albom/addFotoAlbom" modelAttribute="AlbomFoto" method="post">
+                <h2 class="textAddAlbom">Назва альбома</h2>
+                <sf:input path="albomName" type="text" class="form-control seachInput"/>
+                <button class="btn btn-default addAlbom">Додати</button>
+                </sf:form>
+            </div>
+        </div>
+    </div>
+</div>
 
-<sf:form action="/albom/addFotoAlbom" modelAttribute="AlbomFoto" method="post">
-    <fieldset>
-        <table>
-            <tr>
-                <th>Назва альбома</th>
-            </tr>
-            <tr>
-                <td><sf:input path="albomName"></sf:input></td>
-                <td><input type="submit" value="додати альбом"></td>
-            </tr>
-        </table>
-    </fieldset>
-</sf:form>
+<div class="container">
+    <div class="row">
+        <div class="am-container" id="am-container">
+            <c:forEach items="${AlbomFotoList}" var="albomFotoList">
+                <c:forEach items="${albomFotoList.fotos}" var="foto" varStatus="vs">
+                    <c:if test="${vs.index == 0}">
+                    <c:url value="/albom/${albomFotoList.id}/foto" var="url"/>
+                    <a href="${url}"><img src="${foto.foto}" class="imgGalary"><div class="boxForAlbom "><h1>${albomFotoList.albomName}</h1><h3>${vs.index}</h3>
+                        <form action="/albom/daleteById${albomFotoList.id}">
+                        <div class="divRemove"><button type="submit" class="buttonRemove"><i class="glyphicon glyphicon-remove removeAlbom"></i></button></div></div></a>
+                        </form>
+                    </c:if>
+                </c:forEach>
+            </c:forEach>
+        </div>
 
-<table>
-    <tr>
-        <c:forEach items="${AlbomFotoList}" var="albomFotoList">
-    <tr>
-        <td>
-            <c:url value="/albom/${albomFotoList.id}/foto" var="url"/>
-            <a href="${url}">${albomFotoList.albomName}</a>
-        </td>
-    </tr>
-    </c:forEach>
-    </tr>
-</table>
+    </div>
+</div>
 
+<script type="text/javascript" src="/resources/allForSite/jsForJsp/jquery.montage.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        /*
+         * just for this demo:
+         */
+        $('#showcode').toggle(
+                function() {
+                    $(this).addClass('up').removeClass('down').next().slideDown();
+                },
+                function() {
+                    $(this).addClass('down').removeClass('up').next().slideUp();
+                }
+        );
+        $('#panel').toggle(
+                function() {
+                    $(this).addClass('show').removeClass('hide');
+                    $('#overlay').stop().animate( { left : - $('#overlay').width() + 20 + 'px' }, 300 );
+                },
+                function() {
+                    $(this).addClass('hide').removeClass('show');
+                    $('#overlay').stop().animate( { left : '0px' }, 300 );
+                }
+        );
+
+        // initialize the plugin
+        var $container 	= $('#am-container'),
+                $imgs		= $container.find('img').hide(),
+                totalImgs	= $imgs.length,
+                cnt			= 0;
+
+        $imgs.each(function(i) {
+            var $img	= $(this);
+            $('<img/>').load(function() {
+                ++cnt;
+                if( cnt === totalImgs ) {
+                    $imgs.show();
+                    $container.montage({
+                        minsize	: true,
+                        margin 	: 2
+                    });
+
+                    /*
+                     * just for this demo:
+                     */
+                    $('#overlay').fadeIn(500);
+                    var imgarr	= new Array();
+                    for( var i = 1; i <= 73; ++i ) {
+                        imgarr.push( i );
+                    }
+                    $('#loadmore').show().bind('click', function() {
+                        var len = imgarr.length;
+                        for( var i = 0, newimgs = ''; i < 15; ++i ) {
+                            var pos = Math.floor( Math.random() * len ),
+                                    src	= imgarr[pos];
+                            newimgs	+= '<a href="#"><img src="........"/></a>';
+                        }
+
+                        var $newimages = $( newimgs );
+                        $newimages.imagesLoaded( function(){
+                            $container.append( $newimages ).montage( 'add', $newimages );
+                        });
+                    });
+                }
+            }).attr('src',$img.attr('src'));
+        });
+
+    });
+</script>
 
 
 </body>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="/resources/allForSite/jsForJsp/jquery.montage.min.js"></script>
 </html>

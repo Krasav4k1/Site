@@ -1,0 +1,676 @@
+body{
+    background:#fff;
+    color:#fff;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-size:12px;
+}
+a{
+    color:#fff;
+    text-decoration:none;
+}
+.clr{
+    clear:both;
+}
+h1, h5{
+    font-size:40px;
+    font-weight:normal;
+    text-transform:uppercase;
+    font-family:'Monoton', Arial, sans-serif;
+    color:#fff;
+    text-shadow:1px 1px 1px #000;
+    word-spacing:10px;
+    line-height: 40px;
+    padding: 10px 5px 0px 0px;
+}
+h1 span, h5{
+    font-size:18px;
+    color:#c08763;
+    font-family:Georgia, serif;
+    font-style:italic;
+    text-transform:none;
+    word-spacing:0px;
+    white-space: nowrap;
+}
+h2{
+    font-family:Georgia, serif;
+    font-style:italic;
+    padding: 5px 10px 5px 5px;
+    font-size:14px;
+}
+pre{
+    padding:15px;
+    white-space:pre-wrap;
+}
+/* Header Style */
+.header{
+    height:25px;
+    line-height:24px;
+    font-size:13px;
+    background:#000;
+    opacity:0.9;
+    text-transform:uppercase;
+    z-index:4;
+}
+.header a{
+    padding:5px 10px;
+    letter-spacing:1px;
+    text-shadow:1px 1px 1px #000;
+    color:#ddd;
+    text-align:right;
+}
+.header a:hover{
+    color:#fff;
+}
+.header a span{
+    font-weight:bold;
+}
+.header span.right_ab{
+    position:absolute;
+    right:4px;
+}
+.content{
+    position:absolute;
+    top: 75px;
+    left:0px;
+    width:40%;
+    min-width:315px;
+    z-index:100;
+    display:none;
+}
+
+
+.more ul{
+    text-transform:uppercase;
+    font-size:11px;
+    padding:20px 15px 5px 5px;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    margin:0 auto;
+}
+.more ul li{
+    display:inline;
+    line-height:30px;
+    margin:0px 2px;
+    white-space:nowrap;
+}
+.more ul li:first-child{
+    clear:both;
+    float:none;
+    display:block;
+}
+.more ul li.selected a,
+.more ul li.selected a:hover{
+    background:#f7f7f7;
+    color:#000;
+    text-shadow:none;
+    white-space:nowrap;
+}
+.more ul li a{
+    text-shadow:1px 1px 1px #000;
+    color:#fff;
+    background:#c08763;
+    padding:3px 6px;
+    -moz-box-shadow:1px 1px 2px #000;
+    -webkit-box-shadow:1px 1px 2px #000;
+    box-shadow:1px 1px 2px #000;
+}
+.more ul li a:hover{
+    background:#fff;
+    color:#000;
+    text-shadow:none;
+}
+.snippet{
+    padding:5px;
+}
+.snippet span{
+    font-size:14px;
+    cursor:pointer;
+
+    padding: 2px 18px 2px 9px;
+}
+.snippet pre{
+    display:none;
+}
+.panel{
+    position:absolute;
+    height:86px;
+    width:20px;
+    right:0px;
+    top:10px;
+    cursor:pointer;
+}
+
+.loadmore{
+    display:none;
+    width:700px;
+    line-height:30px;
+    text-transform:uppercase;
+    background:#333;
+    float:right;
+    font-weight:bold;
+    font-size:16px;
+    text-align:center;
+    cursor:pointer;
+    text-shadow:1px 1px 1px #000;
+}
+.loadmore:hover{
+    background:#000;
+}
+
+.am-wrapper{
+    float:left;
+    position:relative;
+    overflow:hidden;
+}
+.am-wrapper img{
+    position:absolute;
+    outline:none;
+}
+.imgGalary{
+    max-width: 500px;
+
+}
+
+
+body{
+    background:#fff;
+    color:#fff;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-size:12px;
+}
+a{
+    color:#fff;
+    text-decoration:none;
+}
+.clr{
+    clear:both;
+}
+h1, h5{
+    font-size:40px;
+    font-weight:normal;
+    text-transform:uppercase;
+    font-family:'Monoton', Arial, sans-serif;
+    color:#161616 !important;
+    text-shadow:2px 2px 2px white;
+    word-spacing:10px;
+    line-height: 40px;
+    padding: 10px 5px 0px 0px;
+    margin-top: 0px !important;
+}
+.am-container a:hover{
+    text-decoration: none;
+}
+h1:hover{
+    text-shadow:2px 2px 2px #333;
+}
+h1 span, h5{
+    font-size:18px;
+    color:#c08763;
+    font-family:Georgia, serif;
+    font-style:italic;
+    text-transform:none;
+    word-spacing:0px;
+    white-space: nowrap;
+}
+h2{
+    font-family:Georgia, serif;
+    font-style:italic;
+    padding: 5px 10px 5px 5px;
+    font-size:14px;
+}
+pre{
+    padding:15px;
+    white-space:pre-wrap;
+}
+/* Header Style */
+.header{
+    height:25px;
+    line-height:24px;
+    font-size:13px;
+    background:#000;
+    opacity:0.9;
+    text-transform:uppercase;
+    z-index:4;
+}
+.header a{
+    padding:5px 10px;
+    letter-spacing:1px;
+    text-shadow:1px 1px 1px #000;
+    color:#ddd;
+    text-align:right;
+}
+.header a:hover{
+    color:#fff;
+}
+.header a span{
+    font-weight:bold;
+}
+.header span.right_ab{
+    position:absolute;
+    right:4px;
+}
+.content{
+    position:absolute;
+    top: 75px;
+    left:0px;
+    width:40%;
+    min-width:315px;
+    z-index:100;
+    display:none;
+}
+.inner{
+    padding:10px;
+    background:transparent url(../images/black.png) repeat top left;
+}
+
+.more ul{
+    text-transform:uppercase;
+    font-size:11px;
+    padding:20px 15px 5px 5px;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    margin:0 auto;
+}
+.more ul li{
+    display:inline;
+    line-height:30px;
+    margin:0px 2px;
+    white-space:nowrap;
+}
+.more ul li:first-child{
+    clear:both;
+    float:none;
+    display:block;
+}
+.more ul li.selected a,
+.more ul li.selected a:hover{
+    background:#f7f7f7;
+    color:#000;
+    text-shadow:none;
+    white-space:nowrap;
+}
+.more ul li a{
+    text-shadow:1px 1px 1px #000;
+    color:#fff;
+    background:#c08763;
+    padding:3px 6px;
+    -moz-box-shadow:1px 1px 2px #000;
+    -webkit-box-shadow:1px 1px 2px #000;
+    box-shadow:1px 1px 2px #000;
+}
+.more ul li a:hover{
+    background:#fff ;
+    color:#000;
+    text-shadow:none;
+}
+.snippet{
+    padding:5px;
+}
+.snippet span{
+    font-size:14px;
+    cursor:pointer;
+
+    padding: 2px 18px 2px 9px;
+}
+
+.snippet pre{
+    display:none;
+}
+.panel{
+    position:absolute;
+    height:86px;
+    width:20px;
+    right:0px;
+    top:10px;
+    cursor:pointer;
+}
+.loadmore{
+    display:none;
+    width:700px;
+    line-height:30px;
+    text-transform:uppercase;
+    background:#333;
+    float:right;
+    font-weight:bold;
+    font-size:16px;
+    text-align:center;
+    cursor:pointer;
+    text-shadow:1px 1px 1px #000;
+}
+.loadmore:hover{
+    background:#000;
+}
+
+.am-wrapper{
+    float:left;
+    position:relative;
+    overflow:hidden;
+}
+.am-wrapper img{
+    position:absolute;
+    outline:none;
+}
+
+
+
+.boxForAlbom {
+    height: 500px;
+    width: 500px;
+    background: rgba( 145, 145, 145, 0.642 );
+    position: relative;
+}
+.boxForAlbom:hover{
+    background: rgba( 145, 145, 145, 0.852 );
+
+}
+
+.am-container h3 {
+    color:#161616 !important;
+    text-shadow:2px 2px 2px white;
+}
+
+.addMenu {
+    width: 40px;
+    margin: auto;
+    margin-top: -51px !important;
+    margin-left: 730px;
+    border-radius: 30px;
+    background: transparent;
+    height: 50px;
+    position: absolute;
+    transition:2.3s background 0s, 2s margin-left 0s, 2s width 0s;
+
+}
+.addPlus {
+    margin-left: 5px;
+    margin-top: 9px !important;
+}
+
+.addMenu:hover{
+    position: absolute;
+    height: 50px;
+    margin-top: -51px !important;
+    width: 1170px;
+    border-radius: 4px;
+    background: #333;
+    margin-left: 0px;
+    transition: 2s width 0s, 3s height 1s, 2s margin-left 0s,2.3s background 0s;
+}
+
+
+
+.addMenu:hover > .form-group > .formm > .seachInput{
+    width: 240px !important;
+    margin-top: -31px;
+    visibility: visible;
+    opacity: 1;
+    transition:visibility 0s, opacity 4s linear;
+
+}
+.addMenu:hover > .form-group > .formm > .addAlbom{
+    visibility: visible;
+    opacity: 2;
+    transition: visibility 0s, opacity 4s linear;
+}
+
+.addMenu:hover > .form-group > .formm > .textAddAlbom{
+    visibility: visible;
+    opacity: 2;
+    transition: visibility 0s, opacity 4s linear;
+}
+
+
+.seachInput {
+    margin-left: 470px!important;
+    width: 0px !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 5s, opacity 4s linear;
+}
+
+
+.addAlbom {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 4s linear;
+    margin-top: -30px;
+    margin-left: 720px;
+    width: 110px;
+}
+
+.textAddAlbom {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 4s linear;
+    color: aliceblue;
+    position: absolute;
+    top: -18px;
+    left: 230px;
+}
+
+
+@media all and (max-width: 1200px){
+    .addMenu {
+        width: 40px;
+        margin: auto;
+        margin-top: -51px !important;
+        margin-left: 615px;
+        border-radius: 30px;
+        background: transparent;
+        position: absolute;
+        transition:2.3s background 0s, 2s margin-left 0s, 2s width 0s;
+        height: 50px;
+
+    }
+
+    .addMenu:hover{
+        position: absolute;
+        height: 50px;
+        margin-top: -51px !important;
+        width: 971px;
+        border-radius: 4px;
+        background: #333;
+        margin-left: 0px;
+        transition: 2s width 0s, 3s height 1s, 2s margin-left 0s,2.3s background 0s;
+    }
+
+
+
+    .addMenu:hover > .form-group > input{
+        width: 240px !important;
+        margin-top: -35px;
+        visibility: visible;
+        opacity: 1;
+        transition:visibility 0s, opacity 4s linear;
+
+    }
+    .addMenu:hover > .form-group > .addAlbom{
+        visibility: visible;
+        opacity: 2;
+        transition: visibility 0s, opacity 4s linear;
+    }
+
+    .addMenu:hover > .form-group > .textAddAlbom{
+        visibility: visible;
+        opacity: 2;
+        transition: visibility 0s, opacity 4s linear;
+    }
+
+
+    .seachInput {
+        margin-left: 375px!important;
+        width: 0px !important;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 5s, opacity 4s linear;
+    }
+
+
+    .addAlbom {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 4s linear;
+        margin-top: -30px;
+        margin-left: 625px;
+        width: 110px;
+    }
+
+    .textAddAlbom {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 4s linear;
+        color: aliceblue;
+        position: absolute;
+        top: -18px;
+        left: 150px;
+    }
+
+}
+
+@media all and (max-width: 990px)  {
+    .addMenu {
+        width: 40px;
+        margin: auto;
+        margin-top: -51px !important;
+        margin-left: 469px;
+        border-radius: 30px;
+        background: transparent;
+        position: absolute;
+        transition:2.3s background 0s, 2s margin-left 0s, 2s width 0s;
+        height: 50px;
+
+    }
+
+    .addMenu:hover{
+        position: absolute;
+        height: 50px;
+        margin-top: -51px !important;
+        width: 750px;
+        border-radius: 4px;
+        background: #333;
+        margin-left: 0px;
+        transition: 2s width 0s, 3s height 1s, 2s margin-left 0s,2.3s background 0s;
+    }
+
+
+
+    .addMenu:hover > .form-group > input{
+        width: 240px !important;
+        margin-top: -35px;
+        visibility: visible;
+        opacity: 1;
+        transition:visibility 0s, opacity 4s linear;
+
+    }
+    .addMenu:hover > .form-group > .addAlbom{
+        visibility: visible;
+        opacity: 2;
+        transition: visibility 0s, opacity 4s linear;
+    }
+
+    .addMenu:hover > .form-group > .textAddAlbom{
+        visibility: visible;
+        opacity: 2;
+        transition: visibility 0s, opacity 4s linear;
+    }
+
+
+    .seachInput {
+        margin-left: 315px!important;
+        width: 0px !important;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 5s, opacity 4s linear;
+    }
+
+
+    .addAlbom {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 4s linear;
+        margin-top: -30px;
+        margin-left: 562px;
+        width: 110px;
+    }
+
+    .textAddAlbom {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 4s linear;
+        color: aliceblue;
+        position: absolute;
+        top: -18px;
+        left: 80px;
+    }
+
+}
+@media all and (max-width: 767px)  {
+    .addMenu {
+        width: 40px;
+        margin: auto;
+        margin-top: -51px !important;
+        margin-left: 490px;
+        border-radius: 30px;
+        background: transparent;
+        position: absolute;
+        transition:2.3s background 0s, 2s margin-left 0s, 2s width 0s;
+        height: 50px;
+
+    }
+
+    .addMenu:hover{
+        position: absolute;
+        height: 50px;
+        margin-top: -51px !important;
+        width: 720px;
+        border-radius: 4px;
+        background: #333;
+        margin-left: 0px;
+        transition: 2s width 0s, 3s height 1s, 2s margin-left 0s,2.3s background 0s;
+    }
+
+}
+
+.imgGalary{
+    max-width: 500px;
+    max-height: 400px;
+
+}
+
+.boxForAlbom {
+    height: 200px;
+    width: 100%;
+    background: rgba( 145, 145, 145, 0.642);
+    position: relative;
+    transition: .5s;
+}
+
+
+
+.removeAlbom {
+    font-size: 0px !important;
+    float: right;
+    transition: .5s;
+}
+
+.divRemove {
+    height: 0px;
+    background: white;
+    transition: 4s linear 0s, .9s height 0s;
+}
+
+.buttonRemove{
+    background: transparent;
+    border: 0px;
+    /*    display: none;*/
+    float: right;
+    margin-right: -5px;
+    margin-top: -2px;
+    transition: .5s;
+}
+
+
+
+.am-container h3 {
+    color: #161616 !important;
+    text-shadow: 2px 2px 2px white;
+}
+

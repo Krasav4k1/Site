@@ -19,6 +19,9 @@ public class ValidationEmailUser implements ConstraintValidator<CustomValidation
     }
 
     public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
+        if (userRepository == null){
+            return true;
+        }
         return userRepository.findOneByEMail(s) == null;
     }
 }

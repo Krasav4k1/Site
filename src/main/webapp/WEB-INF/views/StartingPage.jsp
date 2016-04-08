@@ -17,9 +17,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Вход</title>
-    <style>
-        <%@include file='cssForJsp/MainPage.css' %>
-    </style>
+    <link rel="stylesheet" href="/resources/allForSite/cssForJsp/MainPage.css">
 
 </head>
 <body>

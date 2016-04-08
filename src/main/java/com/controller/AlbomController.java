@@ -44,6 +44,12 @@ public class AlbomController {
         return "redirect:/albom";
     }
 
+    @RequestMapping("/albom/daleteById{id}")
+    public String removeAlbom(@PathVariable("id") int id){
+        System.out.println("wuvgwuvg");
+        albomFotoService.removeByid(id);
+        return "redirect:/albom";
+    }
 
 
 }
