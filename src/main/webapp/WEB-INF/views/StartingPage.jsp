@@ -12,15 +12,14 @@
     <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
     <!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
     <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
+    <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Вход</title>
-    <link rel="stylesheet" href="/resources/allForSite/cssForJsp/MainPage.css">
-
-</head>
-<body>
+        <link rel="stylesheet" href="/resources/allForSite/cssForJsp/MainPage.css">
+    </head>
+    <body>
 
 
 <h1 style="text-align: center; color:#a8a7a8; padding: 40px">WTable</h1>
@@ -48,4 +47,6 @@
 
 </form>
 </body>
+    <script src="/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js"></script>
+    <script src="/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </html>

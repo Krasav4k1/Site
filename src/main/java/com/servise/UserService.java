@@ -71,7 +71,7 @@ public class UserService {
         albomFotoUser.setUser(user);
         albomFotoService.save(albomFotoUser);
         foto.setAlbomFotoUser(albomFotoUser);
-        foto.setFoto("resources/allForSite/default/defaultFoto.png");
+        foto.setFoto("/resources/allForSite/default/defaultFoto.png");
         fotoService.save(foto);
     }
 

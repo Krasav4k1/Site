@@ -13,7 +13,8 @@
 <head>
     <title>Альбоми</title>
     <link rel="stylesheet" href="/resources/allForSite/cssForJsp/StyleForAlbom.css">
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js" ></script>
+    <script src="/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js"></script>
+    <link href="<c:url value="/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css" />" rel="stylesheet">
 </head>
 <body>
 
@@ -122,8 +123,7 @@
 
 
 </body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js"></script>
+<script src="/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/resources/allForSite/jsForJsp/jquery.montage.min.js"></script>
 </html>

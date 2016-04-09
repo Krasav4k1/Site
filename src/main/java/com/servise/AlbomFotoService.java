@@ -26,6 +26,7 @@ public class AlbomFotoService {
         Foto foto = new Foto();
         al.setUser(userRepository.findOne(id));
         foto.setAlbomFotoUser(al);
+        foto.setFoto("/resources/allForSite/default/defaultFoto.png");
         f.add(0,foto);
         al.setFotos(f);
         albomFotoUserRepository.save(al);

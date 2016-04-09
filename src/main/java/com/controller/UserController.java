@@ -49,7 +49,9 @@ public class UserController {
         }
         userService.updateUser(id);
         model.addAttribute("user", owner);
-        auditOnFrenship(principal,owner,model);
+        if (principal != null) {
+            auditOnFrenship(principal, owner, model);
+        }
         return "MainPage";
     }
 
