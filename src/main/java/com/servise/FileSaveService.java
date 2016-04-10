@@ -15,22 +15,24 @@ public class FileSaveService {
 
     public String saveFile (String dir, String userId, MultipartFile file, String absolutePath, String id) throws IOException {
         File uploadRootDir = null;
+        String originalName = "";
+        String format = null;
         if(dir.equals("foto")){
             uploadRootDir = new File(absolutePath+File.separator+"uplodateFile"+File.separator+userId+File.separator+"foto"+File.separator+"albom-"+id);
-        }
-        String originalName = "";
-        if (!uploadRootDir.exists()){
-            uploadRootDir.mkdirs();
-        }
-        if (file.getOriginalFilename().endsWith(".jpg")){
-            originalName = file.getOriginalFilename().replaceAll(".jpg","user");
-        }
-        if (file.getOriginalFilename().endsWith(".png")){
-            originalName = file.getOriginalFilename().replaceAll(".png","user");
+            format = "jpg";
+            if (!uploadRootDir.exists()){
+                uploadRootDir.mkdirs();
+            }
+            if (file.getOriginalFilename().endsWith(".jpg")){
+                originalName = file.getOriginalFilename().replaceAll(".jpg","user");
+            }
+            if (file.getOriginalFilename().endsWith(".png")){
+                originalName = file.getOriginalFilename().replaceAll(".png","user");
+            }
         }
         BufferedImage bi =  ImageIO.read(new ByteArrayInputStream(file.getBytes()));
-        File path = new File(uploadRootDir+File.separator+originalName+String.valueOf(userId)+".jpg");
-        ImageIO.write(bi,"jpg",path);
+        File path = new File(uploadRootDir+File.separator+originalName+String.valueOf(userId)+"."+format);
+        ImageIO.write(bi,format,path);
         return String.valueOf(path.getPath());
 
     }
