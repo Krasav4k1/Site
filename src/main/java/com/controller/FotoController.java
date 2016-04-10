@@ -43,7 +43,7 @@ public class FotoController {
         }else {
            String absolutePath = request.getServletContext().getRealPath("resources");
            String albomeName = albomFotoService.getNameAlbom(id);
-           String fotoPath = fileSaveService.saveFile(principal.getName(), file, absolutePath,albomeName);
+           String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, absolutePath,albomeName);
            fotoService.addFoto(fotoPath.substring(50),albomeName, principal);
         }
         return "redirect:/albom/{id}/foto";
