@@ -44,6 +44,7 @@ public class UserService {
         userRepository.delete(Integer.parseInt(id));
     }
 
+
     public void save(User user) {
         user.setRole(Role.ROLE_USER);
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
