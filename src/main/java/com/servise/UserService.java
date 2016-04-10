@@ -13,7 +13,6 @@ import java.util.*;
 @Service
 public class UserService {
 
-    //Prisipal
 
     @Autowired
     UserRepository userRepository;
@@ -50,6 +49,9 @@ public class UserService {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setCity(cityController.cityId);
         user.setFoto("/resources/allForSite/default/defaultFoto.png");
+        if (user.getCity() == null){
+            System.out.println("uycwic");
+        }
         userRepository.save(user);
         addFotoAlbomDefauld(user);
     }
@@ -71,7 +73,7 @@ public class UserService {
         albomFotoUser.setUser(user);
         albomFotoService.save(albomFotoUser);
         foto.setAlbomFotoUser(albomFotoUser);
-        foto.setFoto("/resources/allForSite/default/defaultFoto.png");
+        foto.setFoto("/ resources/allForSite/default/defaultFoto.png");
         fotoService.save(foto);
     }
 

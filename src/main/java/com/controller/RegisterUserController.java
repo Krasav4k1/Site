@@ -4,6 +4,7 @@ import com.entity.Role;
 import com.entity.User;
 import com.repository.UserRepository;
 import com.servise.CountryService;
+import com.servise.MailSenderService;
 import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Description;
@@ -35,6 +36,8 @@ public class RegisterUserController {
     UserRepository userRepository;
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    MailSenderService mailSenderService;
 
 
     @RequestMapping(value = "/register",method = RequestMethod.GET)
@@ -54,6 +57,7 @@ public class RegisterUserController {
             model.addAttribute("countryModel", countryService.getAll());
             return "Register";
         }
+        mailSenderService.sendMail("register",user.getEmail(),"qwertyasdfghzxcvbn");
         userService.save(user);
         return "redirect:/MainPage";
     }

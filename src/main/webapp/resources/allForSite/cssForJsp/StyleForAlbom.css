@@ -175,6 +175,7 @@ pre{
 .am-wrapper img{
 	position:absolute;
 	outline:none;
+	transition: .5s;
 }
 
 
@@ -220,7 +221,7 @@ pre{
 	border-radius: 4px;
 	background: #333;
 	margin-left: 0px;
-	transition: 2s width 0s, 3s height 1s, 2s margin-left 0s,2.3s background 0s;
+	transition: 2s width 0s, 3s height 1s, 2s margin-left 0s, 2.3s background 0s;
 }
 
 
@@ -528,5 +529,5 @@ a:hover > div i {
 a:hover > img {
 	height: 180px !important;
 	margin-top: 20px !important;
-	transition: .5s;
+
 }
