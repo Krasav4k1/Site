@@ -5,8 +5,11 @@
 	version="2.5">
 
 
-
-
+<!--metamodel-->
+<!--spring data predicate-->
+	<!--restControler-->
+	<!--mvc:socet example-->
+	<!--mvc:messege-convertes-->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

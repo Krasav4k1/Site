@@ -58,8 +58,8 @@ public class CityController {
     }
 
     public void searchIdByCity(Model model, String id){
+         cityId = cityRepository.findByCity(id).iterator().next();
 
-        cityId =cityRepository.findByCity(id).iterator().next();
     }
 
 

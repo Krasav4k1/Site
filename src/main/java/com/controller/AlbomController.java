@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.io.IOException;
 import java.security.Principal;
 
 @Controller
@@ -45,9 +46,8 @@ public class AlbomController {
     }
 
     @RequestMapping("/albom/daleteById{id}")
-    public String removeAlbom(@PathVariable("id") int id){
-        System.out.println("wuvgwuvg");
-        albomFotoService.removeByid(id);
+    public String removeAlbom(@PathVariable("id") int id, Principal principal) throws IOException {
+        albomFotoService.removeByid(id, principal);
         return "redirect:/albom";
     }
 

@@ -24,6 +24,9 @@ public class UserService {
     AlbomFotoService albomFotoService;
     @Autowired
     FotoService fotoService;
+    @Autowired
+    CityService cityService;
+
 
 
     //UpdateUser
@@ -50,12 +53,22 @@ public class UserService {
         user.setRole(Role.ROLE_USER);
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setCity(cityController.cityId);
-        user.setFoto("/resources/allForSite/default/defaultFoto.png");
         if (user.getCity() == null){
-            System.out.println("uycwic");
+            user.setCity(cityService.findCity(5470084));
         }
+        user.setFoto("/resources/allForSite/default/defaultFoto.png");
+        user.setAvatarPhotos(addAvatarDefault(user));
         userRepository.save(user);
         addFotoAlbomDefauld(user);
+    }
+
+    private List<AvatarPhoto> addAvatarDefault(User user) {
+        List<AvatarPhoto> list = new ArrayList<AvatarPhoto>();
+        AvatarPhoto avatarPhoto = new AvatarPhoto();
+        avatarPhoto.setFoto("/resources/allForSite/default/defaultFoto.png");
+        avatarPhoto.setUser(user);
+        list.add(avatarPhoto);
+        return list;
     }
 
 
@@ -75,7 +88,7 @@ public class UserService {
         albomFotoUser.setUser(user);
         albomFotoService.save(albomFotoUser);
         foto.setAlbomFotoUser(albomFotoUser);
-        foto.setFoto("/ resources/allForSite/default/defaultFoto.png");
+        foto.setFoto("/resources/allForSite/default/defaultFoto.png");
         fotoService.save(foto);
     }
 

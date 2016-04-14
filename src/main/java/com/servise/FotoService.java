@@ -22,14 +22,12 @@ public class FotoService {
     public void addFoto(String foto,String fotoAlbomName, Principal principal){
         AlbomFotoUser albomFotoUser = albomFotoUserRepository.findAlbomByAlbomNameAndPrincipal(fotoAlbomName,Integer.parseInt(principal.getName()));
         if (fotoRepository.getDefaultFoto("/resources/allForSite/default/defaultFoto.png", albomFotoUser.getId()) != null) {
-            System.out.println("++");
             Foto f = albomFotoUser.getFotos().get(0);
             System.out.println(f.getFoto());
             f.setAlbomFotoUser(albomFotoUser);
             f.setFoto(foto);
             fotoRepository.save(f);
         }else{
-            System.out.println("---");
             Foto f = new Foto();
             f.setAlbomFotoUser(albomFotoUser);
             f.setFoto(foto);

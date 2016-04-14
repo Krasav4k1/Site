@@ -128,3 +128,148 @@ div.container div.rowMain a {
 .nextFotoCarusel{
     position: absolute;
 }
+
+
+
+.imgInModal {
+    max-width: 700px;
+    min-width: 300px;
+}
+
+.divForImgContent {
+    width: 700px;
+    height: 550px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    background: rgba( 3, 3, 3, 0.4 ) !important;
+
+}
+
+.contentForModal {
+    width: 700px !important;
+    height: 550px;
+    background: rgba( 3, 3, 3, 0.4 ) !important;
+}
+
+.likeAva {
+    color: #333 !important;
+    font-size: 0px !important;
+    transition: .7s;
+}
+
+.buutonLikeAva {
+    background: transparent;
+    border: none;
+    position: absolute;
+    left: 40%;
+    top: 30px;
+
+}
+.boxAva:hover .likeAva{
+    color: rgba( 255, 255, 255, 0.8 ) !important;
+    font-size: 40px !important;
+    transition: .7s, 1s color .3s;
+}
+.buutonLikeAva:hover .likeAva{
+    font-size: 60px !important;
+}
+
+.buutonDisLikeAva {
+    background: transparent;
+    border: none;
+    position: absolute;
+    left: 60%;
+    top: 30px;
+}
+
+.boxAva:hover .DisLikeAva{
+    color: rgba( 255, 255, 255, 0.8 ) !important;
+    font-size: 40px !important;
+    transition: .7s, 1s color .3s;
+}
+
+.buutonDisLikeAva:hover .likeAva{
+    font-size: 60px !important;
+}
+
+.moreForModal {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent !important;
+    font-weight: bold;
+    transition: .7s;
+}
+.moreForModal:hover{
+    font-size: 20px;
+    transition: .7s;
+}
+
+.panelMoreForModalAva {
+    padding: 0px !important;
+    height: 40px;
+}
+
+.optionBlock {
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-top: -14px;
+    margin-left: 20px;
+}
+
+.optionWords {
+    text-align: center;
+    margin-left: -11%;
+    width: 122%;
+    border-bottom: 1px solid #333;
+    margin-top: 3px;
+}
+
+.buttonOption {
+    width: 122%;
+    margin-left: -11%;
+    border: none;
+    background: transparent !important;
+    margin-bottom: 6px;
+    font-weight: bolder;
+}
+
+.commentWords {
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.coomentBlock {
+    margin-top: -13px;
+    border: 2px solid #333;
+    width: 70% !important;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.redagyvatuModal {
+    width: 30% !important;
+}
+
+
+
+.headerModalRedag {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 3px solid #333;
+    font-size: 17px;
+}
+
+.selectPhoto {
+    background: transparent;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.containerRedagModel {
+    text-align: center;
+    font-weight: bold;
+
+}

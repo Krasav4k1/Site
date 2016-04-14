@@ -22,7 +22,6 @@ public class City {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "city")
     private List<User> user;
 
-
     public List<User> getUser() {
         return user;
     }

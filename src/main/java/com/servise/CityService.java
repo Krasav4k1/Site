@@ -30,4 +30,8 @@ public class CityService {
         return cityRepository.findByRegion(region);
     }
 
+    public City findCity(int id){
+        return cityRepository.findOne(id);
+    }
+
 }

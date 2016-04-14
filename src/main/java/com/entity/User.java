@@ -42,7 +42,8 @@ public class User {
     @ManyToOne
     @JoinColumn
     private City city;
-
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    private List<AvatarPhoto> avatarPhotos;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userSentMessager")
     private List<Messages> sentMessages;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userReceivedMessages")
@@ -60,6 +61,23 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userRecived")
     private List<Frends> recivedFrendses;
 
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "user_likes", joinColumns =
+    @JoinColumn(name = "fk_user"), inverseJoinColumns =
+    @JoinColumn(name = "fk_avatarphoto"))
+    private List<AvatarPhoto> avatarPhotosLikes;
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "user_dislike", joinColumns =
+    @JoinColumn(name = "fk_user"), inverseJoinColumns =
+    @JoinColumn(name = "fk_avatarphoto"))
+    private List<AvatarPhoto> avatarPhotosDisLikes;
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "user_commentphoto", joinColumns =
+    @JoinColumn(name = "fk_user"), inverseJoinColumns =
+    @JoinColumn(name = "fk_avatarphoto"))
+    private List<AvatarPhoto> avatarPhotosComment;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_grup", joinColumns =
@@ -73,6 +91,37 @@ public class User {
     @JoinColumn(name = "fk_video"))
     private List<Video> videos;
 
+    public List<AvatarPhoto> getAvatarPhotosLikes() {
+        return avatarPhotosLikes;
+    }
+
+    public void setAvatarPhotosLikes(List<AvatarPhoto> avatarPhotosLikes) {
+        this.avatarPhotosLikes = avatarPhotosLikes;
+    }
+
+    public List<AvatarPhoto> getAvatarPhotosDisLikes() {
+        return avatarPhotosDisLikes;
+    }
+
+    public void setAvatarPhotosDisLikes(List<AvatarPhoto> avatarPhotosDisLikes) {
+        this.avatarPhotosDisLikes = avatarPhotosDisLikes;
+    }
+
+    public List<AvatarPhoto> getAvatarPhotosComment() {
+        return avatarPhotosComment;
+    }
+
+    public void setAvatarPhotosComment(List<AvatarPhoto> avatarPhotosComment) {
+        this.avatarPhotosComment = avatarPhotosComment;
+    }
+
+    public List<AvatarPhoto> getAvatarPhotos() {
+        return avatarPhotos;
+    }
+
+    public void setAvatarPhotos(List<AvatarPhoto> avatarPhotos) {
+        this.avatarPhotos = avatarPhotos;
+    }
 
     public List<Frends> getSendFrendses() {
         return sendFrendses;

@@ -41,8 +41,11 @@
                     <c:url value="/albom/${albomFotoList.id}/foto" var="url"/>
                     <a href="${url}"><img src="${foto.foto}" class="imgGalary"><div class="boxForAlbom "><h1>${albomFotoList.albomName}</h1><h3>${vs.index}</h3>
                         <form action="/albom/daleteById${albomFotoList.id}">
-                        <div class="divRemove"><button type="submit" class="buttonRemove"><i class="glyphicon glyphicon-remove removeAlbom"></i></button></div></div></a>
+                            <c:if test="${!albomFotoList.albomName.equals('Фотослайдер')}">
+                            <div class="divRemove"><button type="submit" class="buttonRemove"><i class="glyphicon glyphicon-remove removeAlbom"></i></button></div>
+                            </c:if>
                         </form>
+                    </div></a>
                     </c:if>
                 </c:forEach>
             </c:forEach>

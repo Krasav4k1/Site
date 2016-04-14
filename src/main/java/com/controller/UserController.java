@@ -1,9 +1,11 @@
 package com.controller;
 
+import com.entity.AvatarPhoto;
 import com.entity.Frends;
 import com.entity.User;
 import com.repository.FrendsRepository;
 import com.repository.UserRepository;
+import com.servise.AvatarPhotoService;
 import com.servise.FileSaveService;
 import com.servise.FrendsService;
 import com.servise.UserService;
@@ -32,6 +34,8 @@ public class UserController {
     @Autowired
     FileSaveService fileSaveService;
 
+    @Autowired
+    AvatarPhotoService avatarPhotoService;
 
     @RequestMapping("/MainPage")
     public String ShowMainPage(Model model, Principal principal){
@@ -41,6 +45,7 @@ public class UserController {
         return "redirect:/";
     }
 
+
     @RequestMapping("/id{id}")
     public String ShowMainPageForRoler (@PathVariable int id, Model model, Principal principal) {
         User owner = userRepository.findOne(id);
@@ -49,6 +54,7 @@ public class UserController {
         }
         userService.updateUser(id);
         model.addAttribute("user", owner);
+        model.addAttribute("avatarPhoto", avatarPhotoService.getAllByIdUser(id));
         if (principal != null) {
             auditOnFrenship(principal, owner, model);
         }

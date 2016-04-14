@@ -45,14 +45,78 @@
                 <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
 
-                        <c:forEach items="${user.albomFotoUsers.get(1).fotos}" var="fotos" varStatus="vs">
-                            <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
-                                <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
-                            </div>
-                        </c:forEach>
-                    </div>
-                    <a href="/"><img src="${user.foto}" id="avatar" class="imgAva"></a>
-                </div>
+                        <div class="container">
+                            <div class="row rowMain">
+                                <div class="col-lg-5 col-md-5 wallLeft ">
+                                    <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
+                                        <div class="carousel-inner" role="listbox">
+
+                                            <c:forEach items="${user.albomFotoUsers.get(0).fotos}" var="fotos" varStatus="vs">
+                                                <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
+                                                    <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
+                                                </div>
+                                            </c:forEach>
+
+                                        </div>
+                                        <a  data-toggle="modal" data-target=".bs-example-modal-sm"><img src="${user.foto}" id="avatar" class="imgAva"></a>
+                                    </div>
+
+
+
+
+
+
+
+
+                                        <%--MOdalAvatar--%>
+                                    <div class="modal fade bs-example-modal-sm " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                                        <div class="modal-dialog modal-sm contentForModal">
+                                            <div class="modal-content contentForModal">
+                                                <div class="divForImgContent">
+                                                    <div id="myCarousel" class="carousel">
+                                                        <!-- Carousel items -->
+                                                        <div class="carousel-inner">
+                                                            <c:forEach items="${avatarPhoto}" var="avatar" varStatus="vs">
+                                                                <div class="<c:if test='${vs.index == 0}'>active</c:if> item boxAva">
+                                                                    <button class="buutonLikeAva"><i class="glyphicon glyphicon-thumbs-up likeAva"></i></button>
+                                                                    <button class="buutonDisLikeAva"><i class="glyphicon glyphicon-thumbs-down likeAva"></i></button>
+                                                                    <img src="${avatar.foto}" class="imgInModal"></div>
+                                                            </c:forEach>
+                                                        </div>
+                                                        <!-- Carousel nav -->
+                                                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                                                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                                    </div>
+                                                </div>
+                                                <div class="panel ">
+                                                    <div class="panel-heading panelMoreForModalAva" role="tab" id="headingOne">
+                                                        <button class="moreForModal" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                                                            Більше...
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapseOne1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 coomentBlock">
+                                                                    <h4 class="commentWords">Коменти</h4>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 optionBlock">
+                                                                    <h4 class="optionWords">Опції</h4>
+                                                                    <button class="buttonOption">Надіслати</button>
+                                                                    <br>
+                                                                    <button class="buttonOption">Опублікувати</button>
+                                                                    <br>
+                                                                    <button  type="button" data-toggle="modal" data-target=".bs-example-modal-lg" class="buttonOption" >
+                                                                        Редагувати
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 
@@ -205,8 +269,101 @@
                         </c:forEach>
 
                     </div>
-                    <a href="/"><img src="${user.foto}" id="avatar" class="imgAva"></a>
+                    <a  data-toggle="modal" data-target=".bs-example-modal-sm"><img src="${user.foto}" id="avatar" class="imgAva"></a>
                 </div>
+
+
+
+
+
+
+
+
+                <%--MOdalAvatar--%>
+                <div class="modal fade bs-example-modal-sm " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-sm contentForModal">
+                        <div class="modal-content contentForModal">
+                            <div class="divForImgContent">
+                                <div id="myCarousel" class="carousel">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <c:forEach items="${avatarPhoto}" var="avatar" varStatus="vs">
+                                        <div class="<c:if test='${vs.index == 0}'>active</c:if> item boxAva">
+                                            <button class="buutonLikeAva"><i class="glyphicon glyphicon-thumbs-up likeAva"></i></button>
+                                            <button class="buutonDisLikeAva"><i class="glyphicon glyphicon-thumbs-down likeAva"></i></button>
+                                            <img src="${avatar.foto}" class="imgInModal"></div>
+                                        </c:forEach>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                </div>
+                            </div>
+                            <div class="panel ">
+                                <div class="panel-heading panelMoreForModalAva" role="tab" id="headingOne">
+                                    <button class="moreForModal" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                                        Більше...
+                                    </button>
+                                </div>
+                                <div id="collapseOne1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 coomentBlock">
+                                                <h4 class="commentWords">Коменти</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 optionBlock">
+                                                <h4 class="optionWords">Опції</h4>
+                                                <button class="buttonOption">Надіслати</button>
+                                                <br>
+                                                <button class="buttonOption">Опублікувати</button>
+                                                <br>
+                                                <button  type="button" data-toggle="modal" data-target=".bs-example-modal-lg" class="buttonOption" >
+                                                    Редагувати
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%--MOdalRedaguv--%>
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg redagyvatuModal">
+                        <div class="modal-content">
+                            <div class="headerModalRedag">
+                                Редагування основної фотографії
+                            </div>
+                            <div class="containerRedagModel">
+                                <br>
+                                Загрузка фото
+                                <sf:form action="/id${user.id}/addFileAvatarFoto?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post" >
+                                    <input type="file" name="file" class="selectPhoto">
+                                    <button type="submit" ><a type="submit">Загрузити</a></button>
+                                </sf:form>
+                                <br>
+                                <br>
+                                Видалити дане фото
+                                <br>
+
+                                <form action="/id${user.id}/deleFileAvatarFoto${user.id}?${_csrf.parameterName}=${_csrf.token}">
+                                    <button type="submit">Видалити</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
