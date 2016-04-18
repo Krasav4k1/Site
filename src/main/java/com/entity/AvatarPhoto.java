@@ -1,5 +1,7 @@
 package com.entity;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -26,7 +28,7 @@ public class AvatarPhoto {
 
     private int countLike;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "user_disLike", joinColumns =
     @JoinColumn(name = "fk_avatarphoto"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))

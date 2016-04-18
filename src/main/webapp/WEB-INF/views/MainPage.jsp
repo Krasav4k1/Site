@@ -42,24 +42,22 @@
     <div class="container">
         <div class="row rowMain">
             <div class="col-lg-5 col-md-5 wallLeft ">
-                <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
+                <div class="container">
+                    <div class="row rowMain">
+                        <div class="col-lg-5 col-md-5 wallLeft ">
+                            <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
+                                <div class="carousel-inner" role="listbox">
 
-                        <div class="container">
-                            <div class="row rowMain">
-                                <div class="col-lg-5 col-md-5 wallLeft ">
-                                    <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
 
-                                            <c:forEach items="${user.albomFotoUsers.get(0).fotos}" var="fotos" varStatus="vs">
-                                                <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
-                                                    <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
-                                                </div>
-                                            </c:forEach>
-
+                                    <c:forEach items="${caruselPhoto.fotos}" var="fotos" varStatus="vs">
+                                        <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
+                                            <img src="${fotos.foto}" class="caraselImg">
                                         </div>
-                                        <a  data-toggle="modal" data-target=".bs-example-modal-sm"><img src="${user.foto}" id="avatar" class="imgAva"></a>
-                                    </div>
+                                    </c:forEach>
+
+                                </div>
+                                <a  data-toggle="modal" data-target=".bs-example-modal-sm"><img src="${user.foto}" id="avatar" class="imgAva"></a>
+                            </div>
 
 
 
@@ -68,57 +66,78 @@
 
 
 
-                                        <%--MOdalAvatar--%>
-                                    <div class="modal fade bs-example-modal-sm " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                                        <div class="modal-dialog modal-sm contentForModal">
-                                            <div class="modal-content contentForModal">
-                                                <div class="divForImgContent">
-                                                    <div id="myCarousel" class="carousel">
-                                                        <!-- Carousel items -->
-                                                        <div class="carousel-inner">
-                                                            <c:forEach items="${avatarPhoto}" var="avatar" varStatus="vs">
-                                                                <div class="<c:if test='${vs.index == 0}'>active</c:if> item boxAva">
-                                                                    <button class="buutonLikeAva"><i class="glyphicon glyphicon-thumbs-up likeAva"></i></button>
-                                                                    <button class="buutonDisLikeAva"><i class="glyphicon glyphicon-thumbs-down likeAva"></i></button>
-                                                                    <img src="${avatar.foto}" class="imgInModal"></div>
-                                                            </c:forEach>
-                                                        </div>
-                                                        <!-- Carousel nav -->
-                                                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                                                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                <%--MOdalAvatar--%>
+                            <div class="modal fade bs-example-modal-sm " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                                <div class="modal-dialog modal-sm contentForModal">
+                                    <div class="modal-content contentForModal">
+
+
+                                        <div class="sideBarMenuHidden likeCount">
+                                            <div class="countLikeAndDisLike countLikeDiv"></div>
+
+                                            <div statyss="none" class="sidebarMy">
+
+                                                <div class="containerForLikeAndDisLikeUser">
+                                                    <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+                                                    <div class="nameUserPutLikeAndDisLike">
+                                                        <h4 class="h4NameUserPutLikeAndDisLike acive">Andrii Blzniuk </h4>
                                                     </div>
                                                 </div>
-                                                <div class="panel ">
-                                                    <div class="panel-heading panelMoreForModalAva" role="tab" id="headingOne">
-                                                        <button class="moreForModal" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
-                                                            Більше...
-                                                        </button>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="divForImgContent">
+                                            <div id="myCarousel" class="carousel">
+                                                <!-- Carousel items -->
+                                                <div class="carousel-inner">
+                                                    <div class="active item boxAva">
+                                                        <button class="buutonLikeAva"><i class="glyphicon glyphicon-thumbs-up likeAva"></i></button>
+                                                        <button class="buutonDisLikeAva"><i class="glyphicon glyphicon-thumbs-down likeAva"></i></button>
+                                                        <img src="${avatarPhoto.get(0).foto}" dti="0" idAvatarPhoto="${avatarPhoto.get(0).id}" class="imgInModal">
+
                                                     </div>
-                                                    <div id="collapseOne1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-                                                        <div class="panel-body">
-                                                            <div class="row">
-                                                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 coomentBlock">
-                                                                    <h4 class="commentWords">Коменти</h4>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 optionBlock">
-                                                                    <h4 class="optionWords">Опції</h4>
-                                                                    <button class="buttonOption">Надіслати</button>
-                                                                    <br>
-                                                                    <button class="buttonOption">Опублікувати</button>
-                                                                    <br>
-                                                                    <button  type="button" data-toggle="modal" data-target=".bs-example-modal-lg" class="buttonOption" >
-                                                                        Редагувати
-                                                                    </button>
-                                                                </div>
-                                                            </div>
+
+                                                </div>
+                                                <!-- Carousel nav -->
+                                                <a class="carousel-control left  controlLeft" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                                                <a class="carousel-control right controlRight" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                            </div>
+                                        </div>
+                                        <div class="panel ">
+                                            <div class="panel-heading panelMoreForModalAva" role="tab" id="headingOne">
+
+                                                <h1 class="countPhoto"></h1>
+                                                <h1 class="countPhotoFinish"></h1>
+
+                                                <button class="moreForModal" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                                                    Більше...
+                                                </button>
+                                            </div>
+                                            <div id="collapseOne1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 coomentBlock">
+                                                            <h4 class="commentWords">Коменти</h4>
+                                                        </div>
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 optionBlock">
+                                                            <h4 class="optionWords">Опції</h4>
+                                                            <button class="buttonOption">Надіслати</button>
+                                                            <br>
+                                                            <button class="buttonOption">Опублікувати</button>
+                                                            <br>
+                                                            <button  type="button" data-toggle="modal" data-target=".bs-example-modal-lg" class="buttonOption" >
+                                                                Редагувати
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-
+                                </div>
+                            </div>
 
                     <%--<div id="btn-friends">--%>
 
@@ -254,7 +273,7 @@
 
 <security:authorize access="isAuthenticated() and principal.username =='${user.id}'">
     <%--Це буде бачити користувач який є власником сторінки--%>
-    Текущая дата: <%= new java.util.Date()%>
+
 
     <div class="container">
         <div class="row rowMain">
@@ -262,9 +281,9 @@
                 <div id="carousel-example-generic" class="carousel slide imgBack" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
 
-                        <c:forEach items="${user.albomFotoUsers.get(0).fotos}" var="fotos" varStatus="vs">
+                        <c:forEach items="${caruselPhoto.fotos}" var="fotos" varStatus="vs">
                             <div class="item <c:if test='${vs.index == 0}'>active</c:if>">
-                                <img src="${fotos.foto}" class="caraselImg"><!--https://pp.vk.me/c619824/v619824891/9f4/SCqkDHBblMI.jpg-->
+                                <img src="${fotos.foto}" class="caraselImg">
                             </div>
                         </c:forEach>
 
@@ -283,24 +302,47 @@
                 <div class="modal fade bs-example-modal-sm " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
                     <div class="modal-dialog modal-sm contentForModal">
                         <div class="modal-content contentForModal">
+
+
+                            <div class="sideBarMenuHidden likeCount">
+                                <div class="countLikeAndDisLike countLikeDiv"></div>
+
+                                <div statyss="none" class="sidebarMy">
+
+                                    <div class="containerForLikeAndDisLikeUser">
+                                        <a href="#"><img src="\resources\uplodateFile\90\foto\albom-avatar\395678461user90.jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+                                        <div class="nameUserPutLikeAndDisLike">
+                                            <h4 class="h4NameUserPutLikeAndDisLike acive">Andrii Blzniuk </h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                             <div class="divForImgContent">
                                 <div id="myCarousel" class="carousel">
                                     <!-- Carousel items -->
                                     <div class="carousel-inner">
-                                        <c:forEach items="${avatarPhoto}" var="avatar" varStatus="vs">
-                                        <div class="<c:if test='${vs.index == 0}'>active</c:if> item boxAva">
+                                            <div class="active item boxAva">
                                             <button class="buutonLikeAva"><i class="glyphicon glyphicon-thumbs-up likeAva"></i></button>
                                             <button class="buutonDisLikeAva"><i class="glyphicon glyphicon-thumbs-down likeAva"></i></button>
-                                            <img src="${avatar.foto}" class="imgInModal"></div>
-                                        </c:forEach>
+                                            <img src="${avatarPhoto.get(0).foto}" dti="0" idAvatarPhoto="${avatarPhoto.get(0).id}" class="imgInModal">
+
+                                        </div>
+
                                     </div>
                                     <!-- Carousel nav -->
-                                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                    <a class="carousel-control left  controlLeft" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right controlRight" href="#myCarousel" data-slide="next">&rsaquo;</a>
                                 </div>
                             </div>
                             <div class="panel ">
                                 <div class="panel-heading panelMoreForModalAva" role="tab" id="headingOne">
+
+                                    <h1 class="countPhoto"></h1>
+                                    <h1 class="countPhotoFinish"></h1>
+
                                     <button class="moreForModal" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
                                         Більше...
                                     </button>
@@ -340,16 +382,13 @@
                                 Загрузка фото
                                 <sf:form action="/id${user.id}/addFileAvatarFoto?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post" >
                                     <input type="file" name="file" class="selectPhoto">
-                                    <button type="submit" ><a type="submit">Загрузити</a></button>
+                                    <button type="submit" class="addAvatarPhoto"><a type="submit">Загрузити</a></button>
                                 </sf:form>
                                 <br>
                                 <br>
                                 Видалити дане фото
                                 <br>
-
-                                <form action="/id${user.id}/deleFileAvatarFoto${user.id}?${_csrf.parameterName}=${_csrf.token}">
-                                    <button type="submit">Видалити</button>
-                                </form>
+                                    <button class="daleteUserButto">Видалити</button>
                             </div>
                         </div>
                     </div>
@@ -469,9 +508,196 @@
             $("#avatar").stop().fadeIn(800);
         }, function(e){
             $("#avatar").stop().fadeOut(800);
-        })
+        });
+
+    var countPhotoFinish;
+
+    $('.imgAva').click(function(){
+        $.get('/countPhoto-user-'+'${user.id}',{},function(e){
+            lol = $('.imgInModal');
+            var img = lol;
+            countPhotoFinish = parseInt(e);
+            $('.countPhotoFinish').text(e);
+            $('.countPhoto').text(parseInt(img.attr('dti'))+1);
+        });
+        if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'like'){
+            $(".sidebarMy").toggleClass("sidebarForAvaModel");
+            $(".putLikeAndDisLikeUser").toggleClass("active");
+            $('.sidebarMy').attr('statyss','none')
+        }
     });
+
+    $('.controlRight').click(function(){
+            lol = $('.imgInModal');
+        var img = lol;
+        var index = parseInt(img.attr('dti'));
+        var countPhoto;
+            $.get('/getFoto/user='+"${user.id}"+"/foto="+ index + "/right",{}, function(e){
+                countPhoto = e[1]-1;
+                if (index == parseInt(countPhoto)){
+                    img.attr('dti', parseInt(0));
+                    img.attr('src', e[0]);
+                    img.attr('idAvatarPhoto', e[2]);
+                }else{
+                    img.attr('src', e[0]);
+                    img.attr('dti', parseInt(index+1));
+                    img.attr('idAvatarPhoto', e[2]);
+                }
+//               $('.carousel-inner').append('<div class="item boxAva"> <button class="buutonLikeAva"><i class="glyphicon glyphicon-thumbs-up likeAva"></i></button> <button class="buutonDisLikeAva"><i class="glyphicon glyphicon-thumbs-down likeAva"></i></button> <img src="'+e+'"  ind="'+ index2 +'"  class="imgInModal"> </div> ');
+            });
+
+
+            if ((parseInt(img.attr('dti'))+1) >= countPhotoFinish){
+                $('.countPhoto').text(1);
+            }else{
+                $('.countPhoto').text((parseInt(img.attr('dti'))+1)+1);
+            }
+        if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'like'){
+            $(".sidebarMy").toggleClass("sidebarForAvaModel");
+            $(".putLikeAndDisLikeUser").toggleClass("active");
+            $('.sidebarMy').attr('statyss','none')
+        }
+        });
+
+      $('.controlLeft').click(function(){
+          lol1 = $('.imgInModal');
+          var img1 = lol1;
+          var index1 = parseInt(img1.attr('dti'));
+          var countPhoto1;
+          $.get('/getFoto/user='+"${user.id}"+"/foto="+ index1 + "/left",{}, function(e) {
+              countPhoto1 = parseInt(e[1]-1);
+              if (index1 == 0){
+                  img1.attr('dti', parseInt(countPhoto1));
+                  img1.attr('src', e[0]);
+                  img1.attr('idAvatarPhoto', e[2]);
+              }else{
+                  img1.attr('src', e[0]);
+                  img1.attr('dti', parseInt(index1-1));
+                  img1.attr('idAvatarPhoto', e[2]);
+              }
+        });
+          if ((parseInt(img1.attr('dti'))+1) <= 1){
+              $('.countPhoto').text(countPhotoFinish);
+          }else{
+              $('.countPhoto').text((parseInt(img1.attr('dti'))+1)-1);
+          }
+          if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'like'){
+              $(".sidebarMy").toggleClass("sidebarForAvaModel");
+              $(".putLikeAndDisLikeUser").toggleClass("active");
+              $('.sidebarMy').attr('statyss','none')
+          }
+      });
+
+
+        $('.buutonLikeAva').click(function(){
+            var lol = $('.imgInModal');
+            var img = lol;
+            var nomerPhoto = parseInt(img.attr('idAvatarPhoto'));
+            $.get('/addLikeForPhoto'+nomerPhoto+'/user-'+'${user.id}',{},function(e){
+                $('.countLikeAndDisLike').text(e);
+            });
+            $.get('/photoUserPutLike-foto-'+nomerPhoto,{},function(e){
+                alert(e);
+            });
+            if ($('.sidebarMy').attr('statyss') == 'like'){
+                $(".sidebarMy").toggleClass("sidebarForAvaModel");
+                $(".putLikeAndDisLikeUser").toggleClass("active");
+            }
+            if ($('.sidebarMy').attr('statyss') == 'like' || $('.sidebarMy').attr('statyss') == 'none' ){
+                if($('.sidebarMy').attr('statyss') == 'like'){
+                    setTimeout('$(".sidebarMy").toggleClass("sidebarForAvaModel")', 1000);
+                    setTimeout('$(".putLikeAndDisLikeUser").toggleClass("active")', 1000);
+                    $('.sidebarMy').attr('statyss','disLike')
+                }else{
+                    $(".sidebarMy").toggleClass("sidebarForAvaModel");
+                    $(".putLikeAndDisLikeUser").toggleClass("active");
+                    $('.sidebarMy').attr('statyss','disLike')
+                }
+            }
+
+        });
+
+
+        $('.buutonLikeAva').hover(function(){
+            var lol = $('.imgInModal');
+            var img = lol;
+            var nomerPhoto = parseInt(img.attr('idAvatarPhoto'));
+            $.get('/likeForFoto='+nomerPhoto,{},function(e){
+                $('.countLikeAndDisLike').text(e);
+            });
+            $(".likeCount").toggleClass("likeBox");
+        });
+
+
+        $('.buutonDisLikeAva').click(function(){
+            var lol = $('.imgInModal');
+            var img = lol;
+            var nomerPhoto = parseInt(img.attr('idAvatarPhoto'));
+            $.get('/addDisLikeForPhoto'+nomerPhoto+'/user-'+'${user.id}',{},function(e){
+                $('.countLikeAndDisLike').text(e);
+            });
+            if ($('.sidebarMy').attr('statyss') == 'disLike'){
+                $(".sidebarMy").toggleClass("sidebarForAvaModel");
+                $(".putLikeAndDisLikeUser").toggleClass("active");
+            }
+            if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'none'){
+                if ($('.sidebarMy').attr('statyss') == 'disLike') {
+                    setTimeout('$(".sidebarMy").toggleClass("sidebarForAvaModel")', 1000);
+                    setTimeout('$(".putLikeAndDisLikeUser").toggleClass("active")', 1000);
+                    $('.sidebarMy').attr('statyss','like')
+                }else{
+                    $(".sidebarMy").toggleClass("sidebarForAvaModel");
+                    $(".putLikeAndDisLikeUser").toggleClass("active");
+                    $('.sidebarMy').attr('statyss','like')
+                }
+            }
+        });
+
+
+        $('.buutonDisLikeAva').hover(function(){
+            var lol = $('.imgInModal');
+            var img = lol;
+            var nomerPhoto = parseInt(img.attr('idAvatarPhoto'));
+            $.get('/disLikeForFoto='+nomerPhoto,{},function(e){
+                $('.countLikeAndDisLike').text(e);
+            });
+            $(".likeCount").toggleClass("likeBox");
+        });
+
+
+        $('.addAvatarPhoto').click(function(){
+            $('.countPhotoFinish').text(countPhotoFinish+1);
+        });
+
+        $('.daleteUserButto').click(function(){
+            lol = $('.imgInModal');
+            var img = lol;
+            var indexDaletePhoto = parseInt(img.attr('idAvatarPhoto'));
+            var index = parseInt(img.attr('dti'));
+            var countPhoto;
+            $.get('/id'+'${user.id}'+'/deleFileAvatarFoto'+indexDaletePhoto,{},function(){
+                $.get('/getFoto/user='+"${user.id}"+"/foto="+ index + "/right",{}, function(e){
+                    countPhoto = e[1]-1;
+                    if (index == parseInt(countPhoto)){
+                        img.attr('dti', parseInt(0));
+                        img.attr('src', e[0]);
+                        img.attr('idAvatarPhoto', e[2]);
+                    }else{
+                        img.attr('src', e[0]);
+                        img.attr('dti', parseInt(index+1));
+                        img.attr('idAvatarPhoto', e[2]);
+                    }
+                    $('.countPhotoFinish').text(countPhotoFinish-1);
+            });
+            });
+        });
+
+
+    });
+
 </script>
+
+
 
 <script>
     $( document ).ready(function() {
@@ -481,7 +707,7 @@
               $("#addFriends").css("display","none");
                 $("#addsFriends").css("display","block");
             })
-        })
+        });
     });
 </script>
 

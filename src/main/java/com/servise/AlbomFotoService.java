@@ -22,6 +22,8 @@ public class AlbomFotoService {
     @Autowired
     FileDeleteService fileDeleteService;
 
+    private int principalId;
+
 
     public void addAlbomFotoForUser(int id,AlbomFotoUser albomFotoUser){
         AlbomFotoUser al = albomFotoUser;
@@ -36,7 +38,12 @@ public class AlbomFotoService {
     }
 
     public Iterable<AlbomFotoUser> getAllAlbomPrincipal(int id){
+        principalId = id;
         return albomFotoUserRepository.getAllAlbomFotoByUserId(id);
+    }
+
+    public AlbomFotoUser getCaruselByPrincipal(String nameAlbom, int id){
+        return albomFotoUserRepository.findAlbomByAlbomNameAndPrincipal(nameAlbom,id);
     }
 
     public String getNameAlbom(int id){
@@ -47,7 +54,8 @@ public class AlbomFotoService {
         AlbomFotoUser albomFotoUser = albomFotoUserRepository.findOne(id);
         fileDeleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources\\uplodateFile\\" + principal.getName() + "\\foto" + "\\albom-"+albomFotoUser.getAlbomName());
         fileDeleteService.deleteFile("C:\\Program Files\\apache-tomcat-8.0.32\\webapps\\ROOT\\resources\\uplodateFile\\" + principal.getName() + "\\foto" + "\\albom-"+albomFotoUser.getAlbomName());
-        fileDeleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\resources\\uplodateFile\\" + principal.getName() + "\\foto" + "\\albom-"+albomFotoUser.getAlbomName());
+        fileDeleteService.deleteFile("C:\\Users\\Andrii\\EclipseP" +
+                "roject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\resources\\uplodateFile\\" + principal.getName() + "\\foto" + "\\albom-"+albomFotoUser.getAlbomName());
         albomFotoUser.setUser(null);
         albomFotoUser.setGrup(null);
         albomFotoUser.setFotos(null);
@@ -57,5 +65,9 @@ public class AlbomFotoService {
 
     public void save(AlbomFotoUser albomFotoUser) {
         albomFotoUserRepository.save(albomFotoUser);
+    }
+
+    public AlbomFotoUser findOneNameAlbom(String s) {
+    return albomFotoUserRepository.findAlbomByAlbomNameAndPrincipal(s,principalId);
     }
 }

@@ -2,6 +2,7 @@ package com.entity;
 
 import com.servise.CustomValidation.CustomValidationEmailUser;
 import org.hibernate.validator.constraints.Email;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -10,6 +11,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
+@Transactional
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,7 +44,7 @@ public class User {
     @ManyToOne
     @JoinColumn
     private City city;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<AvatarPhoto> avatarPhotos;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userSentMessager")
     private List<Messages> sentMessages;
@@ -52,34 +54,34 @@ public class User {
     private List<Publication> publications;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<MusicAlbom> musicAlboms;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<AlbomFotoUser> albomFotoUsers;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<Language> languages;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userSend")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userSend")
     private List<Frends> sendFrendses;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userRecived")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userRecived")
     private List<Frends> recivedFrendses;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "user_likes", joinColumns =
     @JoinColumn(name = "fk_user"), inverseJoinColumns =
     @JoinColumn(name = "fk_avatarphoto"))
     private List<AvatarPhoto> avatarPhotosLikes;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "user_dislike", joinColumns =
     @JoinColumn(name = "fk_user"), inverseJoinColumns =
     @JoinColumn(name = "fk_avatarphoto"))
     private List<AvatarPhoto> avatarPhotosDisLikes;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "user_commentphoto", joinColumns =
     @JoinColumn(name = "fk_user"), inverseJoinColumns =
     @JoinColumn(name = "fk_avatarphoto"))
     private List<AvatarPhoto> avatarPhotosComment;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "user_grup", joinColumns =
     @JoinColumn(name = "fk_user"), inverseJoinColumns =
     @JoinColumn(name = "fk_grup"))

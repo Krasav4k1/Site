@@ -8,11 +8,16 @@ import java.io.IOException;
 import static org.apache.commons.io.FileUtils.deleteDirectory;
 
 @Service
-public class FileDeleteService {
+public class
+FileDeleteService {
 
     public void deleteFile(String absolutePath) throws IOException {
-        File dir = new File(absolutePath);
-        deleteDirectory(dir);
+        File file = new File(absolutePath);
+        if(file.isDirectory()) {
+            deleteDirectory(file);
+        }else{
+            file.delete();
+        }
     }
 
 }

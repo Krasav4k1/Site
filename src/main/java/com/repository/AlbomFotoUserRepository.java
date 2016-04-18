@@ -13,4 +13,5 @@ public interface AlbomFotoUserRepository extends CrudRepository<AlbomFotoUser,In
     @Query(value = "select a from AlbomFotoUser a where  (a.user like concat(:userId))")
     Iterable<AlbomFotoUser> getAllAlbomFotoByUserId(@Param("userId") int userId);
 
+
 }

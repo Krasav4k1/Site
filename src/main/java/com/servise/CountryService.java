@@ -6,6 +6,8 @@ import com.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Map;
 
 @Service
@@ -21,5 +23,9 @@ public class CountryService {
 
     public Country findById(int id) {
         return countryRepository.findOne(id);
+    }
+
+    public ArrayList<Country> getAllInArrayList() {
+        return countryRepository.findAllList();
     }
 }

@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.entity.Country;
 import com.entity.Role;
 import com.entity.User;
 import com.repository.UserRepository;
@@ -13,15 +14,15 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
 import static org.apache.commons.lang.StringEscapeUtils.escapeHtml;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class RegisterUserController {
@@ -61,6 +62,7 @@ public class RegisterUserController {
         userService.save(user);
         return "redirect:/MainPage";
     }
+
 
 }
 

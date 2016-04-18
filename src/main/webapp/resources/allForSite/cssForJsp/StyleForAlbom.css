@@ -200,7 +200,7 @@ pre{
 	width: 40px;
 	margin: auto;
 	margin-top: -51px !important;
-	margin-left: 730px;
+	margin-left: 725px;
 	border-radius: 30px;
 	background: transparent;
 	height: 50px;
@@ -227,28 +227,31 @@ pre{
 
 
 .addMenu:hover > .form-group > .formm > .seachInput{
+	margin-left: 470px!important;
 	width: 240px !important;
 	margin-top: -31px;
 	visibility: visible;
 	opacity: 1;
-	transition:visibility 0s, opacity 4s linear;
+	transition: 1s linear, 1s opacity 1s;
 
 }
 .addMenu:hover > .form-group > .formm > .addAlbom{
 	visibility: visible;
 	opacity: 2;
-	transition: visibility 0s, opacity 4s linear;
+	margin-left: 720px;
+	width: 110px;
+	transition: 1s linear, visibility 2s,0.5s opacity 1s linear;
 }
 
 .addMenu:hover > .form-group > .formm > .textAddAlbom{
 	visibility: visible;
 	opacity: 2;
-	transition: visibility 0s, opacity 4s linear;
+	left: 230px;
+	transition: 1s linear 1.05s;
 }
 
 
 .seachInput {
-	margin-left: 470px!important;
 	width: 0px !important;
 	visibility: hidden;
 	opacity: 0;
@@ -257,22 +260,20 @@ pre{
 
 
 .addAlbom {
+
+	margin-top: -35px;
 	visibility: hidden;
 	opacity: 0;
-	transition: visibility 0s, opacity 4s linear;
-	margin-top: -35px;
-	margin-left: 720px;
-	width: 110px;
+	transition:0s linear;
 }
 
 .textAddAlbom {
 	visibility: hidden;
 	opacity: 0;
-	transition: visibility 0s, opacity 4s linear;
 	color: aliceblue;
 	position: absolute;
 	top: -15px;
-	left: 230px;
+	transition: visibility 0s, opacity 4s linear;
 }
 
 
@@ -281,7 +282,7 @@ pre{
 		width: 40px;
 		margin: auto;
 		margin-top: -51px !important;
-		margin-left: 615px;
+		margin-left: 605px;
 		border-radius: 30px;
 		background: transparent;
 		position: absolute;
@@ -359,13 +360,12 @@ pre{
 		width: 40px;
 		margin: auto;
 		margin-top: -51px !important;
-		margin-left: 469px;
+		margin-left: 469px ;
 		border-radius: 30px;
 		background: transparent;
 		position: absolute;
 		transition:2.3s background 0s, 2s margin-left 0s, 2s width 0s;
 		height: 50px;
-
 	}
 
 	.addMenu:hover{
@@ -385,6 +385,7 @@ pre{
 		width: 240px !important;
 		margin-top: -35px;
 		visibility: visible;
+		margin-left: 0px !important;
 		opacity: 1;
 		transition:visibility 0s, opacity 4s linear;
 
@@ -392,18 +393,20 @@ pre{
 	.addMenu:hover > .form-group > .addAlbom{
 		visibility: visible;
 		opacity: 2;
+		margin-left: 350px !important;
 		transition: visibility 0s, opacity 4s linear;
 	}
 
 	.addMenu:hover > .form-group > .textAddAlbom{
 		visibility: visible;
 		opacity: 2;
+		margin-left: -260px !important;
 		transition: visibility 0s, opacity 4s linear;
 	}
 
 
 	.seachInput {
-		margin-left: 315px!important;
+		margin-left: 215px !important;
 		width: 0px !important;
 		visibility: hidden;
 		opacity: 0;
@@ -449,7 +452,7 @@ pre{
 		position: absolute;
 		height: 50px;
 		margin-top: -51px !important;
-		width: 720px;
+		width: 690px;
 		border-radius: 4px;
 		background: #333;
 		margin-left: 0px;

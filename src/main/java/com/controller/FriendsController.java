@@ -35,6 +35,7 @@ public class FriendsController {
 
     @ModelAttribute("friends")
     public List<User> frends(Principal principal){
+//        System.out.println(frendsService.getFrends(principal,1,1,0).iterator().next().getFirstName());
        return frendsService.getFrends(principal,1,1,0);
     }
 

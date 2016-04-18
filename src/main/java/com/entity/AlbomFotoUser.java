@@ -1,6 +1,9 @@
 package com.entity;
 
+import com.servise.CustomValidation.CustomValidNameAlbom;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -9,7 +12,7 @@ public class AlbomFotoUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    @CustomValidNameAlbom(message = "такий альбом вже існує")
     private String albomName;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "albomFotoUser")

@@ -8,11 +8,10 @@ import com.servise.FotoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.io.IOException;
 import java.security.Principal;
 
@@ -40,7 +39,10 @@ public class AlbomController {
     }
 
     @RequestMapping(value = "/albom/addFotoAlbom", method = RequestMethod.POST)
-    public String addFotoAlbom(@ModelAttribute("AlbomFoto") AlbomFotoUser albomFotoUser, Principal principal){
+    public String addFotoAlbom(@Valid @ModelAttribute("AlbomFoto") AlbomFotoUser albomFotoUser, BindingResult br, Principal principal){
+        if (br.hasErrors()){
+            return "Albom";
+        }
         albomFotoService.addAlbomFotoForUser(Integer.parseInt(principal.getName()),albomFotoUser);
         return "redirect:/albom";
     }
