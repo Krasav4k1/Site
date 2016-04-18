@@ -126,6 +126,7 @@ public class UserController {
             return Integer.toString(avatarPhoto.getCountLike());
         }else
         if (whote.equals("DisLike")){
+
             int startIndex = 0;
             for (User user: avatarPhotoService.findOne(idFoto).getUsersDisLikePhoto()) {
                 if (startIndex <= indexLike - 1) {
