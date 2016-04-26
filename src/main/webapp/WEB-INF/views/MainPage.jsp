@@ -305,9 +305,6 @@
 
 
 
-
-
-
                             <div class="sideBarMenuHidden likeCount">
                                 <div class="countLikeAndDisLike countLikeDiv"></div>
                                 <div statyss="none" class="sidebarMy">
@@ -398,12 +395,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
 
 
 
@@ -600,7 +591,7 @@
                 $('.countLikeAndDisLike').text(e);
             $.get('/photoUserPutLike-foto-'+nomerPhoto+'.json',{},function(e){
                 for(i=0 ;i <= e.length;i++){
-                 $(".sidebarMy").append(' <div class="containerForLikeAndDisLikeUser"> <a href="#"><img class="img-circle putLikeAndDisLikeUser active" src="'+ e[i].foto+'"/></a> <div class="nameUserPutLikeAndDisLike"> <h4 class="h4NameUserPutLikeAndDisLike acive">'+e[i].firstName+ ' '+e[i].lastName+' </h4> </div> </div>');
+                 $(".sidebarMy").append('<div class="containerForLikeAndDisLikeUser"> <a href="#"><img class="img-circle putLikeAndDisLikeUser active" src="'+ e[i].foto+'"/></a> <div class="nameUserPutLikeAndDisLike"> <h4 class="h4NameUserPutLikeAndDisLike acive">'+e[i].firstName+ ' '+e[i].lastName+' </h4> </div> </div>');
                  $(".putLikeAndDisLikeUser").removeClass("active");
                     console.log(i)
              }

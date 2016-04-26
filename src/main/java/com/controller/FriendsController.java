@@ -5,16 +5,13 @@ import com.entity.User;
 import com.repository.FrendsRepository;
 import com.servise.FrendsService;
 import com.servise.UserService;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -60,17 +57,20 @@ public class FriendsController {
         if (friends != null){
             friends.setUserSend(null);
             friends.setUserRecived(null);
-            frendsService.daleteByObjectLine(friends);
             frendsRepository.delete(friends.getId());
         }else if(friends2 != null){
             friends2.setUserSend(null);
             friends2.setUserRecived(null);
-            frendsService.daleteByObjectLine(friends2);
             frendsRepository.delete(friends2.getId());
         }
         return "redirect:/id{id}";
     }
 
+    @RequestMapping("getAllPeople.json")
+    public @ResponseBody Iterable<User> getAllPeople(){
+        Hibernate.initialize(userService.getAll());
+        return userService.getAll();
+    }
 
 
 

@@ -24,7 +24,7 @@
         <button class="btn btn-default">Друзі онлайн</button>
         <button class="btn btn-default">Друзі друзів </button>
         <button class="btn btn-default">Заяви</button>
-        <button class="btn btn-default">Всі</button>
+        <button class="btn btn-default allFrendsButton">Всі</button>
 
     </div>
     <div class="col-lg-5 col-md-4 col-sm-7 col-xs-7 headerFriend seach boxCenter">
@@ -44,7 +44,7 @@
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="row mainBoxForFrends">
         <c:forEach items="${friends}" var="fr" varStatus="vs">
         <div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-7 col-sm-offset-2 col-lg-offset-1 col-xs-7 col-xs-offset-1 boxFrend">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 boxImgFriend">
@@ -105,6 +105,16 @@
         modal.find('.modal-title').text('New message to ' + recipient)
         modal.find('.modal-body input').val(recipient)
     })
+    $(document).ready(function(){
+        $('.allFrendsButton').click(function(){
+            $('.boxFrend').remove();
+            $.get('/getAllPeople.json',{},function(a){
+                for(i = 0; i < a.length; i++){
+                    $('.mainBoxForFrends').append('<div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-7 col-sm-offset-2 col-lg-offset-1 col-xs-7 col-xs-offset-1 boxFrend"> <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 boxImgFriend"> <a href="/id'+a[i].id+'"><img src="'+a[i].foto+'" class="imgFriend"></a> </div> <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 infoFrend"> <a href="/id'+a[i].id+'"><p class="nameFrend">'+a[i].firstName+' '+a[i].lastName+'</p></a><p>'+a[i].city.name+'</p> <p>тел. 380964106766</p> <p class="sendMassege"><button class="buttomSendMessege"><a class="sendMassege" data-toggle="modal" data-target="#exampleModal" data-whatever="'+a[i].firstName+' '+a[i].lastName+'" >Hадіслати</a></button></p> </div> </div>');
+                }
+            });
+        });
+    });
 
 </script>
 
