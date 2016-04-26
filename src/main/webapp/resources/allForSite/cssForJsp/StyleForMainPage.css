@@ -478,3 +478,22 @@ div.container div.rowMain a {
     transition: .3s, 1s color 0.2s;
 }
 
+.morLikeAndDisLikeFrends {
+    width: 10%;
+    background: transparent;
+    height: 50px;
+    position: fixed;
+    margin-top: 500px;
+}
+
+.buttomMOreLikeAndDisLikeFrends {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.iMoreLikeAndDisLikeFrends {
+    font-size: 35px !important;
+    margin: auto;
+}

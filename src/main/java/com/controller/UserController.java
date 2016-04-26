@@ -1,19 +1,24 @@
 package com.controller;
 
-import com.entity.*;
-import com.servise.*;
+import com.entity.AvatarPhoto;
+import com.entity.User;
+import com.servise.AlbomFotoService;
+import com.servise.AvatarPhotoService;
+import com.servise.FrendsService;
+import com.servise.UserService;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
 import java.security.Principal;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Queue;
 
 //@RestController
 @Controller
@@ -123,16 +128,38 @@ public class UserController {
 
     @Transactional
     @RequestMapping(value = "/photoUserPutLike-foto-{idPhoto}.json")
-    public @ResponseBody List<User> photoUserPutLike(@PathVariable("idPhoto") int idFoto){
+    public @ResponseBody Queue<User> photoUserPutLike(@PathVariable("idPhoto") int idFoto){
+        Queue<User> list = new ArrayDeque<User>();
             Hibernate.initialize(avatarPhotoService.findOneById(idFoto).getUsersLikePhoto());
-        return avatarPhotoService.findOneById(idFoto).getUsersLikePhoto();
+        if (avatarPhotoService.findOneById(idFoto).getUsersLikePhoto().size() >= 8) {
+            for (int d = 0; d < 8; d++) {
+                list.add(avatarPhotoService.findOneById(idFoto).getUsersLikePhoto().get(d));
+            }
+            return list;
+        }else{
+            for (User user : avatarPhotoService.findOneById(idFoto).getUsersLikePhoto()) {
+                list.add(user);
+            }
+            return list;
+        }
     }
 
     @Transactional
     @RequestMapping("/photoUserPutDisLike-foto-{idPhoto}.json")
-    public @ResponseBody List<User> photoUserPutDisLike(@PathVariable("idPhoto") int idFoto){
+    public @ResponseBody Queue<User> photoUserPutDisLike(@PathVariable("idPhoto") int idFoto){
+        Queue<User> list = new ArrayDeque<User>();
         Hibernate.initialize(avatarPhotoService.findOneById(idFoto).getUsersDisLikePhoto());
-        return avatarPhotoService.findOneById(idFoto).getUsersDisLikePhoto();
+        if (avatarPhotoService.findOneById(idFoto).getUsersLikePhoto().size() >= 8) {
+            for (int d = 0; d < 8; d++) {
+                list.add(avatarPhotoService.findOneById(idFoto).getUsersDisLikePhoto().get(d));
+            }
+            return list;
+        }else{
+            for (User user : avatarPhotoService.findOneById(idFoto).getUsersDisLikePhoto()) {
+                list.add(user);
+            }
+            return list;
+        }
     }
 
 

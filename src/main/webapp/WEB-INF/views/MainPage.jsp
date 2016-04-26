@@ -312,6 +312,11 @@
                                 <div class="countLikeAndDisLike countLikeDiv"></div>
                                 <div statyss="none" class="sidebarMy">
 
+                                    <div class="morLikeAndDisLikeFrends">
+                                        <button class="buttomMOreLikeAndDisLikeFrends">
+                                            <i class="glyphicon glyphicon-menu-hamburger iMoreLikeAndDisLikeFrends"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
