@@ -32,7 +32,6 @@ public class FriendsController {
 
     @ModelAttribute("friends")
     public List<User> frends(Principal principal){
-//        System.out.println(frendsService.getFrends(principal,1,1,0).iterator().next().getFirstName());
        return frendsService.getFrends(principal,1,1,0);
     }
 
@@ -72,6 +71,10 @@ public class FriendsController {
         return userService.getAll();
     }
 
+    @RequestMapping("/getMyFrends.json")
+    public @ResponseBody Iterable<User> myFrends(Principal principal){
+        return frendsService.getFrends(principal,1,1,0);
+    }
 
 
 }

@@ -20,7 +20,7 @@
 
 <div class="container">
     <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 headerFriend boxLeft">
-        <button class="btn btn-default">Мої друзі</button>
+        <button class="btn btn-default myFrendsButton">Мої друзі</button>
         <button class="btn btn-default">Друзі онлайн</button>
         <button class="btn btn-default">Друзі друзів </button>
         <button class="btn btn-default">Заяви</button>
@@ -107,10 +107,21 @@
     })
     $(document).ready(function(){
         $('.allFrendsButton').click(function(){
-            $('.boxFrend').remove();
             $.get('/getAllPeople.json',{},function(a){
+                $('.boxFrend').remove();
                 for(i = 0; i < a.length; i++){
                     $('.mainBoxForFrends').append('<div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-7 col-sm-offset-2 col-lg-offset-1 col-xs-7 col-xs-offset-1 boxFrend"> <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 boxImgFriend"> <a href="/id'+a[i].id+'"><img src="'+a[i].foto+'" class="imgFriend"></a> </div> <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 infoFrend"> <a href="/id'+a[i].id+'"><p class="nameFrend">'+a[i].firstName+' '+a[i].lastName+'</p></a><p>'+a[i].city.name+'</p> <p>тел. 380964106766</p> <p class="sendMassege"><button class="buttomSendMessege"><a class="sendMassege" data-toggle="modal" data-target="#exampleModal" data-whatever="'+a[i].firstName+' '+a[i].lastName+'" >Hадіслати</a></button></p> </div> </div>');
+                }
+            });
+        });
+
+        $('.myFrendsButton').click(function(){
+            $.get('/getMyFrends.json',{},function(a){
+                $('.boxFrend').remove();
+                for(i = 0; i < a.length; i++){
+                    console.log(a[i]);
+                    $('.mainBoxForFrends').append('<div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-7 col-sm-offset-2 col-lg-offset-1 col-xs-7 col-xs-offset-1 boxFrend"> <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 boxImgFriend"> <a href="/id'+a[i].id+'"><img src="'+a[i].foto+'" class="imgFriend"></a> </div> <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 infoFrend"> <a href="/id'+a[i].id+'"><p class="nameFrend">'+a[i].firstName+' '+a[i].lastName+'</p></a><p>'+a[i].city.name+'</p> <p>тел. 380964106766</p> <p class="sendMassege"><button class="buttomSendMessege"><a class="sendMassege" data-toggle="modal" data-target="#exampleModal" data-whatever="'+a[i].firstName+' '+a[i].lastName+'" >Hадіслати</a></button></p> </div> </div>');
+
                 }
             });
         });

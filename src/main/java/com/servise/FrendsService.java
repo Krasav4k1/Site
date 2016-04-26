@@ -32,21 +32,22 @@ public class FrendsService {
         frendsRepository.save(frends);
     }
 
-    public List<User> getFrends(Principal principal, int sendFrendship, int recivedFrenship, int spesialStatys){
+    public List<User> getFrends(Principal principal, int sendFrendship, int recivedFrenship, int spesialStatys) {
         List<User> frendses = new ArrayList<User>();
         int count = 0;
-        for (Frends fr : frendsRepository.findFrendsByUserId(Integer.parseInt(principal.getName()),sendFrendship,recivedFrenship,spesialStatys)){
-            if (fr.getUserRecived().getId() == Integer.parseInt(principal.getName())){
-                frendses.add(count,fr.getUserSend());
-                count++;
-            }else {
-                frendses.add(count, fr.getUserRecived());
+        for (Frends fr : frendsRepository.findFrendsByUserId(Integer.parseInt(principal.getName()), sendFrendship, recivedFrenship, spesialStatys)) {
+            if (fr.getUserSend().getId() == Integer.parseInt(principal.getName())) {
+                frendses.add(count, fr.getUserSend());
                 count++;
             }
         }
-       return frendses;
+        for (Frends fr : frendsRepository.findFrendsByUserIdRecived(Integer.parseInt(principal.getName()), sendFrendship, recivedFrenship, spesialStatys)) {
+            if (fr.getUserRecived().getId() == Integer.parseInt(principal.getName())) {
+                frendses.add(count, fr.getUserSend());
+                count++;
+            }
+        }
+        return frendses;
     }
-
-
 
 }

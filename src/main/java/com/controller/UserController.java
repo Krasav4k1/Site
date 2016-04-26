@@ -39,6 +39,7 @@ public class UserController {
     AlbomFotoService albomFotoUseService;
 
 
+
     @RequestMapping("/MainPage")
     public String ShowMainPage(Model model, Principal principal){
         if (principal != null) {
@@ -104,7 +105,7 @@ public class UserController {
 
     @RequestMapping("/add{whote}ForPhoto{idFoto}/user-{idUser}")
     @ResponseBody
-    public String aadlikeFoto(@PathVariable("idFoto") int idFoto,@PathVariable("idUser") int idUser,@PathVariable("whote") String whote,Principal principal){
+    public String aadlikeFoto(@PathVariable("idFoto") int idFoto,@PathVariable("idUser") int idUser,@PathVariable("whote") String whote,Principal principal ){
         return avatarPhotoService.addLikeAndDisLike(idFoto,idUser,whote,principal);
     }
 
@@ -160,6 +161,7 @@ public class UserController {
             }
             return list;
         }
+
     }
 
 
