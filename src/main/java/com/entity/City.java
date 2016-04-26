@@ -1,9 +1,14 @@
 package com.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Transactional
+//@PersistenceContext(type= PersistenceContextType.EXTENDED)
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +25,8 @@ public class City {
     private String oblast;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "city")
+    @JsonIgnore
+//    @LazyCollection(LazyCollectionOption.FALSE)
     private List<User> user;
 
     public List<User> getUser() {

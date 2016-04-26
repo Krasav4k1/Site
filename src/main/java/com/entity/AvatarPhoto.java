@@ -1,11 +1,13 @@
 package com.entity;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Transactional
 public class AvatarPhoto {
 
     @Id
@@ -14,32 +16,35 @@ public class AvatarPhoto {
 
     private String foto;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
     @JoinColumn
     private User user;
 
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinTable(name = "user_likes", joinColumns =
     @JoinColumn(name = "fk_avatarphoto"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))
+    @JsonIgnore
     private List<User> usersLikePhoto;
 
 
     private int countLike;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinTable(name = "user_disLike", joinColumns =
     @JoinColumn(name = "fk_avatarphoto"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))
+    @JsonIgnore
     private List<User> usersDisLikePhoto;
 
     private int countDisLike;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinTable(name = "user_commentphoto", joinColumns =
     @JoinColumn(name = "fk_avatarphoto"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))
+    @JsonIgnore
     private List<User> usersCommentPhoto;
 
     public String getFoto() {

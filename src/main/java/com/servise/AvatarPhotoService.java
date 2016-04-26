@@ -1,8 +1,6 @@
 package com.servise;
 
-import com.entity.AlbomFotoUser;
 import com.entity.AvatarPhoto;
-import com.entity.Foto;
 import com.entity.User;
 import com.repository.AvatarPhotoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.security.Principal;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.List;
 
 @Service
 @Transactional
@@ -66,7 +64,33 @@ public class AvatarPhotoService {
         avatarPhotoRepository.delete(avatarPhoto);
     }
 
+
+    @Transactional
     public AvatarPhoto findOne(int id) {
         return avatarPhotoRepository.findOne(id);
+    }
+
+    public AvatarPhoto findOneById(int id){
+        return avatarPhotoRepository.findBYIdPhoto(id);
+    }
+
+    public String addLikeAndDisLike(int idFoto, int idUser, String whote, Principal principal) {
+        AvatarPhoto avatarPhoto = findOne(idFoto);
+        if (whote.equals("Like")) {
+            List<User> userLikePhoto = findOne(idFoto).getUsersLikePhoto();
+            userLikePhoto.add(userService.findById(Integer.parseInt(principal.getName())));
+            avatarPhoto.setUsersLikePhoto(userLikePhoto);
+            avatarPhoto.setCountLike(avatarPhoto.getCountLike() + 1);
+            save(avatarPhoto);
+            return Integer.toString(avatarPhoto.getCountLike());
+        } else if (whote.equals("DisLike")) {
+            List<User> userDisLikePhoto = findOne(idFoto).getUsersDisLikePhoto();
+            userDisLikePhoto.add(userService.findById(Integer.parseInt(principal.getName())));
+            avatarPhoto.setCountDisLike(avatarPhoto.getCountDisLike() + 1);
+            avatarPhoto.setUsersDisLikePhoto(userDisLikePhoto);
+            save(avatarPhoto);
+            return Integer.toString(avatarPhoto.getCountDisLike());
+        }
+        return "0";
     }
 }

@@ -5,10 +5,12 @@ import com.entity.AvatarPhoto;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-
+import java.util.List;
+@Transactional
 public interface AvatarPhotoRepository extends CrudRepository<AvatarPhoto,Integer>{
 
     @Query(value = "select a from AvatarPhoto a where (a.user like concat(:userId))")
@@ -20,4 +22,7 @@ public interface AvatarPhotoRepository extends CrudRepository<AvatarPhoto,Intege
 
     @Query(value = "select a from AvatarPhoto a where (a.user like concat(:userId)) ORDER BY id DESC ")
     AvatarPhoto findByIdUser(@Param("userId") int userId);
+
+    @Query(value = "select a from AvatarPhoto a  WHERE (a.id like concat(:fotoId))")
+    AvatarPhoto findBYIdPhoto (@Param("fotoId") int fotoId);
 }

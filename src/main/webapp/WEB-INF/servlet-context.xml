@@ -27,7 +27,6 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 
-
 	<!-- Bean tilesConfigurer demands xml, in which tiles definitions are defined -->
 	<!-- Bean tilesConfigurer вимагає xml, в якому є описані tiles definitions -->
 	<bean id="tilesConfigurer"
@@ -41,6 +40,9 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
 
 
 
+<!--sololearns-->
+
+	<!-- JSON Support -->
 
 
 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>

@@ -43,6 +43,7 @@
           p:username="${db.username}" p:password="${db.password}">
     </bean>
 
+
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="packagesToScan" value="com.entity"></property>
@@ -62,8 +63,10 @@
         </property>
     </bean>
 
+    <!--<bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"/>-->
+    <!--<param-value>mySessionFactory</param-value>-->
 
-    <tx:annotation-driven transaction-manager="transactionManager" />
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="dataSource" ref="dataSource"></property>

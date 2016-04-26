@@ -304,20 +304,20 @@
                         <div class="modal-content contentForModal">
 
 
+
+
+
+
                             <div class="sideBarMenuHidden likeCount">
                                 <div class="countLikeAndDisLike countLikeDiv"></div>
-
                                 <div statyss="none" class="sidebarMy">
-
-                                    <div class="containerForLikeAndDisLikeUser">
-                                        <a href="#"><img src="\resources\uplodateFile\90\foto\albom-avatar\395678461user90.jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
-                                        <div class="nameUserPutLikeAndDisLike">
-                                            <h4 class="h4NameUserPutLikeAndDisLike acive">Andrii Blzniuk </h4>
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>
+
+
+
+
 
 
                             <div class="divForImgContent">
@@ -522,7 +522,6 @@
         });
         if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'like'){
             $(".sidebarMy").toggleClass("sidebarForAvaModel");
-            $(".putLikeAndDisLikeUser").toggleClass("active");
             $('.sidebarMy').attr('statyss','none')
         }
     });
@@ -554,7 +553,6 @@
             }
         if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'like'){
             $(".sidebarMy").toggleClass("sidebarForAvaModel");
-            $(".putLikeAndDisLikeUser").toggleClass("active");
             $('.sidebarMy').attr('statyss','none')
         }
         });
@@ -583,25 +581,28 @@
           }
           if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'like'){
               $(".sidebarMy").toggleClass("sidebarForAvaModel");
-              $(".putLikeAndDisLikeUser").toggleClass("active");
               $('.sidebarMy').attr('statyss','none')
           }
       });
 
 
         $('.buutonLikeAva').click(function(){
+            $('.containerForLikeAndDisLikeUser').remove();
             var lol = $('.imgInModal');
             var img = lol;
             var nomerPhoto = parseInt(img.attr('idAvatarPhoto'));
             $.get('/addLikeForPhoto'+nomerPhoto+'/user-'+'${user.id}',{},function(e){
                 $('.countLikeAndDisLike').text(e);
+            $.get('/photoUserPutLike-foto-'+nomerPhoto+'.json',{},function(e){
+                for(i=0 ;i <= e.length;i++){
+                 $(".sidebarMy").append(' <div class="containerForLikeAndDisLikeUser"> <a href="#"><img class="img-circle putLikeAndDisLikeUser active" src="'+ e[i].foto+'"/></a> <div class="nameUserPutLikeAndDisLike"> <h4 class="h4NameUserPutLikeAndDisLike acive">'+e[i].firstName+ ' '+e[i].lastName+' </h4> </div> </div>');
+                 $(".putLikeAndDisLikeUser").removeClass("active");
+                    console.log(i)
+             }
             });
-            $.get('/photoUserPutLike-foto-'+nomerPhoto,{},function(e){
-                alert(e);
             });
             if ($('.sidebarMy').attr('statyss') == 'like'){
                 $(".sidebarMy").toggleClass("sidebarForAvaModel");
-                $(".putLikeAndDisLikeUser").toggleClass("active");
             }
             if ($('.sidebarMy').attr('statyss') == 'like' || $('.sidebarMy').attr('statyss') == 'none' ){
                 if($('.sidebarMy').attr('statyss') == 'like'){
@@ -610,7 +611,6 @@
                     $('.sidebarMy').attr('statyss','disLike')
                 }else{
                     $(".sidebarMy").toggleClass("sidebarForAvaModel");
-                    $(".putLikeAndDisLikeUser").toggleClass("active");
                     $('.sidebarMy').attr('statyss','disLike')
                 }
             }
@@ -630,15 +630,23 @@
 
 
         $('.buutonDisLikeAva').click(function(){
+            $('.containerForLikeAndDisLikeUser').remove();
             var lol = $('.imgInModal');
             var img = lol;
             var nomerPhoto = parseInt(img.attr('idAvatarPhoto'));
             $.get('/addDisLikeForPhoto'+nomerPhoto+'/user-'+'${user.id}',{},function(e){
                 $('.countLikeAndDisLike').text(e);
+                $.get('/photoUserPutDisLike-foto-'+nomerPhoto+'.json',{},function(e){
+                    console.log(e.length);
+                    for(i=0 ;i <= e.length;i++){
+                        $(".sidebarMy").append(' <div class="containerForLikeAndDisLikeUser"> <a href="#"><img class="img-circle putLikeAndDisLikeUser active" src="'+ e[i].foto+'"/></a> <div class="nameUserPutLikeAndDisLike"> <h4 class="h4NameUserPutLikeAndDisLike acive">'+e[i].firstName+ ' '+e[i].lastName+' </h4> </div> </div>');
+                        $(".putLikeAndDisLikeUser").removeClass("active");
+                        console.log(i)
+                    }
+                });
             });
             if ($('.sidebarMy').attr('statyss') == 'disLike'){
                 $(".sidebarMy").toggleClass("sidebarForAvaModel");
-                $(".putLikeAndDisLikeUser").toggleClass("active");
             }
             if ($('.sidebarMy').attr('statyss') == 'disLike' || $('.sidebarMy').attr('statyss') == 'none'){
                 if ($('.sidebarMy').attr('statyss') == 'disLike') {
@@ -647,7 +655,6 @@
                     $('.sidebarMy').attr('statyss','like')
                 }else{
                     $(".sidebarMy").toggleClass("sidebarForAvaModel");
-                    $(".putLikeAndDisLikeUser").toggleClass("active");
                     $('.sidebarMy').attr('statyss','like')
                 }
             }

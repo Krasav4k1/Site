@@ -6,14 +6,15 @@ import com.servise.AvatarPhotoService;
 import com.servise.FileDeleteService;
 import com.servise.FileSaveService;
 import com.servise.UserService;
-import org.mortbay.servlet.MultiPartFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.security.Principal;
@@ -38,7 +39,7 @@ public class AvatarPhotoController {
 
     @RequestMapping(value = "/id{id}/addFileAvatarFoto")
     public String addAvatarPhoto(@RequestParam("file") MultipartFile file,@PathVariable("id")int id, HttpServletRequest request, Principal principal) throws IOException{
-        if( file.getBytes().length >= 10000000){
+        if(file.getBytes().length >= 10000000){
             return "Завеликий файл";
         }else {
             String absolutePath1 = request.getServletContext().getRealPath("resources");

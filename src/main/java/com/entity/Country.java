@@ -1,9 +1,14 @@
 package com.entity;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Transactional
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
