@@ -1,25 +1,13 @@
 package com.servise;
 
 import com.entity.MusicAlbom;
-import com.repository.MusicAlbomRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class MusicAlbomService {
+public interface MusicAlbomService {
 
-    @Autowired
-    MusicAlbomRepository musicAlbomRepository;
+    Iterable<MusicAlbom> getAll();
 
-    public Iterable<MusicAlbom> getAll() {
-        return musicAlbomRepository.findAll();
-    }
+    void save(MusicAlbom musicAlbom);
 
-    public void save(MusicAlbom musicAlbom) {
-        musicAlbomRepository.save(musicAlbom);
-    }
+    MusicAlbom findById(int id);
 
-    public MusicAlbom findById(int id) {
-        return musicAlbomRepository.findOne(id);
-    }
 }

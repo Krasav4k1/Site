@@ -2,52 +2,19 @@ package com.servise;
 
 import com.entity.Frends;
 import com.entity.User;
-import com.repository.FrendsRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 
-@Service
-public class FrendsService {
+public interface FrendsService {
 
-    @Autowired
-    FrendsRepository frendsRepository;
+    void daleteByObjectLine(Frends frends);
 
-    public void daleteByObjectLine(Frends frends){
-        frendsRepository.delete(frends);
-    }
+    void daleteByIdLine(int id);
 
-    public void daleteByIdLine(int id){
-        frendsRepository.delete(id);
-    }
+    Frends findRecivedAndSend(int idR, int idS);
 
-    public Frends findRecivedAndSend(int idR, int idS){
-        return frendsRepository.findRecivedAndSend(idR,idS);
-    }
+    void save(Frends frends);
 
-    public void save(Frends frends){
-        frendsRepository.save(frends);
-    }
-
-    public List<User> getFrends(Principal principal, int sendFrendship, int recivedFrenship, int spesialStatys) {
-        List<User> frendses = new ArrayList<User>();
-        int count = 0;
-        for (Frends fr : frendsRepository.findFrendsByUserId(Integer.parseInt(principal.getName()), sendFrendship, recivedFrenship, spesialStatys)) {
-            if (fr.getUserSend().getId() == Integer.parseInt(principal.getName())) {
-                frendses.add(count, fr.getUserSend());
-                count++;
-            }
-        }
-        for (Frends fr : frendsRepository.findFrendsByUserIdRecived(Integer.parseInt(principal.getName()), sendFrendship, recivedFrenship, spesialStatys)) {
-            if (fr.getUserRecived().getId() == Integer.parseInt(principal.getName())) {
-                frendses.add(count, fr.getUserSend());
-                count++;
-            }
-        }
-        return frendses;
-    }
-
+    List<User> getFrends(Principal principal, int sendFrendship, int recivedFrenship, int spesialStatys);
 }

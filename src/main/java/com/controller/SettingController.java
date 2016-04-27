@@ -1,16 +1,11 @@
 package com.controller;
 
-import com.entity.*;
 import com.repository.GrupRepository;
 import com.repository.UserRepository;
 import com.servise.*;
-import com.servise.binder.GrupEditor;
-import com.servise.binder.UserEditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
-import java.security.Principal;
 
 @Controller
 //@SessionAttributes( value = "User", types={User.class})
@@ -25,7 +20,7 @@ public class SettingController {
     @Autowired
     GrupService grupService;
     @Autowired
-    AlbomFotoService albomFotoService;
+    AlbomFotoService albomFotoServiceImpl;
     @Autowired
     FotoService fotoService;
 

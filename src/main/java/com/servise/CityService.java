@@ -1,37 +1,17 @@
 package com.servise;
 
 import com.entity.City;
-import com.entity.Country;
-import com.repository.CityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
+public interface CityService {
 
-@Service
-public class CityService {
+    Iterable<City> getAll();
 
-    @Autowired
-    CityRepository cityRepository;
+    Iterable<City> getOblast(int id);
 
-    public Iterable<City> getAll(){
-        return cityRepository.findAll();
-    }
+    Iterable<City> getRegion(String oblast);
 
-    public Iterable<City> getOblast(int id){
-        return cityRepository.findByCountry(id);
-    }
+    Iterable<City> getCity(String region);
 
-    public Iterable<City> getRegion(String oblast){
-        return cityRepository.findByOblast(oblast);
-    }
-
-    public Iterable<City> getCity(String region){
-        return cityRepository.findByRegion(region);
-    }
-
-    public City findCity(int id){
-        return cityRepository.findOne(id);
-    }
+    City findCity(int id);
 
 }

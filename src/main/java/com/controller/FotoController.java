@@ -8,12 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
 import java.io.IOException;
 import java.security.Principal;
 
@@ -25,7 +23,7 @@ public class FotoController {
     @Autowired
     FileSaveService fileSaveService;
     @Autowired
-    AlbomFotoService albomFotoService;
+    AlbomFotoService albomFotoServiceImpl;
 
     @RequestMapping("/albom/{id}/foto")
     public String showFotoPage(@PathVariable("id") int id, Model model, Principal principal){
@@ -43,7 +41,7 @@ public class FotoController {
         }else {
            String absolutePath1 = request.getServletContext().getRealPath("resources");
            String absolutePath2 = "C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources";
-           String albomeName = albomFotoService.getNameAlbom(id);
+           String albomeName = albomFotoServiceImpl.getNameAlbom(id);
            String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, absolutePath1,albomeName);
            fileSaveService.saveFile("foto",principal.getName(), file, absolutePath2,albomeName);
            fotoService.addFoto(fotoPath.substring(50),albomeName, principal);

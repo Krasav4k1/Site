@@ -1,7 +1,6 @@
 package com.controller;
 
 import com.entity.AvatarPhoto;
-import com.entity.User;
 import com.servise.AvatarPhotoService;
 import com.servise.FileDeleteService;
 import com.servise.FileSaveService;
@@ -55,31 +54,7 @@ public class AvatarPhotoController {
 
     @RequestMapping("/id{id}/deleFileAvatarFoto{idFoto}")
     public String deleFileAvatarFoto(@PathVariable("id") int userId, @PathVariable("idFoto") String fotoId, HttpServletRequest request) throws IOException {
-        String photoUser = userService.findById(userId).getFoto();
-        String photoAva = avatarPhotoService.findOne(Integer.parseInt(fotoId)).getFoto();
-        if (photoUser.equals(photoAva)){
-            deleteService.deleteFile(request.getServletContext().getRealPath("resources") + avatarPhotoService.findOne(Integer.parseInt(fotoId)).getFoto().substring(10));
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp" + avatarPhotoService.findOne(Integer.parseInt(fotoId)).getFoto());
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\" + avatarPhotoService.findOne(Integer.parseInt(fotoId)).getFoto());
-            avatarPhotoService.daletePhotoByPhotoId(Integer.parseInt(fotoId));
-            if (avatarPhotoService.getAllByIdUser(userId).size() == 0){
-                User user = userService.findById(userId);
-                user.setFoto("/resources/allForSite/default/defaultFoto.png");
-                userService.editUser(user);
-                AvatarPhoto avatarPhoto= avatarPhotoService.getByIdUser(userId);
-                avatarPhoto.setFoto("/resources/allForSite/default/defaultFoto.png");
-                avatarPhotoService.save(avatarPhoto);
-            }else{
-                User user = userService.findById(userId);
-                user.setFoto(avatarPhotoService.getAllByIdUser(userId).iterator().next().getFoto());
-                userService.editUser(user);
-            }
-        }else {
-            deleteService.deleteFile(request.getServletContext().getRealPath("resources") + avatarPhotoService.findOne(Integer.parseInt(fotoId)).getFoto().substring(10));
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp" + avatarPhotoService.findOne(Integer.parseInt(fotoId)).getFoto());
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\" + avatarPhotoService.findOne(Integer.parseInt(fotoId)).getFoto());
-            avatarPhotoService.daletePhotoByPhotoId(Integer.parseInt(fotoId));
-        }
+        avatarPhotoService.daleteFileAvatarPhoto(userId,fotoId,request);
         return "redirect:/id{id}";
     }
 

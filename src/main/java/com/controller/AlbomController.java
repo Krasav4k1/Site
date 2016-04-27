@@ -1,12 +1,9 @@
 package com.controller;
 
 import com.entity.AlbomFotoUser;
-import com.entity.Foto;
-import com.repository.FotoRepository;
 import com.servise.AlbomFotoService;
 import com.servise.FotoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +18,7 @@ public class AlbomController {
     @Autowired
     FotoService fotoService;
     @Autowired
-    AlbomFotoService albomFotoService;
+    AlbomFotoService albomFotoServiceImpl;
 
     @RequestMapping("/albom")
     public String showFotoPage(){
@@ -35,7 +32,7 @@ public class AlbomController {
 
     @ModelAttribute("AlbomFotoList")
     public Iterable<AlbomFotoUser> albomFotos(Principal principal){
-        return albomFotoService.getAllAlbomPrincipal(Integer.parseInt(principal.getName()));
+        return albomFotoServiceImpl.getAllAlbomPrincipal(Integer.parseInt(principal.getName()));
     }
 
     @RequestMapping(value = "/albom/addFotoAlbom", method = RequestMethod.POST)
@@ -43,13 +40,13 @@ public class AlbomController {
         if (br.hasErrors()){
             return "Albom";
         }
-        albomFotoService.addAlbomFotoForUser(Integer.parseInt(principal.getName()),albomFotoUser);
+        albomFotoServiceImpl.addAlbomFotoForUser(Integer.parseInt(principal.getName()),albomFotoUser);
         return "redirect:/albom";
     }
 
     @RequestMapping("/albom/daleteById{id}")
     public String removeAlbom(@PathVariable("id") int id, Principal principal) throws IOException {
-        albomFotoService.removeByid(id, principal);
+        albomFotoServiceImpl.removeByid(id, principal);
         return "redirect:/albom";
     }
 
