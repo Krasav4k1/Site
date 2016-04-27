@@ -31,7 +31,6 @@ public class MusicController {
 
     @RequestMapping(value = "/musicUplodate", method = RequestMethod.POST)
     public String addMusic(@RequestParam("files")MultipartFile file){
-        System.out.println("1234567890-==-09876543211234567890-==--=-098765432");
         return "redirect:/music";
     }
 

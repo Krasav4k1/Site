@@ -4,6 +4,7 @@ import com.entity.Frends;
 import com.entity.User;
 import com.repository.FrendsRepository;
 import com.servise.FrendsService;
+import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,8 @@ public class FrendsServiceImpl implements FrendsService{
 
     @Autowired
     FrendsRepository frendsRepository;
+    @Autowired
+    UserService userService;
 
     public void daleteByObjectLine(Frends frends){
         frendsRepository.delete(frends);
@@ -49,6 +52,32 @@ public class FrendsServiceImpl implements FrendsService{
             }
         }
         return frendses;
+    }
+
+    public void daleteFrends(Principal principal, int id) {
+        User user = userService.findById(Integer.parseInt(principal.getName()));
+        Frends friends = findRecivedAndSend(id,user.getId());
+        Frends friends2 = findRecivedAndSend(user.getId(),id);
+        if (friends != null){
+            friends.setUserSend(null);
+            friends.setUserRecived(null);
+            frendsRepository.delete(friends.getId());
+        }else if(friends2 != null){
+            friends2.setUserSend(null);
+            friends2.setUserRecived(null);
+            frendsRepository.delete(friends2.getId());
+        }
+    }
+
+    public void addFrend(Principal principal, int id) {
+        User user = userService.findById(Integer.parseInt(principal.getName()));
+        Frends frend = new Frends();
+        frend.setUserSend(user);
+        frend.setUserRecived(userService.findById(id));
+        frend.setRecivedFrendsip(1);
+        frend.setSendFrendship(1);
+        frend.setSpesialStatys(1);
+        save(frend);
     }
 
 }

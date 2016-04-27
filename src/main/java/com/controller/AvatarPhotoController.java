@@ -38,16 +38,9 @@ public class AvatarPhotoController {
 
     @RequestMapping(value = "/id{id}/addFileAvatarFoto")
     public String addAvatarPhoto(@RequestParam("file") MultipartFile file,@PathVariable("id")int id, HttpServletRequest request, Principal principal) throws IOException{
-        if(file.getBytes().length >= 10000000){
-            return "Завеликий файл";
-        }else {
-            String absolutePath1 = request.getServletContext().getRealPath("resources");
-            String absolutePath2 = "C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources";
-            String albomeName = "avatar";
-            String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, absolutePath1,albomeName);
-            fileSaveService.saveFile("foto",principal.getName(), file, absolutePath2,albomeName);
-            avatarPhotoService.addFoto(fotoPath.substring(50), Integer.parseInt(principal.getName()));
-            System.out.println(absolutePath1);
+       int rez = avatarPhotoService.auditAvatarPhotoFile(file,request,principal);
+        if (rez == 1){
+            return "файл завеликий";
         }
         return "redirect:/id{id}";
     }

@@ -17,4 +17,8 @@ public interface FrendsService {
     void save(Frends frends);
 
     List<User> getFrends(Principal principal, int sendFrendship, int recivedFrenship, int spesialStatys);
+
+    void daleteFrends(Principal principal, int id);
+
+    void addFrend(Principal principal, int id);
 }

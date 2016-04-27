@@ -4,6 +4,7 @@ import com.entity.AvatarPhoto;
 import com.entity.User;
 
 import java.util.List;
+import java.util.Queue;
 
 public interface UserService {
 
@@ -22,4 +23,10 @@ public interface UserService {
     User editUser(User user);
 
     void addFotoAlbomDefauld(User user);
+
+    String[] moveAvatarPhoto(int index, int id, String control);
+
+    Queue<User> photoUserPutLike(int idFoto);
+
+    Queue<User> photoUserPutDisLike(int idFoto);
 }

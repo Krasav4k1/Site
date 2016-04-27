@@ -31,21 +31,11 @@ public class FotoController {
         return "Foto";
     }
 
-
-//CatelinaBases
-//catelinaHome
     @RequestMapping(value = "/albom/{id}/addFileFoto")
     public String addFileFoto(@RequestParam(value = "file") MultipartFile file, HttpServletRequest request, Principal principal, @PathVariable("id") int id) throws IOException {
-       if( file.getBytes().length >= 10000000){
+        int rez = fotoService.auditAndAddFotoFile(file,request,principal,id);
+        if (rez == 1){
             return "Завеликий файл";
-        }else {
-           String absolutePath1 = request.getServletContext().getRealPath("resources");
-           String absolutePath2 = "C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources";
-           String albomeName = albomFotoServiceImpl.getNameAlbom(id);
-           String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, absolutePath1,albomeName);
-           fileSaveService.saveFile("foto",principal.getName(), file, absolutePath2,albomeName);
-           fotoService.addFoto(fotoPath.substring(50),albomeName, principal);
-           System.out.println(absolutePath1);
         }
         return "redirect:/albom/{id}/foto";
     }

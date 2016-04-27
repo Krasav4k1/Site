@@ -1,6 +1,7 @@
 package com.servise;
 
 import com.entity.AvatarPhoto;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -26,4 +27,6 @@ public interface AvatarPhotoService {
     String addLikeAndDisLike(int idFoto, int idUser, String whote, Principal principal);
 
     void daleteFileAvatarPhoto(int userId, String fotoId, HttpServletRequest request) throws IOException;
+
+    int auditAvatarPhotoFile(MultipartFile file, HttpServletRequest request, Principal principal) throws IOException;
 }

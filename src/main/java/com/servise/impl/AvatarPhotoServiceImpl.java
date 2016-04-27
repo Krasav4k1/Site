@@ -4,9 +4,11 @@ import com.entity.AvatarPhoto;
 import com.entity.User;
 import com.repository.AvatarPhotoRepository;
 import com.servise.AvatarPhotoService;
+import com.servise.FileSaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -24,6 +26,8 @@ public class AvatarPhotoServiceImpl implements AvatarPhotoService{
     UserServiceImpl userService;
     @Autowired
     FileDeleteServiceImpl deleteService;
+    @Autowired
+    FileSaveService fileSaveService;
 
     public void save(AvatarPhoto avatarPhoto){
         avatarPhotoRepository.save(avatarPhoto);
@@ -125,5 +129,20 @@ public class AvatarPhotoServiceImpl implements AvatarPhotoService{
             deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\" + findOne(Integer.parseInt(fotoId)).getFoto());
             daletePhotoByPhotoId(Integer.parseInt(fotoId));
         }
+    }
+
+    public int auditAvatarPhotoFile(MultipartFile file, HttpServletRequest request, Principal principal) throws IOException {
+        if(file.getBytes().length >= 10000000){
+            return 1;
+        }else {
+            String absolutePath1 = request.getServletContext().getRealPath("resources");
+            String absolutePath2 = "C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources";
+            String albomeName = "avatar";
+            String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, absolutePath1,albomeName);
+            fileSaveService.saveFile("foto",principal.getName(), file, absolutePath2,albomeName);
+            addFoto(fotoPath.substring(50), Integer.parseInt(principal.getName()));
+            System.out.println(absolutePath1);
+        }
+        return 0;
     }
 }
