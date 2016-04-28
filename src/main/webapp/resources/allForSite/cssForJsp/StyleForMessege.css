@@ -1,0 +1,338 @@
+.frendsStartMesseger{
+    margin-top: 5px;
+    height: 510px;
+    border-radius: 5px;
+    width: 30px !important;
+    background: #777777;
+    transition: 1s;
+    float: left;
+    overflow-x: hidden;
+    border: 2px solid #333;
+
+}
+.frendsStartMesseger:hover {
+    height: 510px;
+    width: 80px !important;
+    background: #333;
+    margin-top: 5px;
+    overflow-y: scroll;
+    transition: 1s;
+}
+
+::-webkit-scrollbar{
+    width:7px;
+}
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+::-webkit-scrollbar-track{
+    border-width:0;
+}
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #bcbcbc;
+}
+.putLikeAndDisLikeUser{
+    width: 0px;
+    margin-left: 40px;
+    margin-top: -600px;
+    visibility: visible;
+    opacity: 0;
+    transition:1s,.5s opacity 0s;
+}
+
+.putLikeAndDisLikeUser:hover{
+    width: 60px !important;
+    margin-left: 8px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    transition: .3s !important;
+}
+
+.frendsStartMesseger:hover .putLikeAndDisLikeUser{
+    width: 50px;
+    visibility: visible;
+    opacity: 1;
+    margin-left: 14px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+.mainMessegeWindow {
+    float: left;
+    width: 1102px;
+    height: 510px;
+    border-radius: 5px;
+    background: #e5e5e5;
+    margin-top: 5px;
+    margin-left: 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 1s;
+    border: 2px solid #333;
+
+}
+
+
+.allFrendsMessege {
+    float: right;
+    background: #777777;
+    margin-top: 5px;
+    margin-left: 3px;
+    width: 30px;
+    height: 510px;
+    transition: 1s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 5px;
+    border: 2px solid #333;
+
+}
+.allFrendsMessege:hover{
+    float: right;
+    background: #333;
+    margin-top: 5px;
+    margin-left: 3px;
+    width: 262px;
+    height: 510px;
+    overflow-y: scroll;
+    transition: 1s;
+}
+.allFrendsMessege:hover +.mainMessegeWindow{
+    background: #878282;
+    width: 870px;
+    height: 510px !important;
+    transition: 1s;
+}    
+.frendsStartMesseger:hover ~.mainMessegeWindow{
+    width: 1052px;
+    background: #878282;
+    height: 510px !important;
+    transition: 1s;
+}   
+
+.countMotReadyMessege {
+    display: none;
+    visibility: visible;
+    opacity: 0;
+    background: transparent !important;
+}
+.frendsStartMesseger:hover .countMotReadyMessege {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    margin-top: -30px !important;
+    margin-left: -60px !important;
+    background: white !important;
+    color: #333;
+    transition: 1s,1s opacity .6s;    
+}
+.putLikeAndDisLikeUser:hover +.countMotReadyMessege{
+    background: #333 !important; 
+    color: white;
+    margin-top: -30px !important;
+    margin-left: -60px !important;
+    transition: 0s;
+}
+
+.allCountNoReadMesseges {
+    margin-left: -4px;
+    margin-top: -5px;
+    background: #333 !important;
+    transition: 2s;
+
+}
+.frendsStartMesseger:hover .allCountNoReadMesseges{
+    visibility: visible;
+    opacity: 0;
+    transition: .4s;
+}
+
+.boxForFrendsInAllMessegeFrends {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 0px;
+    width: 0px;
+    height: 60px;
+    background: #333 !important;
+    float: right;
+    visibility: visible;
+    opacity: 0;
+    transition: 1s;
+    border-radius: 10px;
+    
+}
+.boxForFrendsInAllMessegeFrends>h6{
+    text-align: left;
+    margin-top: -10px;
+    max-width: 0px;
+    margin-left: 5px;
+    height: 0px !important;
+    color: transparent;
+    overflow: hidden;
+    transition: 0.3s linear 0s;
+}
+.boxForFrendsInAllMessegeFrends:hover h6{
+    color: black;
+    margin-top: -10px;
+    max-width: 160px;
+    margin-left: 5px;
+    height: 40px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: .5s linear .5s, color 1s;
+}
+.boxForFrendsInAllMessegeFrends:hover{
+ background: #777777 !important;   
+}
+.boxForFrendsInAllMessegeFrends>h5{
+    color: #b7b7b7;
+    margin-left: 5px;
+    margin-top: 5px;
+    visibility: visible;
+    opacity: 0;
+    transition: 1s, 0.4s opacity 0s;
+}
+.allFrendsMessege:hover .boxForFrendsInAllMessegeFrends>h5{
+    visibility: visible;
+    opacity: 1;
+    transition: 1s, 1s opacity .5s;
+}
+.boxForFrendsInAllMessegeFrends:hover h5{
+    color: white!important;
+}
+.allFrendsMessege:hover .boxForFrendsInAllMessegeFrends{
+    width: 250px;
+    background: #777777;
+    visibility: visible;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+.photoForUserInAllFrendsInMesseger {
+    float: right;
+    max-width: 80px;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+.seachInput {
+    float: right;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    width: 0px !important;
+    height: 32px !important;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    margin-right: -12px;
+    font-weight: bold;
+    visibility: visible;
+    opacity: 0;
+    transition: 1s, .4s opacity 0s !important;
+}
+.allFrendsMessege:hover .seachInput{
+    width: 230px !important;
+    margin-right: 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s, 1s opacity .1s !important;
+}
+
+.sendUserMesseges {
+    float: left;
+    min-width: 250px;
+    max-width: 700px;
+    background: #82cee7;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 5px; 
+        box-shadow: 0 0 20px #333;
+
+    padding-right: 10px;
+    border: 1px solid #333;
+}
+
+
+.reciveUserMesseges {
+    float: right;
+    min-width: 250px;
+    max-width: 690px;
+    background: #82cee7;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px #333;
+
+}
+
+
+.photoUserSendMessege {
+    margin-top: -10px;
+    right: -10px;
+}
+
+.photoForUserWhoSendMessege {
+    max-width: 150px;
+    float: right;
+    margin-right: -165px;
+    margin-top: -5px;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px #333;
+}
+
+.photoForUserWhoResiverMessege {
+   max-width: 150px;
+    float: left;
+    margin-left: -160px;
+    margin-top: -5px; 
+    border: 1px solid #333;
+    box-shadow: 0 0 20px #333;
+
+}
+
+.inputMessegesLable {
+    margin-top: 10px !important;
+    margin-left: 150px;
+    width: 800px !important;
+    background:white  !important;
+    height: 60px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+        border: 2px solid #333;
+
+}
+
+.inputMesseges {
+    height: 80px;
+    width: 1095px;
+    background: #777777 !important;
+    margin-top: 520px !important;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.sendMessege {
+    float: right;
+    margin-top: 25px;
+    margin-right: 50px;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}

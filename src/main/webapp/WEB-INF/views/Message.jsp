@@ -12,11 +12,227 @@
 <head>
     <title>Повідомлення</title>
     <link href="<c:url value="/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css" />" rel="stylesheet">
+    <link rel="stylesheet" href="/resources/allForSite/cssForJsp/StyleForMessege.css">
 </head>
 <body>
 
 
-<h1>Message</h1>
+<div class="container">
+    <div class="row">
+        <div class="frendsStartMesseger">
+            <span class="badge allCountNoReadMesseges">659</span>
+            <div class="containerForLikeAndDisLikeUser">
+                <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"><span class="badge countMotReadyMessege">164</span></a>
+            </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"><span class="badge countMotReadyMessege">1</span></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"><span class="badge countMotReadyMessege">14</span></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"></a>
+        </div><div class="containerForLikeAndDisLikeUser">
+            <a href="#"><img src="nurGQMK2C8I%20(1).jpg" alt="..." class="img-circle putLikeAndDisLikeUser active"><span class="badge countMotReadyMessege">14</span></a>
+        </div>
+        </div>
+
+
+        <div class="allFrendsMessege">
+            <div class="row">
+                <input type="text" placeholder="Пошук" class="form-control seachInput"/>
+            </div>
+
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+            <div class="row">
+                <a href=""><div class="boxForFrendsInAllMessegeFrends">
+                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
+                    <h5>Andrii Blyzniuk</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                </div>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="mainMessegeWindow">
+
+            <div class="row">
+                <div class="reciveUserMesseges">
+                    <a href=""><img src="P5TnMJYgJM0.jpg" class="img-rounded photoForUserWhoResiverMessege"></a>
+                    <h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="reciveUserMesseges">
+                    <a href=""><img src="P5TnMJYgJM0.jpg" class="img-rounded photoForUserWhoResiverMessege"></a>
+                    <h4>
+                        Lorem ipsum dolor sit Lorem ipsum dolor sit.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="sendUserMesseges">
+                    <a href=""><img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserWhoSendMessege"></a>
+                    <h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="reciveUserMesseges">
+                    <a href=""><img src="P5TnMJYgJM0.jpg" class="img-rounded photoForUserWhoResiverMessege"></a>
+                    <h4>
+                        Lorem ipsum dolor sit Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="sendUserMesseges">
+                    <a href=""><img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserWhoSendMessege"></a>
+                    <h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ut, dolorum veritatis obcaecati delectus iure cupiditate minus quasi, impedit consequatur qui aspernatur, alias ipsam placeat esse. Laboriosam aliquam dolores delectus quis harum iure officia culpa velit consectetur assumenda doloribus quisquam aut, mollitia explicabo impedit rerum expedita eveniet voluptate accusamus sapiente.
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="inputMesseges">
+                <textarea class="inputMessegesLable" ></textarea>
+                <button class="sendMessege">Надіслати</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
 
 </body>

@@ -24,6 +24,14 @@
         <put-attribute name="body" value=""></put-attribute>
     </definition>
 
+    <definition name="withoutFooter.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/Tiles/Header.jsp"></put-attribute>
+        <put-attribute name="footer" value=""></put-attribute>
+        <!-- Here body must be empty, values will come in child definitions -->
+        <!-- Задаєм пустим, значення будуть приходити в наступних definition -->
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+
     <definition name="withoutHeaderAndFooter.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
         <put-attribute name="header" value=""></put-attribute>
         <put-attribute name="footer" value=""></put-attribute>
@@ -73,7 +81,7 @@
         <put-attribute name="body" value="/WEB-INF/views/searchOblastByIdCountry.jsp"></put-attribute>
         <put-attribute name="title" value=""></put-attribute>
     </definition>
-    <definition name="Message" extends="base.definition">
+    <definition name="Message" extends="withoutFooter.definition">
         <put-attribute name="body" value="/WEB-INF/views/Message.jsp"></put-attribute>
         <put-attribute name="title" value=""></put-attribute>
     </definition>
