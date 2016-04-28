@@ -41,7 +41,7 @@ public class FrendsServiceImpl implements FrendsService{
         int count = 0;
         for (Frends fr : frendsRepository.findFrendsByUserId(Integer.parseInt(principal.getName()), sendFrendship, recivedFrenship, spesialStatys)) {
             if (fr.getUserSend().getId() == Integer.parseInt(principal.getName())) {
-                frendses.add(count, fr.getUserSend());
+                frendses.add(count, fr.getUserRecived());
                 count++;
             }
         }

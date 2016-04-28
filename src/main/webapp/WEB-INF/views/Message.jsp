@@ -58,118 +58,17 @@
                 <input type="text" placeholder="Пошук" class="form-control seachInput"/>
             </div>
 
+            <c:forEach items="${getAllUserForMessegerPage}" var="userFrend">
             <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
+                <a href="">
+                    <div class="boxForFrendsInAllMessegeFrends">
+                        <img src="${userFrend.foto}" class="img-rounded photoForUserInAllFrendsInMesseger">
+                        <h5>${userFrend.firstName} ${userFrend.lastName}</h5>
+                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
+                    </div>
                 </a>
             </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
-            <div class="row">
-                <a href=""><div class="boxForFrendsInAllMessegeFrends">
-                    <img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserInAllFrendsInMesseger">
-                    <h5>Andrii Blyzniuk</h5>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                </div>
-                </a>
-            </div>
+            </c:forEach>
 
 
         </div>

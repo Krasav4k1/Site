@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -46,9 +47,15 @@ public class FriendsController {
     }
 
     @RequestMapping("getAllPeople.json")
-    public @ResponseBody Iterable<User> getAllPeople(){
+    public @ResponseBody Iterable<User> getAllPeople(Principal principal){
         Hibernate.initialize(userService.getAll());
-        return userService.getAll();
+        List<User> list = new ArrayList<User>();
+        for (User user : userService.getAll()){
+            if (user.getId() != Integer.parseInt(principal.getName())){
+                list.add(user);
+            }
+        }
+        return list;
     }
 
     @RequestMapping("/getMyFrends.json")
