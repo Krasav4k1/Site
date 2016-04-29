@@ -3,12 +3,12 @@ package com.controller;
 import com.entity.Messages;
 import com.entity.User;
 import com.servise.FrendsService;
+import com.servise.MessageService;
+import com.servise.UserService;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
@@ -17,6 +17,11 @@ public class MessageController {
 
     @Autowired
     FrendsService frendsService;
+    @Autowired
+    MessageService messageService;
+    @Autowired
+    UserService userService;
+
 
     @RequestMapping("/message")
     public String ShowMessage(){
@@ -28,10 +33,30 @@ public class MessageController {
         return frendsService.getFrends(principal,1,1,1);
     }
 
-    @RequestMapping("sendMessegerAndUpdate{resiverUser}.json")
-    public @ResponseBody Iterable<Messages> sendMessegerAndUpdate(@PathVariable('resiverUser') int resiverUser){
-        resiverUser = 0;
-        return null;
+    @ModelAttribute("newMessege")
+    public Messages newMessege(){
+        return new Messages();
+    }
+
+
+    @RequestMapping("message-{idUser}")
+    public String getMessegForUserId(Principal principal,@PathVariable("idUser") int idUserResived){
+        Hibernate.initialize(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived));
+        System.out.println(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived));
+        System.out.println(messageService.findMessegeByIdUserResiver(idUserResived,Integer.parseInt(principal.getName())));
+        System.out.println(idUserResived);
+        return "redirect:/message";
+    }
+
+    @RequestMapping(value = "MessegerUpdate{resiverUser}-{textMesseg}.json")
+    public @ResponseBody Iterable<Messages> sendMessegerAndUpdate(@PathVariable("resiverUser") int resiverUser, Principal principal,@PathVariable("textMesseg") String textMesseg){
+        Messages messages = new Messages();
+        messages.setUserSentMessager(userService.findById(Integer.parseInt(principal.getName())));
+        messages.setUserReceivedMessages(userService.findById(resiverUser));
+        messages.setMessager(textMesseg);
+        messages.setStatys(1);
+        messageService.save(messages);
+        return messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()), resiverUser);
     }
 
 }

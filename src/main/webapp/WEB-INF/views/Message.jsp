@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -12,6 +13,7 @@
 <head>
     <title>Повідомлення</title>
     <link href="<c:url value="/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css" />" rel="stylesheet">
+    <script src="/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js"></script>
     <link rel="stylesheet" href="/resources/allForSite/cssForJsp/StyleForMessege.css">
 </head>
 <body>
@@ -60,7 +62,7 @@
 
             <c:forEach items="${getAllUserForMessegerPage}" var="userFrend">
             <div class="row">
-                <a href="">
+                <a href="message-${userFrend.id}" class="hrefUserResived" idResived="${userFrend.id}">
                     <div class="boxForFrendsInAllMessegeFrends">
                         <img src="${userFrend.foto}" class="img-rounded photoForUserInAllFrendsInMesseger">
                         <h5>${userFrend.firstName} ${userFrend.lastName}</h5>
@@ -133,6 +135,17 @@
 </div>
 
 
+<script>
+    $(document).ready(function(){
+        $('.sendMessege').click(function(){
+            var indexUserResived = $('.hrefUserResived').attr('idResived');
+            var textMessege = $('.inputMessegesLable').val();
+            $.get('MessegerUpdate'+indexUserResived+'-'+textMessege+'.json',{},function(a){
+
+            });
+        });
+    });
+</script>
 
 </body>
 </body>
