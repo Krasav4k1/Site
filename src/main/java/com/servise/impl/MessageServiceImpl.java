@@ -8,6 +8,8 @@ import com.servise.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MessageServiceImpl implements MessageService {
 
@@ -17,12 +19,11 @@ public class MessageServiceImpl implements MessageService {
     UserRepository userRepository;
 
 
-    public Iterable<Messages> findMessegeByIdUserResiver(int idUserSend, int idUserResiver){
+    public List<Messages> findMessegeByIdUserResiver(int idUserSend, int idUserResiver){
         User userSend = userRepository.findOne(idUserSend);
         User userRecived = userRepository.findOne(idUserResiver);
-//        return messagesRepository.getMessegeByUserSendAndUserResived(userSend,userRecived);
-
-return null;    }
+        return messagesRepository.getMessegeByUserSendAndUserResived(userSend,userRecived);
+}
 
     public void save(Messages messages){
         messagesRepository.save(messages);

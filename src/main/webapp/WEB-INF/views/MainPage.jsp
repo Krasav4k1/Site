@@ -590,7 +590,6 @@
             $.get('/addLikeForPhoto'+nomerPhoto+'/user-'+'${user.id}',{},function(e){
                 $('.countLikeAndDisLike').text(e);
             $.get('/photoUserPutLike-foto-'+nomerPhoto+'.json',{},function(e){
-                contentType: "application/json";
                 for(i=0 ;i <= e.length;i++){
                  $(".sidebarMy").append('<div class="containerForLikeAndDisLikeUser"> <a href="#"><img class="img-circle putLikeAndDisLikeUser active" src="'+ e[i].foto+'"/></a> <div class="nameUserPutLikeAndDisLike"> <h4 class="h4NameUserPutLikeAndDisLike acive">'+e[i].firstName+ ' '+e[i].lastName+' </h4> </div> </div>');
                  $(".putLikeAndDisLikeUser").removeClass("active");
@@ -634,8 +633,6 @@
             $.get('/addDisLikeForPhoto'+nomerPhoto+'/user-'+'${user.id}',{},function(e){
                 $('.countLikeAndDisLike').text(e);
                 $.get('/photoUserPutDisLike-foto-'+nomerPhoto+'.json',{},function(e){
-                    contentType: "application/json";
-                    console.log(e.length);
                     for(i=0 ;i <= e.length;i++){
                         $(".sidebarMy").append(' <div class="containerForLikeAndDisLikeUser"> <a href="#"><img class="img-circle putLikeAndDisLikeUser active" src="'+ e[i].foto+'"/></a> <div class="nameUserPutLikeAndDisLike"> <h4 class="h4NameUserPutLikeAndDisLike acive">'+e[i].firstName+ ' '+e[i].lastName+' </h4> </div> </div>');
                         $(".putLikeAndDisLikeUser").removeClass("active");

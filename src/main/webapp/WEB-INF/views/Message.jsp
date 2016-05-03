@@ -60,8 +60,9 @@
                 <input type="text" placeholder="Пошук" class="form-control seachInput"/>
             </div>
 
+<%--
             <c:forEach items="${getAllUserForMessegerPage}" var="userFrend">
-            <div class="row">
+            <div class="row showAllUserOnMesseg">
                 <a href="message-${userFrend.id}" class="hrefUserResived" idResived="${userFrend.id}">
                     <div class="boxForFrendsInAllMessegeFrends">
                         <img src="${userFrend.foto}" class="img-rounded photoForUserInAllFrendsInMesseger">
@@ -71,13 +72,16 @@
                 </a>
             </div>
             </c:forEach>
+--%>
+
+
 
 
         </div>
 
         <div class="mainMessegeWindow">
 
-            <div class="row">
+<%--            <div class="row">
                 <div class="reciveUserMesseges">
                     <a href=""><img src="P5TnMJYgJM0.jpg" class="img-rounded photoForUserWhoResiverMessege"></a>
                     <h4>
@@ -123,7 +127,7 @@
             </div>
 
         </div>
-
+--%>
         <div class="row">
             <div class="inputMesseges">
                 <textarea class="inputMessegesLable" ></textarea>
@@ -137,11 +141,36 @@
 
 <script>
     $(document).ready(function(){
-        $('.sendMessege').click(function(){
-            var indexUserResived = $('.hrefUserResived').attr('idResived');
-            var textMessege = $('.inputMessegesLable').val();
-            $.get('MessegerUpdate'+indexUserResived+'-'+textMessege+'.json',{},function(a){
+        $.get('getAllUserForMessegerPage.json',{},function(a){
+            for (i = 0; i < a.length; i++) {
+                $('.allFrendsMessege').append('<div class="row showAllUserOnMesseg"> <a id="hrefUserResived'+a[i].id+'" idResived="'+a[i].id+'"> <div class="boxForFrendsInAllMessegeFrends"> <img src="'+a[i].foto+'" class="img-rounded photoForUserInAllFrendsInMesseger"> <h5>'+a[i].firstName+' '+ a[i].lastName+'</h5> <h6></h6> </div> </a></div>');
+                $('#hrefUserResived'+a[i].id).click(function(){
+                    var indexUserResived = $(this).attr('idResived');
+                    $.get('getDialog-Resived-'+indexUserResived,{},function(a){
+                        for(var i = 0; i < a.length; i++){
+                            if (a[i].userReceivedMessages.id == indexUserResived){
+                                console.log(+a[i]);
+                                $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userReceivedMessages.id+'"><img src="'+a[i].userReceivedMessages.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
+                            }else{
+                                console.log(+a[i]);
+                                $('.mainMessegeWindow').append('<div class="row"> <div class="sendUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoSendMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
+                            }
+                        }
+                    });
+                });
+            }
+        });
 
+
+
+        $('.sendMessege').click(function(){
+            var textMessege = $('.inputMessegesLable').val();
+            var indexUserResived = $('.hrefUserResived').attr('idResived');
+            $.get('MessegerUpdate'+indexUserResived+'-'+textMessege+'.json',{},function(a){
+                console.log(a);
+                for(i = 0; i < a.length; i++){
+                    $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
+                }
             });
         });
     });

@@ -8,9 +8,14 @@ import com.servise.UserService;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class MessageController {
@@ -28,8 +33,8 @@ public class MessageController {
         return "Message";
     }
 
-    @ModelAttribute("getAllUserForMessegerPage")
-    public Iterable<User> getAllUserForMessegerPage(Principal principal){
+    @RequestMapping("getAllUserForMessegerPage.json")
+    public @ResponseBody Iterable<User> getAllUserForMessegerPage(Principal principal){
         return frendsService.getFrends(principal,1,1,1);
     }
 
@@ -39,13 +44,11 @@ public class MessageController {
     }
 
 
-    @RequestMapping("message-{idUser}")
-    public String getMessegForUserId(Principal principal,@PathVariable("idUser") int idUserResived){
+    @RequestMapping("getDialog-Resived-{idUser}")
+    public @ResponseBody List<Messages> getMessegForUserId(Principal principal, @PathVariable("idUser") int idUserResived){
+        List<Messages> list = new ArrayList<Messages>();
         Hibernate.initialize(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived));
-        System.out.println(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived));
-        System.out.println(messageService.findMessegeByIdUserResiver(idUserResived,Integer.parseInt(principal.getName())));
-        System.out.println(idUserResived);
-        return "redirect:/message";
+        return messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived);
     }
 
     @RequestMapping(value = "MessegerUpdate{resiverUser}-{textMesseg}.json")

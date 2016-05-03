@@ -102,13 +102,13 @@ public class UserController {
     }
 
     @Transactional
-    @RequestMapping(value = "/photoUserPutLike-foto-{idPhoto}.json",produces = "application/json",headers = "application/json")
+    @RequestMapping(value = "/photoUserPutLike-foto-{idPhoto}.json")
     public @ResponseBody Queue<User> photoUserPutLike(@PathVariable("idPhoto") int idFoto){
         return userService.photoUserPutLike(idFoto);
     }
 
     @Transactional
-    @RequestMapping(value = "/photoUserPutDisLike-foto-{idPhoto}.json",produces = "application/json",headers = "application/json")
+    @RequestMapping(value = "/photoUserPutDisLike-foto-{idPhoto}.json")
     public @ResponseBody Queue<User> photoUserPutDisLike(@PathVariable("idPhoto") int idFoto){
         return userService.photoUserPutDisLike(idFoto);
     }

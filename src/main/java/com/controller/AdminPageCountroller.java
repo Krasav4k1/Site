@@ -24,4 +24,5 @@ public class AdminPageCountroller {
         return "redirect:/id" + id;
     }
 
+
 }
