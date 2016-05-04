@@ -83,8 +83,18 @@
     $(document).ready(function(){
         var indexUserResivedGlobal;
         $.get('getAllUserForMessegerPage.json',{},function(a){
-            for (i = 0; i < a.length; i++) {
-                $('.allFrendsMessege').append('<div class="row showAllUserOnMesseg"> <a id="hrefUserResived'+a[i].id+'" idResived="'+a[i].id+'"> <div class="boxForFrendsInAllMessegeFrends"> <img src="'+a[i].foto+'" class="img-rounded photoForUserInAllFrendsInMesseger"> <h5>'+a[i].firstName+' '+ a[i].lastName+'</h5> <h6></h6> </div> </a></div>');
+            for (var i = 0; i < a.length; i++) {
+                $('.allFrendsMessege').append('<div class="row showAllUserOnMesseg"> <a id="hrefUserResived'+a[i].id+'" idResived="'+a[i].id+'"> <div class="boxForFrendsInAllMessegeFrends"> <img src="'+a[i].foto+'" class="img-rounded photoForUserInAllFrendsInMesseger"> <h5>'+a[i].firstName+' '+ a[i].lastName+'</h5> <h6 class="lastMessegerForBox"></h6> </div> </a></div>');
+
+                $('#hrefUserResived'+a[i].id).hover(function() {
+                    var indexUserResived = $(this).attr('idResived');
+                    indexUserResivedGlobal = $(this).attr('idResived');
+                    $.get('getDialog-Resived-'+indexUserResived,{},function(a){
+                        $('.lastMessegerForBox').html('');
+                        var lastIndex = a.length - 1;
+                        $('.lastMessegerForBox').html(a[lastIndex].messager);
+                    });
+                });
                 $('#hrefUserResived'+a[i].id).click(function(){
                     var indexUserResived = $(this).attr('idResived');
                     indexUserResivedGlobal = $(this).attr('idResived');
@@ -92,10 +102,8 @@
                         $('.mainMessegeWindow').html('<div class="loadMore">загрузить ще...</div>');
                         for(var i = 0; i < a.length; i++){
                             if (a[i].userReceivedMessages.id == indexUserResived){
-                                console.log(+a[i]);
                                 $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
                             }else{
-                                console.log(+a[i]);
                                 $('.mainMessegeWindow').append('<div class="row"> <div class="sendUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoSendMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
                             }
                         }
@@ -107,13 +115,12 @@
 
 
         sendMessegEventKey = function(){
-            alert('send');
             var textMessege = $('.inputMessegesLable').val();
             var indexUserResived = indexUserResivedGlobal;
             $.get('MessegerUpdate'+indexUserResived+'-'+textMessege+'.json',{},function(a){
-                console.log(a);
                 var lastIndex = a.length - 1;
                     $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[lastIndex].userSentMessager.id+'"><img src="'+a[lastIndex].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[lastIndex].messager+'</h4> </div> </div>');
+                    $('.inputMessegesLable').val('');
             });
         };
     });
