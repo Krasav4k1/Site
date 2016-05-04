@@ -60,78 +60,18 @@
                 <input type="text" placeholder="Пошук" class="form-control seachInput"/>
             </div>
 
-<%--
-            <c:forEach items="${getAllUserForMessegerPage}" var="userFrend">
-            <div class="row showAllUserOnMesseg">
-                <a href="message-${userFrend.id}" class="hrefUserResived" idResived="${userFrend.id}">
-                    <div class="boxForFrendsInAllMessegeFrends">
-                        <img src="${userFrend.foto}" class="img-rounded photoForUserInAllFrendsInMesseger">
-                        <h5>${userFrend.firstName} ${userFrend.lastName}</h5>
-                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vero consequuntur earum inventore veniam voluptas alias eum odio, repellat tempore odit dolorem, aspernatur ut totam fugit, voluptatibus dolore, doloribus labore.</h6>
-                    </div>
-                </a>
-            </div>
-            </c:forEach>
---%>
-
-
-
 
         </div>
 
         <div class="mainMessegeWindow">
-
-<%--            <div class="row">
-                <div class="reciveUserMesseges">
-                    <a href=""><img src="P5TnMJYgJM0.jpg" class="img-rounded photoForUserWhoResiverMessege"></a>
-                    <h4>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="reciveUserMesseges">
-                    <a href=""><img src="P5TnMJYgJM0.jpg" class="img-rounded photoForUserWhoResiverMessege"></a>
-                    <h4>
-                        Lorem ipsum dolor sit Lorem ipsum dolor sit.
-                    </h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="sendUserMesseges">
-                    <a href=""><img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserWhoSendMessege"></a>
-                    <h4>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="reciveUserMesseges">
-                    <a href=""><img src="P5TnMJYgJM0.jpg" class="img-rounded photoForUserWhoResiverMessege"></a>
-                    <h4>
-                        Lorem ipsum dolor sit Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="sendUserMesseges">
-                    <a href=""><img src="nurGQMK2C8I.jpg" class="img-rounded photoForUserWhoSendMessege"></a>
-                    <h4>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ut, dolorum veritatis obcaecati delectus iure cupiditate minus quasi, impedit consequatur qui aspernatur, alias ipsam placeat esse. Laboriosam aliquam dolores delectus quis harum iure officia culpa velit consectetur assumenda doloribus quisquam aut, mollitia explicabo impedit rerum expedita eveniet voluptate accusamus sapiente.
-                    </h4>
-                </div>
-            </div>
+            <div class="loadMore">загрузить ще...</div>
 
         </div>
---%>
+
         <div class="row">
             <div class="inputMesseges">
-                <textarea class="inputMessegesLable" ></textarea>
-                <button class="sendMessege">Надіслати</button>
+                <textarea class="inputMessegesLable" onkeydown = "if(event.keyCode == 13 && event.ctrlKey )document.getElementById('sendMessege').click()" ></textarea>
+                <button class="sendMessege" id="sendMessege" onclick="sendMessegEventKey()" >Надіслати</button>
             </div>
         </div>
 
@@ -141,16 +81,19 @@
 
 <script>
     $(document).ready(function(){
+        var indexUserResivedGlobal;
         $.get('getAllUserForMessegerPage.json',{},function(a){
             for (i = 0; i < a.length; i++) {
                 $('.allFrendsMessege').append('<div class="row showAllUserOnMesseg"> <a id="hrefUserResived'+a[i].id+'" idResived="'+a[i].id+'"> <div class="boxForFrendsInAllMessegeFrends"> <img src="'+a[i].foto+'" class="img-rounded photoForUserInAllFrendsInMesseger"> <h5>'+a[i].firstName+' '+ a[i].lastName+'</h5> <h6></h6> </div> </a></div>');
                 $('#hrefUserResived'+a[i].id).click(function(){
                     var indexUserResived = $(this).attr('idResived');
+                    indexUserResivedGlobal = $(this).attr('idResived');
                     $.get('getDialog-Resived-'+indexUserResived,{},function(a){
+                        $('.mainMessegeWindow').html('<div class="loadMore">загрузить ще...</div>');
                         for(var i = 0; i < a.length; i++){
                             if (a[i].userReceivedMessages.id == indexUserResived){
                                 console.log(+a[i]);
-                                $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userReceivedMessages.id+'"><img src="'+a[i].userReceivedMessages.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
+                                $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
                             }else{
                                 console.log(+a[i]);
                                 $('.mainMessegeWindow').append('<div class="row"> <div class="sendUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoSendMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
@@ -163,16 +106,16 @@
 
 
 
-        $('.sendMessege').click(function(){
+        sendMessegEventKey = function(){
+            alert('send');
             var textMessege = $('.inputMessegesLable').val();
-            var indexUserResived = $('.hrefUserResived').attr('idResived');
+            var indexUserResived = indexUserResivedGlobal;
             $.get('MessegerUpdate'+indexUserResived+'-'+textMessege+'.json',{},function(a){
                 console.log(a);
-                for(i = 0; i < a.length; i++){
-                    $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
-                }
+                var lastIndex = a.length - 1;
+                    $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[lastIndex].userSentMessager.id+'"><img src="'+a[lastIndex].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[lastIndex].messager+'</h4> </div> </div>');
             });
-        });
+        };
     });
 </script>
 

@@ -336,3 +336,15 @@
     background: #333;
     color: white;
 }
+.loadMore {
+    display: none;
+    text-shadow: 5px 3px 6px black;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    font-size: 20px;
+    margin-left: 43%;
+    width: 150px;
+    height: 30px;
+}
