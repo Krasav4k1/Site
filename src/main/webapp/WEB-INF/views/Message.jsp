@@ -59,13 +59,10 @@
             <div class="row">
                 <input type="text" placeholder="Пошук" class="form-control seachInput"/>
             </div>
-
-
         </div>
 
         <div class="mainMessegeWindow">
             <div class="loadMore">загрузить ще...</div>
-
         </div>
 
         <div class="row">
@@ -85,7 +82,6 @@
         $.get('getAllUserForMessegerPage.json',{},function(a){
             for (var i = 0; i < a.length; i++) {
                 $('.allFrendsMessege').append('<div class="row showAllUserOnMesseg"> <a id="hrefUserResived'+a[i].id+'" idResived="'+a[i].id+'"> <div class="boxForFrendsInAllMessegeFrends"> <img src="'+a[i].foto+'" class="img-rounded photoForUserInAllFrendsInMesseger"> <h5>'+a[i].firstName+' '+ a[i].lastName+'</h5> <h6 class="lastMessegerForBox"></h6> </div> </a></div>');
-
                 $('#hrefUserResived'+a[i].id).hover(function() {
                     var indexUserResived = $(this).attr('idResived');
                     indexUserResivedGlobal = $(this).attr('idResived');
@@ -112,17 +108,27 @@
             }
         });
 
+        sendMessegEventKey = function() {
+        submitForm();
+        }
+            function submitForm() {
+                var roles = [$('.inputMessegesLable').val(),indexUserResivedGlobal];
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/message?${_csrf.parameterName}=${_csrf.token}",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(roles),
+                    success: function (a){
+                        var lastIndex = a.length - 1;
+                        $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[lastIndex].userSentMessager.id+'"><img src="'+a[lastIndex].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[lastIndex].messager+'</h4> </div> </div>');
+                        $('.inputMessegesLable').val('');
+                    },
+                });
+        }
 
 
-        sendMessegEventKey = function(){
-            var textMessege = $('.inputMessegesLable').val();
-            var indexUserResived = indexUserResivedGlobal;
-            $.get('MessegerUpdate'+indexUserResived+'-'+textMessege+'.json',{},function(a){
-                var lastIndex = a.length - 1;
-                    $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[lastIndex].userSentMessager.id+'"><img src="'+a[lastIndex].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[lastIndex].messager+'</h4> </div> </div>');
-                    $('.inputMessegesLable').val('');
-            });
-        };
+
     });
 </script>
 

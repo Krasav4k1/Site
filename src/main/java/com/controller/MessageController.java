@@ -8,10 +8,7 @@ import com.servise.UserService;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.ArrayList;
@@ -51,15 +48,17 @@ public class MessageController {
         return messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived);
     }
 
-    @RequestMapping(value = "MessegerUpdate{resiverUser}-{textMesseg}.json")
-    public @ResponseBody Iterable<Messages> sendMessegerAndUpdate(@PathVariable("resiverUser") int resiverUser, Principal principal,@PathVariable("textMesseg") String textMesseg){
+    @RequestMapping(value = "/message", method = RequestMethod.POST)
+    public @ResponseBody Iterable<Messages> testPostJson(@RequestBody List<String> request, Principal principal){
         Messages messages = new Messages();
         messages.setUserSentMessager(userService.findById(Integer.parseInt(principal.getName())));
-        messages.setUserReceivedMessages(userService.findById(resiverUser));
-        messages.setMessager(textMesseg);
+        messages.setUserReceivedMessages(userService.findById(Integer.parseInt(request.get(1))));
+        messages.setMessager(request.get(0));
         messages.setStatys(1);
         messageService.save(messages);
-        return messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()), resiverUser);
+        return messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()), Integer.parseInt(request.get(1)));
     }
+
+
 
 }
