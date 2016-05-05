@@ -61,8 +61,8 @@
             </div>
         </div>
 
-        <div class="mainMessegeWindow">
-            <div class="loadMore">загрузить ще...</div>
+        <div class="mainMessegeWindow" id ="mainMessegeWindow">
+            <div class="loadMore" beginCount="0" >загрузить ще...</div>
         </div>
 
         <div class="row">
@@ -79,6 +79,7 @@
 <script>
     $(document).ready(function(){
         var indexUserResivedGlobal;
+        var loadMore = false;
         $.get('getAllUserForMessegerPage.json',{},function(a){
             for (var i = 0; i < a.length; i++) {
                 $('.allFrendsMessege').append('<div class="row showAllUserOnMesseg"> <a id="hrefUserResived'+a[i].id+'" idResived="'+a[i].id+'"> <div class="boxForFrendsInAllMessegeFrends"> <img src="'+a[i].foto+'" class="img-rounded photoForUserInAllFrendsInMesseger"> <h5>'+a[i].firstName+' '+ a[i].lastName+'</h5> <h6 class="lastMessegerForBox"></h6> </div> </a></div>');
@@ -94,36 +95,50 @@
                 $('#hrefUserResived'+a[i].id).click(function(){
                     var indexUserResived = $(this).attr('idResived');
                     indexUserResivedGlobal = $(this).attr('idResived');
-                    $.get('getDialog-Resived-'+indexUserResived,{},function(a){
-                        $('.mainMessegeWindow').html('<div class="loadMore">загрузить ще...</div>');
-                        for(var i = 0; i < a.length; i++){
-                            if (a[i].userReceivedMessages.id == indexUserResived){
-                                $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
-                            }else{
-                                $('.mainMessegeWindow').append('<div class="row"> <div class="sendUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoSendMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
+                    var beginCount = 0;
+                    $.get('getDialog-Resived-'+indexUserResived+'-'+beginCount,{},function(a){
+                        if(a.length == 10) {
+                            $('.mainMessegeWindow').html('<div class="loadMore">загрузить ще...</div>');
+                            loadMore = true;
+                            if (loadMore){
+                                $('.loadMore').css("display","inline-block");
+                                $('.loadMore').click(function(){
+                                    alert('Go');
+                                });
                             }
+                        }
+                        for(var i = 0; i < a.length; i++){
+                                if (a[i].userReceivedMessages.id == indexUserResived){
+                                    $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
+                                }else{
+                                    $('.mainMessegeWindow').append('<div class="row"> <div class="sendUserMesseges"> <a href="id'+a[i].userSentMessager.id+'"><img src="'+a[i].userSentMessager.foto+'" class="img-rounded photoForUserWhoSendMessege"></a> <h4>'+a[i].messager+'</h4> </div> </div>');
+                                }
                         }
                     });
                 });
             }
         });
 
+
+
         sendMessegEventKey = function() {
         submitForm();
         }
+
             function submitForm() {
                 var roles = [$('.inputMessegesLable').val(),indexUserResivedGlobal];
                 jQuery.ajax({
                     type: "POST",
-                    url: "/message?${_csrf.parameterName}=${_csrf.token}",
+                    url: "/sendMessege?${_csrf.parameterName}=${_csrf.token}",
                     dataType: "json",
                     contentType: "application/json; charset=utf-8",
                     data: JSON.stringify(roles),
                     success: function (a){
+                        document.getElementById("mainMessegeWindow").scrollTop += 10000;
                         var lastIndex = a.length - 1;
                         $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id'+a[lastIndex].userSentMessager.id+'"><img src="'+a[lastIndex].userSentMessager.foto+'" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>'+a[lastIndex].messager+'</h4> </div> </div>');
                         $('.inputMessegesLable').val('');
-                    },
+                    }
                 });
         }
 

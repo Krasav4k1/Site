@@ -41,14 +41,29 @@ public class MessageController {
     }
 
 
-    @RequestMapping("getDialog-Resived-{idUser}")
-    public @ResponseBody List<Messages> getMessegForUserId(Principal principal, @PathVariable("idUser") int idUserResived){
+    @RequestMapping("getDialog-Resived-{idUser}-{beginCount}")
+    public @ResponseBody List<Messages> getMessegForUserId(Principal principal, @PathVariable("idUser") int idUserResived,@PathVariable("beginCount") int beginCount){
         List<Messages> list = new ArrayList<Messages>();
+        int countMeseg = 10;
         Hibernate.initialize(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived));
-        return messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived);
+        if(beginCount + countMeseg <= messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).size()){
+            for(int d = beginCount; d < beginCount + countMeseg; d++){
+                System.out.println("1----"+d+"-----"+messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
+                list.add(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
+            }
+        }else{
+            int rizn = beginCount + countMeseg - messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).size();
+            for(int d = beginCount; d < beginCount + countMeseg - rizn; d++){
+                System.out.println("2----"+d+"-----"+messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
+
+                list.add(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
+            }
+        }
+        return list;
     }
 
-    @RequestMapping(value = "/message", method = RequestMethod.POST)
+
+    @RequestMapping(value = "/sendMessege", method = RequestMethod.POST)
     public @ResponseBody Iterable<Messages> testPostJson(@RequestBody List<String> request, Principal principal){
         Messages messages = new Messages();
         messages.setUserSentMessager(userService.findById(Integer.parseInt(principal.getName())));
