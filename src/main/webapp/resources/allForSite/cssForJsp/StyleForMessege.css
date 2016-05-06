@@ -287,19 +287,19 @@
 }
 
 .photoForUserWhoSendMessege {
-    max-width: 150px;
+    max-width: 80px;
     float: right;
-    margin-right: -165px;
+    margin-right: -95px;
     margin-top: -5px;
     border: 1px solid #333;
     box-shadow: 0 0 20px #333;
 }
 
 .photoForUserWhoResiverMessege {
-   max-width: 150px;
+    max-width: 80px;
     float: left;
-    margin-left: -160px;
-    margin-top: -5px; 
+    margin-left: -90px;
+    margin-top: -5px;
     border: 1px solid #333;
     box-shadow: 0 0 20px #333;
 

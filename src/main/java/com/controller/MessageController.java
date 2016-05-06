@@ -48,14 +48,11 @@ public class MessageController {
         Hibernate.initialize(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived));
         if(beginCount + countMeseg <= messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).size()){
             for(int d = beginCount; d < beginCount + countMeseg; d++){
-                System.out.println("1----"+d+"-----"+messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
                 list.add(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
             }
         }else{
             int rizn = beginCount + countMeseg - messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).size();
             for(int d = beginCount; d < beginCount + countMeseg - rizn; d++){
-                System.out.println("2----"+d+"-----"+messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
-
                 list.add(messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()),idUserResived).get(d));
             }
         }

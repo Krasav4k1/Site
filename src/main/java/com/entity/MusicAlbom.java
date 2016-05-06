@@ -20,8 +20,8 @@ public class MusicAlbom {
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "musicAlbom_music", joinColumns =
-    @JoinColumn(name = "fk_music"), inverseJoinColumns =
-    @JoinColumn(name = "fk_musicAlbom"))
+    @JoinColumn(name = "fk_musicAlbom"), inverseJoinColumns =
+    @JoinColumn(name = "fk_music"))
     private List<Music> musics;
 
     public int getId() {
