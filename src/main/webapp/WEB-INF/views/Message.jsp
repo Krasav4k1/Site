@@ -155,6 +155,8 @@
 
     });
 </script>
+
+
 </body>
 <script src="/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js"></script>
 <script src="/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>

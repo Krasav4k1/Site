@@ -10,4 +10,6 @@ public interface MessageService {
 
     void save(Messages messages);
 
+    Messages findMessageById(int id);
+
 }

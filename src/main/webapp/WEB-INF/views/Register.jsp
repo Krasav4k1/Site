@@ -95,7 +95,34 @@
         </fieldset>
 </sf:form>
 
+<h1>JEE7 WebSocket Example</h1>
+<div id="container">
 
+</div>
+<input type="text" id="message" name="message" />
+<button type="button" id="send" onclick="send()">Send</button>
+
+<script>
+    var chatClient = new WebSocket("ws://localhost:8080/chat");
+
+    chatClient.onmessage = function(evt) {
+        var p = document.createElement("p");
+        p.setAttribute("class", "server");
+        p.innerHTML = "Server: " + evt.data;
+        var container = document.getElementById("container");
+        container.appendChild(p);
+    }
+    function send() {
+        var input = document.getElementById("message");
+        var p = document.createElement("p");
+        p.setAttribute("class", "client");
+        p.innerHTML = "Me: " + input.value;
+        var container = document.getElementById("container");
+        container.appendChild(p);
+        chatClient.send(input.value);
+        input.value = "";
+    }
+</script>
 
 <script>
 

@@ -29,4 +29,8 @@ public class MessageServiceImpl implements MessageService {
         messagesRepository.save(messages);
     }
 
+    public Messages findMessageById (int id){
+        return messagesRepository.findOne(id);
+    }
+
 }
