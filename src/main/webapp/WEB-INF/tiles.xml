@@ -10,6 +10,7 @@
 
     <definition name="withoutHeader.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
         <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="uvidomlenia" value=""></put-attribute>
         <put-attribute name="footer" value="/WEB-INF/views/Tiles/Footer.jsp"></put-attribute>
         <!-- Here body must be empty, values will come in child definitions -->
         <!-- Задаєм пустим, значення будуть приходити в наступних definition -->
@@ -17,6 +18,7 @@
     </definition>
 
     <definition name="base.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
+        <put-attribute name="uvidomlenia" value="/WEB-INF/views/Tiles/Uvidomlenia.jsp"></put-attribute>
         <put-attribute name="header" value="/WEB-INF/views/Tiles/Header.jsp"></put-attribute>
         <put-attribute name="footer" value="/WEB-INF/views/Tiles/Footer.jsp"></put-attribute>
         <!-- Here body must be empty, values will come in child definitions -->
@@ -27,6 +29,7 @@
     <definition name="withoutFooter.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
         <put-attribute name="header" value="/WEB-INF/views/Tiles/Header.jsp"></put-attribute>
         <put-attribute name="footer" value=""></put-attribute>
+        <put-attribute name="uvidomlenia" value=""></put-attribute>
         <!-- Here body must be empty, values will come in child definitions -->
         <!-- Задаєм пустим, значення будуть приходити в наступних definition -->
         <put-attribute name="body" value=""></put-attribute>
@@ -35,6 +38,7 @@
     <definition name="withoutHeaderAndFooter.definition" template="/WEB-INF/views/Tiles/Layout.jsp">
         <put-attribute name="header" value=""></put-attribute>
         <put-attribute name="footer" value=""></put-attribute>
+        <put-attribute name="uvidomlenia" value=""></put-attribute>
         <!-- Here body must be empty, values will come in child definitions -->
         <!-- Задаєм пустим, значення будуть приходити в наступних definition -->
         <put-attribute name="body" value=""></put-attribute>

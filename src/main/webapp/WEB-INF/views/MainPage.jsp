@@ -492,7 +492,12 @@
 
 
 
+   <%--             <h1>JEE7 WebSocket Example</h1>
 
+                <div id="container">
+
+                </div>
+--%>
 
 </security:authorize>
 
@@ -505,6 +510,19 @@
 <script src="/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 
 <script>
+//   var chatClient = new WebSocket("ws://localhost:8080/activation");
+//
+//   chatClient.onmessage = function (evt) {
+//       var p = document.createElement("p");
+//       p.setAttribute("class", "server");
+//       p.innerHTML = evt.data;
+//       var container = document.getElementById("container");
+//       container.appendChild(p);
+//   }
+//
+//   chatClient.send("hello");
+
+
     $(document).ready(function(){
         $("#avatar").stop().fadeOut(3000);
         $(".imgBack").hover(function(e){

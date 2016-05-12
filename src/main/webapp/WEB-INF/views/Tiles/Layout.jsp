@@ -14,6 +14,9 @@
     <tiles:insertAttribute name="header"></tiles:insertAttribute>
 </div>
 <div>
+    <tiles:insertAttribute name="uvidomlenia"></tiles:insertAttribute>
+</div>
+<div>
     <tiles:insertAttribute name="body"></tiles:insertAttribute>
 </div>
 <div>

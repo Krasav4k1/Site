@@ -36,7 +36,7 @@ public class ChatServer {
     @OnMessage
     public void onMessage(@PathParam("user") String name,@PathParam("friend") String friend,String message, Session session){
         System.out.println("Message from " + session.getId() + ": " + message);
-        sendMessageToAll("Користувач " + name + " : " + message+" : " + new java.util.Date(),friend);
+        sendMessageToAll(message,friend);
     }
 
     @OnClose
