@@ -1,29 +1,20 @@
 package com.servise.impl;
 
-import com.servise.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
+import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
 
-@ServerEndpoint(value = "/chat")
+@ServerEndpoint(value = "/chat/{user}/{friend}")
 public class ChatServer {
-    private static final Set<Session> sessions = Collections.synchronizedSet(new HashSet<Session>());
 
-    @Autowired
-    UserService userService;
-
-    private void sendMessageToAll(String message){
-        for(Session s : sessions){
+    private void sendMessageToAll(String message,String friend){
+        for(Session s : UserMonitoringWebSocket.getSessions()){
             try {
-                s.getBasicRemote().sendText(message);
+               if (Integer.parseInt(s.getUserPrincipal().getName()) == Integer.parseInt(friend)) s.getBasicRemote().sendText(message);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -31,28 +22,27 @@ public class ChatServer {
     }
 
     @OnOpen
-    public void onOpen(Session session){
+    public void onOpen(Session session, @PathParam("user") String name){
         System.out.println(session.getId() + " has opened a connection");
-        sendMessageToAll("User has connected");
+        System.out.println(session.getUserPrincipal().getName());
+//        sendMessageToAll(name+" був підключений");
         try {
-            session.getBasicRemote().sendText("Connection Established");
+            session.getBasicRemote().sendText("Підключення вдале");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        sessions.add(session);
     }
 
     @OnMessage
-    public void onMessage(String message, Session session){
+    public void onMessage(@PathParam("user") String name,@PathParam("friend") String friend,String message, Session session){
         System.out.println("Message from " + session.getId() + ": " + message);
-        sendMessageToAll(message);
+        sendMessageToAll("Користувач " + name + " : " + message+" : " + new java.util.Date(),friend);
     }
 
     @OnClose
-    public void onClose(Session session){
-        sessions.remove(session);
+    public void onClose(Session session, @PathParam("user") String name){
         System.out.println("Session " +session.getId()+" has ended");
-        sendMessageToAll("User has disconnected");
+//        sendMessageToAll(name+" був відключений");
     }
 
 

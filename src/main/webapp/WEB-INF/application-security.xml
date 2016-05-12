@@ -35,6 +35,8 @@
 
 	</http>
 
+
+
 	<beans:bean id="encoder"
 				class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 	<beans:bean id="UserDetailsService" class="com.servise.UserDetailsServiceImp"/>
