@@ -199,6 +199,13 @@
                     }
 
                     var input = $('.inputMessegesLable').val();
+                        var userSendMessageObject = {
+                        id: '90',
+                        firstName: 'Andrii',
+                        lastName: 'Blyzniuk',
+                        foto: 'foto'
+                    };
+//                    chatClient.send(JSON.stringify(userSendMessageObject));
                     chatClient.send(input);
                     input = "";
                     $('.inputMessegesLable').val('');

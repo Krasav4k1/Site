@@ -34,7 +34,6 @@ public class UserController {
     AlbomFotoService albomFotoUseService;
 
 
-
     @RequestMapping("/MainPage")
     public String ShowMainPage(Model model, Principal principal){
         if (principal != null) {
@@ -112,7 +111,5 @@ public class UserController {
     public @ResponseBody Queue<User> photoUserPutDisLike(@PathVariable("idPhoto") int idFoto){
         return userService.photoUserPutDisLike(idFoto);
     }
-
-
 
 }

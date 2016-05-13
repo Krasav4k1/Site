@@ -8,19 +8,14 @@ import com.servise.UserService;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.server.ServerEndpoint;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@ServerEndpoint("/message")
 public class MessageController {
 
     @Autowired
@@ -32,7 +27,8 @@ public class MessageController {
 
 
     @RequestMapping("/message")
-    public String ShowMessage(){
+    public String ShowMessage(Principal principal, Model model){
+        model.addAttribute("userSendMesage", userService.findById(Integer.parseInt(principal.getName())));
         return "Message";
     }
 
@@ -67,7 +63,7 @@ public class MessageController {
 
 
     @RequestMapping(value = "/sendMessege", method = RequestMethod.POST)
-    public @ResponseBody Iterable<Messages> testPostJson(@RequestBody List<String> request, Principal principal){
+    public @ResponseBody Iterable<Messages> PostJson(@RequestBody List<String> request, Principal principal){
         Messages messages = new Messages();
         messages.setUserSentMessager(userService.findById(Integer.parseInt(principal.getName())));
         messages.setUserReceivedMessages(userService.findById(Integer.parseInt(request.get(1))));
@@ -76,29 +72,5 @@ public class MessageController {
         messageService.save(messages);
         return messageService.findMessegeByIdUserResiver(Integer.parseInt(principal.getName()), Integer.parseInt(request.get(1)));
     }
-
-    @OnOpen
-    public void handleOpen(){
-        System.out.println("client is now connected...");
-    }
-
-    @OnMessage
-    public String handleMessage(String message){
-        System.out.println("recived from client: " + message);
-        String replyMessage = "echo " + message;
-        System.out.println("send to client: " + replyMessage);
-        return replyMessage;
-    }
-
-    @OnClose
-    public void handleClose(){
-        System.out.println("client is now disconnected...");
-    }
-
-    @OnError
-    public void handleError(Throwable t){
-        t.printStackTrace();
-    }
-
 
 }

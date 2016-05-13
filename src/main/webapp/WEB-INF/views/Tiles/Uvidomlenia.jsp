@@ -19,20 +19,18 @@
 <body class="bodyClass">
 
 </body>
-
 <script>
-        var count = 0;
 
         var chatClient = new WebSocket("ws://localhost:8080/activation");
-
+        var count = 0;
         chatClient.onmessage = function (evt) {
             if(count <= 5 ){
-                open(count,evt);
                 count++;
+                open(count,evt);
             }else{
                 count = 0;
             }
-            open = function(e,date){
+            function open (e,date){
                 $('.bodyClass').append(' <div class="glavWindowUvidomlenia glavWindowUvidomleniabottom'+e+'"= style=""><div class="mesegeUvidomInWindUvidom"><h4 class="messegeInUvidom">'+date.data+'</h4></div><div class="imgUserUvidomlenia" ><img src="" class="img"></div> </div>');
                 if (e > 1){
                     var bot = (count-1)*120;
