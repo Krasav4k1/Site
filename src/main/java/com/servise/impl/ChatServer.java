@@ -24,7 +24,6 @@ public class ChatServer {
     public void onOpen(Session session, @PathParam("user") String name){
         System.out.println(session.getId() + " has opened a connection");
         System.out.println(session.getUserPrincipal().getName());
-//        sendMessageToAll(name+" був підключений");
         try {
             session.getBasicRemote().sendText("Підключення вдале");
         } catch (IOException ex) {
@@ -34,21 +33,12 @@ public class ChatServer {
 
     @OnMessage
     public void onMessage(@PathParam("user") String name, @PathParam("friend") String friend, String message, Session session) throws ParseException {
-//        JSONParser parser = new JSONParser();
-//        Object obj = parser.parse(message);
-//        JSONObject jsonObj = (JSONObject) obj;
-//        System.out.println(jsonObj.get("id"));
-//        System.out.println(jsonObj.get("firstName"));
-//        System.out.println(jsonObj.get("lastName"));
-//        System.out.println(jsonObj.get("userAvatar"));
-        System.out.println("Message from " + session.getId() + ": " + message);
         sendMessageToAll(message,friend,name);
     }
 
     @OnClose
     public void onClose(Session session, @PathParam("user") String name){
         System.out.println("Session " +session.getId()+" has ended");
-//        sendMessageToAll(name+" був відключений");
     }
 
     @OnError

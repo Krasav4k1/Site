@@ -19,7 +19,7 @@
     background-color: #bcbcbc;
 }
 .glavWindowUvidomlenia {
-    background: rgba( 255, 255, 255, 0.783 );
+    background: rgba( 255, 255, 255, 0.439 );
     float: right;
     margin-top: 500px !important;
     width: 310px;
@@ -35,13 +35,14 @@
     z-index: 1000;
     bottom: 0px;
     right: 0px;
+    box-shadow: 10px 10px 15px black;
 }
 
 
 
 .mesegeUvidomInWindUvidom {
     width: 225px;
-    height: 70px;
+    height: 65px;
     background: transparent;
     margin-left: 5px;
     margin-top: 0px;
@@ -58,7 +59,7 @@
     float: left;
     height: 80px;
     width: 70px;
-    margin-top: 8px;
+    margin-top: 10px;
     margin-left: 5px;
 
 }
@@ -75,6 +76,29 @@
     margin-left: 20px;
 }
 .timeMesseg{
-    margin-left: 10px;
+    margin-left: 15px;
+    position: absolute;
+    margin-top: 84px;
+}
 
+
+.closeUvidomlenia {
+    float: right;
+    margin-right: 2px;
+    font-size: 0px !important;
+    color: rgba( 0, 0, 0, 0.681 );
+    transition: .5s;
+    cursor: pointer;
+}
+.glavWindowUvidomlenia:hover .closeUvidomlenia{
+    margin-top: -20px;
+    font-size: 20px !important;
+}
+.closeUvidomlenia:hover {
+    float: right;
+    margin-top: -23px;
+    margin-right: 4px;
+    font-size: 23px !important;
+    color: black;
+    transition: .5s;
 }

@@ -14,6 +14,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="/resources/allForSite/cssForJsp/StyleForUvedomlenia.css">
+    <link href="<c:url value="/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css" />" rel="stylesheet">
     <script src="/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js"></script>
 </head>
 <body class="bodyClass">
@@ -24,6 +25,7 @@
 
         var chatClient = new WebSocket("ws://localhost:8080/activation");
         var count = 0;
+        var idElement;
         chatClient.onmessage = function (evt) {
             var JSONObject = JSON.parse(evt.data);
             var d = new Date();
@@ -36,15 +38,31 @@
                 open(count,JSONObject);
             }
             function open (e,data){
-                $('.bodyClass').append(' <div class="glavWindowUvidomlenia glavWindowUvidomleniabottom'+e+'"= style=""><div class="mesegeUvidomInWindUvidom"><h4 class="nameUser">'+data["firstName"]+' '+data["lastName"]+'</h4><h5 class="messegeInUvidom">'+data["messager"]+'</h5></div><div class="imgUserUvidomlenia" ><img src="'+data["userAvatar"]+'" class="img"></div><h6 class="timeMesseg">'+nowTime+'</h6></div>');
+                $('.bodyClass').append(' <div class="glavWindowUvidomlenia glavWindowUvidomleniabottom'+e+'"= style=""  id="'+e+'" ><div class="mesegeUvidomInWindUvidom"  id="'+e+'" ><h4 class="nameUser"  id="'+e+'" >'+data["firstName"]+' '+data["lastName"]+'</h4><i class="glyphicon glyphicon-remove closeUvidomlenia" id="'+e+'"></i><h5 class="messegeInUvidom"  id="'+e+'" >'+data["messager"]+'</h5></div><div class="imgUserUvidomlenia"  id="'+e+'" ><a href="id'+data["id"]+'"><img src="'+data["userAvatar"]+'"  id="'+e+'" class="img"></a></div><h6 class="timeMesseg">'+nowTime+'</h6></div>');
                 if (e > 1){
                     var bot = (count-1)*120;
                     var bottom ='bottom:'+bot+"px";
                     $('.glavWindowUvidomleniabottom'+e).attr('style',bottom);
-                    setTimeout('$(".glavWindowUvidomleniabottom'+e+'").attr("style","bottom:0px")', 4000);
                 }
-                setTimeout('$(".glavWindowUvidomleniabottom'+e+'").remove()', 5000);
+                $('.glavWindowUvidomlenia').hover(function(){
+                    $(document.body).bind('mouseover', function(e) {
+                        if (e.target.tagName.toLowerCase() == 'div') idElement = e.target.id;
+                        $('#'+idElement).css("background","white");
+                        $('.closeUvidomlenia').click(function(){
+                            $('#'+idElement).remove();
+                        });
+                    });
+                }, function(){
+                    setTimeout('$(".glavWindowUvidomleniabottom'+e+'").remove()', 5000);
+                    setTimeout('$(".glavWindowUvidomleniabottom'+e+'").attr("style","bottom:0px")', 4000);
+                });
+                setTimeout('$(".glavWindowUvidomleniabottom'+e+'").attr("style","bottom:0px")', 19000);
+                setTimeout('$(".glavWindowUvidomleniabottom'+e+'").remove()', 20000);
             };
+
+            TimeOutForCount = function(){
+                count = 0;
+            }
 
             function time_format(d) {
                 hours = format_two_digits(d.getHours());
