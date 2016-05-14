@@ -34,7 +34,7 @@ public class FileSaveServiceImpl implements com.servise.FileSaveService {
         BufferedImage bi =  ImageIO.read(new ByteArrayInputStream(file.getBytes()));
         File path = new File(uploadRootDir+File.separator+originalName+String.valueOf(userId)+"."+format);
         ImageIO.write(bi,format,path);
-        return String.valueOf(path.getPath());
+        return String.valueOf(path.getPath().replace("\\","/"));
 
     }
 

@@ -5,8 +5,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <sec:authentication var="principal" property="principal" />
-
 <!DOCTYPE html>
 <html>
 
@@ -21,17 +21,22 @@
 </body>
 <script>
 
+
         var chatClient = new WebSocket("ws://localhost:8080/activation");
         var count = 0;
         chatClient.onmessage = function (evt) {
+            var JSONObject = JSON.parse(evt.data);
+            var d = new Date();
+            var nowTime = time_format(d);
+            count++;
             if(count <= 5 ){
-                count++;
-                open(count,evt);
+                open(count,JSONObject);
             }else{
-                count = 0;
+                count = 1;
+                open(count,JSONObject);
             }
-            function open (e,date){
-                $('.bodyClass').append(' <div class="glavWindowUvidomlenia glavWindowUvidomleniabottom'+e+'"= style=""><div class="mesegeUvidomInWindUvidom"><h4 class="messegeInUvidom">'+date.data+'</h4></div><div class="imgUserUvidomlenia" ><img src="" class="img"></div> </div>');
+            function open (e,data){
+                $('.bodyClass').append(' <div class="glavWindowUvidomlenia glavWindowUvidomleniabottom'+e+'"= style=""><div class="mesegeUvidomInWindUvidom"><h4 class="nameUser">'+data["firstName"]+' '+data["lastName"]+'</h4><h5 class="messegeInUvidom">'+data["messager"]+'</h5></div><div class="imgUserUvidomlenia" ><img src="'+data["userAvatar"]+'" class="img"></div><h6 class="timeMesseg">'+nowTime+'</h6></div>');
                 if (e > 1){
                     var bot = (count-1)*120;
                     var bottom ='bottom:'+bot+"px";
@@ -40,6 +45,18 @@
                 }
                 setTimeout('$(".glavWindowUvidomleniabottom'+e+'").remove()', 5000);
             };
+
+            function time_format(d) {
+                hours = format_two_digits(d.getHours());
+                minutes = format_two_digits(d.getMinutes());
+                seconds = format_two_digits(d.getSeconds());
+                return hours + ":" + minutes + ":" + seconds;
+            }
+
+            function format_two_digits(n) {
+                return n < 10 ? '0' + n : n;
+            }
+
         };
 </script>
 </html>

@@ -200,13 +200,13 @@
 
                     var input = $('.inputMessegesLable').val();
                         var userSendMessageObject = {
-                        id: '90',
-                        firstName: 'Andrii',
-                        lastName: 'Blyzniuk',
-                        foto: 'foto'
-                    };
-//                    chatClient.send(JSON.stringify(userSendMessageObject));
-                    chatClient.send(input);
+                            id: ${userSendMesage.id},
+                            firstName: '${userSendMesage.firstName}',
+                            lastName: '${userSendMesage.lastName}',
+                            userAvatar: '${userSendMesage.foto}',
+                            messager: input
+                        };
+                    chatClient.send(JSON.stringify(userSendMessageObject));
                     input = "";
                     $('.inputMessegesLable').val('');
 

@@ -3,7 +3,7 @@ package com.entity;
 import com.servise.CustomValidation.CustomValidNameAlbom;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
@@ -12,6 +12,8 @@ public class AlbomFotoUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Pattern(regexp = "^/p/(?<secure>[\\w\\-=]+,\\d+),(?<user>[^/]+)(?<file>/.*)$")
     @CustomValidNameAlbom(message = "такий альбом вже існує")
     private String albomName;
 

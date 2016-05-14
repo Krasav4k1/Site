@@ -38,12 +38,13 @@
 }
 
 
+
 .mesegeUvidomInWindUvidom {
     width: 225px;
-    height: 80px;
+    height: 70px;
     background: transparent;
     margin-left: 5px;
-    margin-top: 10px;
+    margin-top: 0px;
     overflow-x: hidden;
     overflow-y: scroll;
     float: left;
@@ -57,13 +58,23 @@
     float: left;
     height: 80px;
     width: 70px;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-left: 5px;
 
 }
 
-
 .img {
     max-width: 70px;
     height: 80px;
+}
+.nameUser{
+    margin-top: 2px;
+    text-align: left;
+    margin-bottom: 0px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.timeMesseg{
+    margin-left: 10px;
+
 }

@@ -1,5 +1,7 @@
 package com.servise.impl;
 
+import org.json.simple.parser.ParseException;
+
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
@@ -31,7 +33,14 @@ public class ChatServer {
     }
 
     @OnMessage
-    public void onMessage(@PathParam("user") String name, @PathParam("friend") String friend, String message, Session session){
+    public void onMessage(@PathParam("user") String name, @PathParam("friend") String friend, String message, Session session) throws ParseException {
+//        JSONParser parser = new JSONParser();
+//        Object obj = parser.parse(message);
+//        JSONObject jsonObj = (JSONObject) obj;
+//        System.out.println(jsonObj.get("id"));
+//        System.out.println(jsonObj.get("firstName"));
+//        System.out.println(jsonObj.get("lastName"));
+//        System.out.println(jsonObj.get("userAvatar"));
         System.out.println("Message from " + session.getId() + ": " + message);
         sendMessageToAll(message,friend,name);
     }
