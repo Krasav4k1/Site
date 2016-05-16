@@ -33,7 +33,6 @@ public class Messages {
         this.messager = messager;
     }
 
-
     public User getUserSentMessager() {
         return userSentMessager;
     }

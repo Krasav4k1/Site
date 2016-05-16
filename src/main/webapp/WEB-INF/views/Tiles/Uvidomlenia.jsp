@@ -19,6 +19,8 @@
 </head>
 <body class="bodyClass">
 
+    <div class="forUvidom"></div>
+
 </body>
 <script>
 
@@ -30,6 +32,8 @@
             var JSONObject = JSON.parse(evt.data);
             var d = new Date();
             var nowTime = time_format(d);
+            if ($('.forUvidom').text().length == 0) count = 0;
+
             count++;
             if(count <= 5 ){
                 open(count,JSONObject);
@@ -38,7 +42,7 @@
                 open(count,JSONObject);
             }
             function open (e,data){
-                $('.bodyClass').append(' <div class="glavWindowUvidomlenia glavWindowUvidomleniabottom'+e+'"= style=""  id="'+e+'" ><div class="mesegeUvidomInWindUvidom"  id="'+e+'" ><h4 class="nameUser"  id="'+e+'" >'+data["firstName"]+' '+data["lastName"]+'</h4><i class="glyphicon glyphicon-remove closeUvidomlenia" id="'+e+'"></i><h5 class="messegeInUvidom"  id="'+e+'" >'+data["messager"]+'</h5></div><div class="imgUserUvidomlenia"  id="'+e+'" ><a href="id'+data["id"]+'"><img src="'+data["userAvatar"]+'"  id="'+e+'" class="img"></a></div><h6 class="timeMesseg">'+nowTime+'</h6></div>');
+                $('.forUvidom').append('<div class="glavWindowUvidomlenia glavWindowUvidomleniabottom'+e+'"= style=""  id="'+e+'" ><div class="mesegeUvidomInWindUvidom"  id="'+e+'" ><h4 class="nameUser"  id="'+e+'" >'+data["firstName"]+' '+data["lastName"]+'</h4><i class="glyphicon glyphicon-remove closeUvidomlenia" id="'+e+'"></i><h5 class="messegeInUvidom"  id="'+e+'" >'+data["messager"]+'</h5></div><div class="imgUserUvidomlenia"  id="'+e+'" ><a href="id'+data["id"]+'"><img src="'+data["userAvatar"]+'"  id="'+e+'" class="img"></a></div><h6 class="timeMesseg">'+nowTime+'</h6></div><audio src="/resources/allForSite/default/recivedMessage.mp3" autoplay></audio>');
                 if (e > 1){
                     var bot = (count-1)*120;
                     var bottom ='bottom:'+bot+"px";
@@ -53,6 +57,7 @@
                         });
                     });
                 }, function(){
+                    $('#'+idElement).css("background","rgba( 255, 255, 255, 0.439 )");
                     setTimeout('$(".glavWindowUvidomleniabottom'+e+'").remove()', 5000);
                     setTimeout('$(".glavWindowUvidomleniabottom'+e+'").attr("style","bottom:0px")', 4000);
                 });
