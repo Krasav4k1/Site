@@ -5,9 +5,14 @@ import com.repository.UserRepository;
 import com.servise.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.io.IOException;
+import java.security.Principal;
 
 @Controller
+
 //@SessionAttributes( value = "User", types={User.class})
 public class SettingController {
 
@@ -20,9 +25,11 @@ public class SettingController {
     @Autowired
     GrupService grupService;
     @Autowired
-    AlbomFotoService albomFotoServiceImpl;
+    AlbomFotoService albomFotoService;
     @Autowired
     FotoService fotoService;
+    @Autowired
+    FileDeleteService fileDeleteService;
 
     @RequestMapping("/settings")
     public String ShowSetting() {
@@ -59,6 +66,12 @@ public class SettingController {
     }
 */
 
+    @RequestMapping(value = "/settings/daleteUser",method = RequestMethod.GET)
+    public String removeUser(Principal principal) throws IOException {
+//        albomFotoService.removeByid(Integer.parseInt(principal.getName()),principal);
 
+        userService.dalete(principal.getName());
+        return null;
+    }
 
 }

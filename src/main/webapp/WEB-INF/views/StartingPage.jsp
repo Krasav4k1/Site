@@ -25,8 +25,8 @@
 <h1 style="text-align: center; color:#a8a7a8; padding: 40px">WTable</h1>
 
 
-<c:url value="/login" var="login"/>
-<form method="post"  class="login" action="${login}" >
+
+<form method="post"  class="login" action="/login" >
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     <input type="hidden" >
     <p>
@@ -43,8 +43,6 @@
         <button type="submit" class="login-button">Войти</button>
     </p>
     <p class="forgot-password"><a href="/register">Регістрація</a></p>
-
-
 </form>
 
 </body>

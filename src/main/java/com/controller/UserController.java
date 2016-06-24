@@ -43,7 +43,6 @@ public class UserController {
         return "redirect:/";
     }
 
-
     @RequestMapping("/id{id}")
     public String ShowMainPageForRoler (@PathVariable int id, Model model, Principal principal) {
         User owner = userService.findById(id);
@@ -71,14 +70,14 @@ public class UserController {
 
     @RequestMapping(value = "/getFoto/user={id}/foto={index}/{control}")
     @ResponseBody
-    public String[] moveAvatarPhoto(@PathVariable("index") int index, @PathVariable("id") int id,@PathVariable("control") String control){
+    public String[] moveAvatarPhoto(@PathVariable("index") int index, @PathVariable("id") int id, @PathVariable("control") String control){
        return userService.moveAvatarPhoto(index,id,control);
     }
 
 
     @RequestMapping("/add{whote}ForPhoto{idFoto}/user-{idUser}")
     @ResponseBody
-    public String aadlikeFoto(@PathVariable("idFoto") int idFoto,@PathVariable("idUser") int idUser,@PathVariable("whote") String whote,Principal principal ){
+    public String aadlikeFoto(@PathVariable("idFoto") int idFoto, @PathVariable("idUser") int idUser, @PathVariable("whote") String whote, Principal principal ){
         return avatarPhotoService.addLikeAndDisLike(idFoto,idUser,whote,principal);
     }
 
@@ -102,13 +101,15 @@ public class UserController {
 
     @Transactional
     @RequestMapping(value = "/photoUserPutLike-foto-{idPhoto}.json")
-    public @ResponseBody Queue<User> photoUserPutLike(@PathVariable("idPhoto") int idFoto){
+    public @ResponseBody
+    Queue<User> photoUserPutLike(@PathVariable("idPhoto") int idFoto){
         return userService.photoUserPutLike(idFoto);
     }
 
     @Transactional
     @RequestMapping(value = "/photoUserPutDisLike-foto-{idPhoto}.json")
-    public @ResponseBody Queue<User> photoUserPutDisLike(@PathVariable("idPhoto") int idFoto){
+    public @ResponseBody
+    Queue<User> photoUserPutDisLike(@PathVariable("idPhoto") int idFoto){
         return userService.photoUserPutDisLike(idFoto);
     }
 

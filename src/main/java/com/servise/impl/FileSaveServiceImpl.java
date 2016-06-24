@@ -14,28 +14,30 @@ public class FileSaveServiceImpl implements com.servise.FileSaveService {
 
     public String saveFile (String dir, String userId, MultipartFile file, String absolutePath, String id) throws IOException {
         File uploadRootDir = null;
-        String originalName = null;
+        String originalName = file.getOriginalFilename().toLowerCase();
         String format = null;
         if(dir.equals("foto")){
             uploadRootDir = new File(absolutePath+File.separator+"uplodateFile"+File.separator+userId+File.separator+"foto"+File.separator+"albom-"+id);
-            format = null;
             if (!uploadRootDir.exists()){
                 uploadRootDir.mkdirs();
             }
-            if (file.getOriginalFilename().endsWith(".jpg")){
-                originalName = file.getOriginalFilename().replaceAll(".jpg","user");
+            if (originalName.endsWith(".jpg")){
+                originalName = originalName.replaceAll(".jpg","user");
                 format = "jpg";
             }
-            if (file.getOriginalFilename().endsWith(".png")){
-                originalName = file.getOriginalFilename().replaceAll(".png","user");
+            if (originalName.endsWith(".jpeg")){
+                originalName = originalName.replaceAll(".jpeg","user");
+                format = "jpeg";
+            }
+            if (originalName.endsWith(".png")){
+                originalName = originalName.replaceAll(".png","user");
                 format = "png";
             }
         }
         BufferedImage bi =  ImageIO.read(new ByteArrayInputStream(file.getBytes()));
         File path = new File(uploadRootDir+File.separator+originalName+String.valueOf(userId)+"."+format);
         ImageIO.write(bi,format,path);
-        return String.valueOf(path.getPath().replace("\\","/"));
-
+        return String.valueOf(path.getPath().replaceAll(absolutePath,"/resources").replace("\\","/"));
     }
 
 

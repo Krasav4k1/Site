@@ -8,8 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+
 @Transactional
 public interface AvatarPhotoRepository extends CrudRepository<AvatarPhoto,Integer>{
 
@@ -24,5 +23,5 @@ public interface AvatarPhotoRepository extends CrudRepository<AvatarPhoto,Intege
     AvatarPhoto findByIdUser(@Param("userId") int userId);
 
     @Query(value = "select a from AvatarPhoto a  WHERE (a.id like concat(:fotoId))")
-    AvatarPhoto findBYIdPhoto (@Param("fotoId") int fotoId);
+    AvatarPhoto findBYIdPhoto(@Param("fotoId") int fotoId);
 }

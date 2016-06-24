@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3750442783">
-    <data-source source="LOCAL" name="MySQL - wtable@localhost" uuid="e1507a64-d5bf-4f5b-b81b-008219767a33">
+  <component name="DataSourceManagerImpl" format="xml" hash="1666312721">
+    <data-source source="LOCAL" name="MySQL - wtable@localhost" uuid="1195cef4-cf36-4c6d-bbe5-238476021c01">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/wtable</jdbc-url>
       <driver-properties>
+        <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
         <property name="characterEncoding" value="utf8" />

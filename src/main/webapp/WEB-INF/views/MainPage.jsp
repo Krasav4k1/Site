@@ -36,7 +36,7 @@
 </security:authorize>
 
 <security:authorize access="isAuthenticated() and principal.username!='${user.id}' and !hasRole('ROLE_ADMIN')">
-    <%--Це буде бачити користувач який залогінився він не являється власником сторінки і він не адмін--%>
+    Це буде бачити користувач який залогінився він не являється власником сторінки і він не адмін
     Текущая дата: <%= new java.util.Date()%>
 
 

@@ -1,14 +1,13 @@
 package com.servise.impl;
 
 import com.servise.MailSenderService;
-import org.springframework.stereotype.Service;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-@Service
+@org.springframework.stereotype.Service
 public class MailSenderServiceImpl implements MailSenderService {
 
     final static String USERNAME = "Krasav4k1@gmail.com";

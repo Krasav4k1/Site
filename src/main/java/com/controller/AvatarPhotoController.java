@@ -37,7 +37,7 @@ public class AvatarPhotoController {
     }
 
     @RequestMapping(value = "/id{id}/addFileAvatarFoto")
-    public String addAvatarPhoto(@RequestParam("file") MultipartFile file,@PathVariable("id")int id, HttpServletRequest request, Principal principal) throws IOException{
+    public String addAvatarPhoto(@RequestParam("file") MultipartFile file, @PathVariable("id")int id, HttpServletRequest request, Principal principal) throws IOException{
        int rez = avatarPhotoService.auditAvatarPhotoFile(file,request,principal);
         if (rez == 1){
             return "файл завеликий";

@@ -10,7 +10,6 @@
 
 	<beans:bean id="authenticationSuccessHandler"
 				class="com.servise.SystemAuthenticationSuccessHandler" />
-<!--Socet-->
 
 	<http use-expressions="true">
 
@@ -39,9 +38,9 @@
 
 	<beans:bean id="encoder"
 				class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
-	<beans:bean id="UserDetailsService" class="com.servise.UserDetailsServiceImp"/>
+	<beans:bean id="UserDetailsServiceImp" class="com.servise.UserDetailsServiceImp"/>
 	<authentication-manager>
-		<authentication-provider user-service-ref="UserDetailsService">
+		<authentication-provider user-service-ref="UserDetailsServiceImp">
 			<password-encoder ref="encoder"/>
 		</authentication-provider>
 	</authentication-manager>

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+
 public class AdminPageCountroller {
 
     @Autowired
@@ -19,7 +20,7 @@ public class AdminPageCountroller {
     }
 
     @RequestMapping("/AdminPage/AdminVisit/{id}")
-    public String ShowPageUser(Model model,@PathVariable int id){
+    public String ShowPageUser(Model model, @PathVariable int id){
         model.addAttribute("user", userService.findById(id));
         return "redirect:/id" + id;
     }

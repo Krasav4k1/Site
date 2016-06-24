@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+
 public class FriendsController {
 
     @Autowired
@@ -35,7 +36,7 @@ public class FriendsController {
     }
 
     @RequestMapping( value = "/addFriends/{id}", method = RequestMethod.GET)
-    public String addFrend(@PathVariable("id") int id, Model model,Principal principal){
+    public String addFrend(@PathVariable("id") int id, Model model, Principal principal){
         frendsService.addFrend(principal,id);
         return "redirect:/id{id}";
     }
@@ -47,7 +48,8 @@ public class FriendsController {
     }
 
     @RequestMapping("getAllPeople.json")
-    public @ResponseBody Iterable<User> getAllPeople(Principal principal){
+    public @ResponseBody
+    Iterable<User> getAllPeople(Principal principal){
         Hibernate.initialize(userService.getAll());
         List<User> list = new ArrayList<User>();
         for (User user : userService.getAll()){
@@ -59,7 +61,8 @@ public class FriendsController {
     }
 
     @RequestMapping("/getMyFrends.json")
-    public @ResponseBody Iterable<User> myFrends(Principal principal){
+    public @ResponseBody
+    Iterable<User> myFrends(Principal principal){
         return frendsService.getFrends(principal,1,1,0);
     }
 

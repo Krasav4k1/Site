@@ -9,10 +9,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-import java.util.List;
-
 @Transactional
 public interface UserRepository extends CrudRepository<User,Integer> {
 

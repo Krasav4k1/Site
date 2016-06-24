@@ -3,7 +3,6 @@ package com.servise.binder;
 import com.servise.GrupService;
 
 import java.beans.PropertyEditorSupport;
-import java.util.ArrayList;
 
 public class GrupEditor extends PropertyEditorSupport{
 

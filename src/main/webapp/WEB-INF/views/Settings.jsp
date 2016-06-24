@@ -47,8 +47,9 @@
 </sf:form>
 --%>
 
-
-
+<form action="/settings/daleteUser" method="GET">
+    <input type="submit" value="remove me">
+</form>
 
 
 </body>

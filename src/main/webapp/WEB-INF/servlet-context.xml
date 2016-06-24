@@ -2,12 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:context="http://www.springframework.org/schema/context"
-	   xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:beans="http://www.springframework.org/schema/util"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:beans="http://www.springframework.org/schema/util"
 	   xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
 	<context:component-scan base-package="com.controller"/>
+
 
 	<mvc:resources mapping="/resources/**" location="/resources/"/>
 
@@ -29,13 +33,12 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 
-	<!-- Bean tilesConfigurer demands xml, in which tiles definitions are defined -->
-	<!-- Bean tilesConfigurer вимагає xml, в якому є описані tiles definitions -->
+
 	<bean id="tilesConfigurer"
 		  class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<property name="definitions">
 			<list>
-				<value>/WEB-INF/tiles.xml</value>
+				<value>/webapp/WEB-INF/tiles.xml</value>
 			</list>
 		</property>
 	</bean>

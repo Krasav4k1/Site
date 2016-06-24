@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.security.Principal;
 
 @Controller
+
 public class FotoController {
 
     @Autowired

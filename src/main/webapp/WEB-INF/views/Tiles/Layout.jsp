@@ -7,20 +7,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <%--<title><tiles:getAsString name="title"></tiles:getAsString></title>--%>
 </head>
-
 <!-- This is template, "parent" web page  -->
 <body>
 <div>
-    <tiles:insertAttribute name="header"></tiles:insertAttribute>
+    <tiles:insertAttribute name="header"/>
 </div>
 <div>
-    <tiles:insertAttribute name="uvidomlenia"></tiles:insertAttribute>
+    <tiles:insertAttribute name="uvidomlenia"/>
 </div>
 <div>
-    <tiles:insertAttribute name="body"></tiles:insertAttribute>
+    <tiles:insertAttribute name="body"/>
 </div>
 <div>
-    <tiles:insertAttribute name="footer"></tiles:insertAttribute>
+    <tiles:insertAttribute name="footer"/>
 </div>
 </body>
 </html>

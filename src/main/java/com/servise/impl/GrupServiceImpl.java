@@ -6,9 +6,9 @@ import com.repository.GrupRepository;
 import com.servise.GrupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 @Service
-public class GrupServiceImpl implements GrupService{
+
+public class GrupServiceImpl implements GrupService {
 
     @Autowired
     GrupRepository grupRepository;

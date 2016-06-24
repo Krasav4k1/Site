@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public interface FileSaveService {
 
-    String saveFile (String dir, String userId, MultipartFile file, String absolutePath, String id) throws IOException;
+    String saveFile(String dir, String userId, MultipartFile file, String absolutePath, String id) throws IOException;
 
 
 }
