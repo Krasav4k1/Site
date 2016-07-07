@@ -1,7 +1,6 @@
 package com.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
@@ -19,7 +18,7 @@ public class MusicAlbom {
     @JoinColumn
     private Grup grup;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.LAZY)
     @JoinTable(name = "musicAlbom_music", joinColumns =
     @JoinColumn(name = "fk_musicAlbom"), inverseJoinColumns =
     @JoinColumn(name = "fk_music"))

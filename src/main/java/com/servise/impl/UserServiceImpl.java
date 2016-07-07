@@ -3,12 +3,10 @@ package com.servise.impl;
 import com.controller.CityController;
 import com.entity.*;
 import com.repository.UserRepository;
-import com.servise.AlbomFotoService;
-import com.servise.AvatarPhotoService;
-import com.servise.UserService;
+import com.servise.*;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayDeque;
@@ -25,16 +23,15 @@ public class UserServiceImpl implements UserService{
     @Autowired
     CityController cityController;
     @Autowired
-    BCryptPasswordEncoder bCryptPasswordEncoder;
+    PasswordEncoder bCryptPasswordEncoder;
     @Autowired
-    AlbomFotoService albomFotoServiceImpl;
+    AlbomFotoService albomFotoService;
     @Autowired
-    FotoServiceImpl fotoService;
+    FotoService fotoService;
     @Autowired
-    CityServiceImpl cityService;
+    CityService cityService;
     @Autowired
     AvatarPhotoService avatarPhotoService;
-
 
     //UpdateUser
     public void updateUser(int id){
@@ -93,7 +90,7 @@ public class UserServiceImpl implements UserService{
         Foto foto = new Foto();
         albomFotoUser.setAlbomName("Фотослайдер");
         albomFotoUser.setUser(user);
-        albomFotoServiceImpl.save(albomFotoUser);
+        albomFotoService.save(albomFotoUser);
         foto.setAlbomFotoUser(albomFotoUser);
         foto.setFoto("/resources/allForSite/default/defaultFoto.png");
         fotoService.save(foto);

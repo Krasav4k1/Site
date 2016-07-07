@@ -4,6 +4,7 @@ import com.entity.AvatarPhoto;
 import com.entity.User;
 import com.repository.AvatarPhotoRepository;
 import com.servise.AvatarPhotoService;
+import com.servise.FileDeleteService;
 import com.servise.FileSaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,16 +17,16 @@ import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 @Transactional
-public class AvatarPhotoServiceImpl implements AvatarPhotoService{
+@Service
+public class AvatarPhotoServiceImpl implements AvatarPhotoService {
 
     @Autowired
     AvatarPhotoRepository avatarPhotoRepository;
     @Autowired
     UserServiceImpl userService;
     @Autowired
-    FileDeleteServiceImpl deleteService;
+    FileDeleteService deleteService;
     @Autowired
     FileSaveService fileSaveService;
 
@@ -107,9 +108,7 @@ public class AvatarPhotoServiceImpl implements AvatarPhotoService{
         String photoUser = userService.findById(userId).getFoto();
         String photoAva = findOne(Integer.parseInt(fotoId)).getFoto();
         if (photoUser.equals(photoAva)){
-            deleteService.deleteFile(request.getServletContext().getRealPath("resources") + findOne(Integer.parseInt(fotoId)).getFoto().substring(10));
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp" + findOne(Integer.parseInt(fotoId)).getFoto());
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\" + findOne(Integer.parseInt(fotoId)).getFoto());
+            deleteService.deleteFile(request.getServletContext().getRealPath("resources") + findOne(Integer.parseInt(fotoId)).getFoto().replaceAll("/resources",""));
             daletePhotoByPhotoId(Integer.parseInt(fotoId));
             if (getAllByIdUser(userId).size() == 0){
                 User user = userService.findById(userId);
@@ -124,9 +123,7 @@ public class AvatarPhotoServiceImpl implements AvatarPhotoService{
                 userService.editUser(user);
             }
         }else {
-            deleteService.deleteFile(request.getServletContext().getRealPath("resources") + findOne(Integer.parseInt(fotoId)).getFoto().substring(10));
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp" + findOne(Integer.parseInt(fotoId)).getFoto());
-            deleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\" + findOne(Integer.parseInt(fotoId)).getFoto());
+            deleteService.deleteFile(request.getServletContext().getRealPath("resources") + findOne(Integer.parseInt(fotoId)).getFoto().replaceAll("/resources",""));
             daletePhotoByPhotoId(Integer.parseInt(fotoId));
         }
     }
@@ -135,13 +132,8 @@ public class AvatarPhotoServiceImpl implements AvatarPhotoService{
         if(file.getBytes().length >= 10000000){
             return 1;
         }else {
-            String absolutePath1 = request.getServletContext().getRealPath("resources");
-            String absolutePath2 = "C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources";
-            String albomeName = "avatar";
-            String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, absolutePath1,albomeName);
-            fileSaveService.saveFile("foto",principal.getName(), file, absolutePath2,albomeName);
-            addFoto(fotoPath.substring(50), Integer.parseInt(principal.getName()));
-            System.out.println(absolutePath1);
+            String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, request.getServletContext().getRealPath("resources") ,"avatar");
+            addFoto(fotoPath, Integer.parseInt(principal.getName()));
         }
         return 0;
     }

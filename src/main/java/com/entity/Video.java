@@ -2,6 +2,7 @@ package com.entity;
 
 import javax.persistence.*;
 import java.util.List;
+
 @Entity
 public class Video {
     @Id
@@ -13,13 +14,13 @@ public class Video {
     private int longVideo;
     private int qualityVideo;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.LAZY)
     @JoinTable(name = "user_video", joinColumns =
     @JoinColumn(name = "fk_video"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))
     private List<User> users;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.LAZY)
     @JoinTable(name = "grup_video", joinColumns =
     @JoinColumn(name = "fk_video"), inverseJoinColumns =
     @JoinColumn(name = "fk_grup"))

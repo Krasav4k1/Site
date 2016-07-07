@@ -8,7 +8,7 @@ import java.security.Principal;
 
 public interface AlbomFotoService {
 
-    void addAlbomFotoForUser(int id,AlbomFotoUser albomFotoUser);
+    void addAlbomFotoForUser(int id, AlbomFotoUser albomFotoUser);
 
     Iterable<AlbomFotoUser> getAllAlbomPrincipal(int id);
 
@@ -16,7 +16,7 @@ public interface AlbomFotoService {
 
     String getNameAlbom(int id);
 
-    void removeByid(int id, Principal principal)  throws IOException;
+    void removeByid(int id, String path, Principal principal)  throws IOException;
 
     void save(AlbomFotoUser albomFotoUser);
 

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class ValidNameAlbom  implements ConstraintValidator<CustomValidNameAlbom,String>{
+public class ValidNameAlbom  implements ConstraintValidator<CustomValidNameAlbom,String> {
 
     @Autowired
     AlbomFotoService albomFotoServiceImpl;

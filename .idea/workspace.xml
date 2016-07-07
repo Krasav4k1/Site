@@ -1,0 +1,2243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/controller/StartingController.java" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1d065ef9-278a-4c63-b760-0bfd99e4eafd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/uplodateFile/2/foto/albom-avatar/Cute_1920x1080-full-hd-wallpapersuser2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/uplodateFile/2/foto/albom-avatar/sjafHrJbb3Yuser2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/uplodateFile/2/foto/albom-Фотослайдер/31Thhy0XnXUuser2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/uplodateFile/2/foto/albom-Фотослайдер/sjafHrJbb3Yuser2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/uplodateFile/4/foto/albom-avatar/31thhy0xnxuuser4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/uplodateFile/4/foto/albom-Фотослайдер/wdf_1103248user4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/uplodateFile/5/foto/albom-avatar/retina-hd-wallpaper-for-iphoneuser5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/SiteSpringBoot_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/SiteSpringBoot_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr_antlr_2_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_classmate_1_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_7_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_7_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_7_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_14_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_googlecode_json_simple_json_simple_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_beanutils_commons_beanutils_1_9_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_dbcp_commons_dbcp_1_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_digester_commons_digester_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_pool_commons_pool_1_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__dom4j_dom4j_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_activation_activation_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_json_javax_json_api_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_mail_mail_1_4_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_jsp_jsp_api_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_jstl_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__joda_time_joda_time_2_8_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_36.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_api_3_0_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_autotag_core_runtime_1_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_core_3_0_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_jsp_3_0_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_request_api_1_0_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_request_jsp_1_0_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_request_servlet_1_0_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_servlet_3_0_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tiles_tiles_template_3_0_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_core_8_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_el_8_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_jasper_8_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_tomcat_jdbc_8_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_tomcat_juli_8_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjrt_1_8_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjweaver_1_8_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_jackson_jackson_core_asl_1_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jdt_core_compiler_ecj_4_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_core_5_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_entitymanager_5_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_gradle_plugin_5_2_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_validator_5_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jasig_portlet_utils_portlet_ws_util_1_1_3_M1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_java_websocket_Java_WebSocket_1_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_javassist_javassist_3_18_1_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_jandex_2_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20160212.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_1_10_19.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jul_to_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_log4j_over_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_autoconfigure_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_aop_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_data_jpa_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_jdbc_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_logging_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_security_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_test_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_tomcat_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_validation_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_web_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_websocket_1_3_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_data_spring_data_commons_1_11_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_data_spring_data_jpa_1_9_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_acl_4_0_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_config_4_0_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_core_4_0_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_taglibs_4_0_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_web_4_1_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aspects_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jdbc_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_messaging_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_orm_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_oxm_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_test_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_tx_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_web_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_webmvc_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_websocket_4_2_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_ws_spring_ws_core_2_2_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_ws_spring_xml_2_2_3_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_yaml_snakeyaml_1_16.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xml_apis_xml_apis_1_0_b2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/Site.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/Site_main.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/Site_test.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/Application.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/config/AutowiredConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/config/ConfigurationForTiles.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/config/SecurityConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserPinger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/webSockets/ChatMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/webSockets/ChatSchedulingConfigurer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/webSockets/WebSocketConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets/jquery-2.1.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets/sockjs-0.3.4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets/stomp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/DemoApplicationTests.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/gfgf_war.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/gfgf_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_high_scale_lib_high_scale_lib_1_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jamm_0_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_1_7_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_r08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_json_javax_json_api_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_jta_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_cassandra_all_0_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_cassandra_thrift_0_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_deps_avro_1_4_0_cassandra_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libthrift_0_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_api_3_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_autotag_core_runtime_1_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_core_3_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_jsp_3_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_request_api_1_0_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_request_jsp_1_0_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_request_servlet_1_0_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_servlet_3_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tiles_tiles_template_3_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_java_websocket_Java_WebSocket_1_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_11_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_20081211.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_11_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_9_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_1_8_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_4_0_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_4_0_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_portlet_4_2_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/WebSocket_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/main.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/default/defaultFoto.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/default/defaultFoto.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/default/recivedMessage.mp3" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/default/recivedMessage.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfgf.iml" afterPath="$PROJECT_DIR$/gfgf.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/AdminDaleteUserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/AdminDaleteUserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/AdminPageCountroller.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/AdminPageCountroller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/AlbomController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/AlbomController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/AvatarPhotoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/AvatarPhotoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/CityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/CityController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/ErrorEntrance.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/ErrorEntrance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/ForgotPasswordController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/ForgotPasswordController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/FotoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/FotoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/FriendsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/FriendsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/MessageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/MusicController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/MusicController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/RegisterUserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/RegisterUserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/SettingController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SettingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/StartingController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StartingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/URLController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/URLController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/controller/VideoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/VideoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/AlbomFotoUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/AlbomFotoUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/AvatarPhoto.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/AvatarPhoto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/City.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/City.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Comments.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Comments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Country.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Country.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Foto.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Foto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Frends.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Frends.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Grup.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Grup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Language.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Language.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/MaritalStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/MaritalStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Messages.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Messages.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Music.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Music.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/MusicAlbom.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/MusicAlbom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Publication.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Publication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/entity/Video.java" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Video.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/AlbomFotoUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/AlbomFotoUserRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/AvatarPhotoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/AvatarPhotoRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/CityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/CityRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/CommentsRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/CommentsRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/CountryRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/CountryRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/FotoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/FotoRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/FrendsRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/FrendsRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/GrupRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/GrupRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/LanguageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/LanguageRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/MessagesRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/MessagesRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/MusicAlbomRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/MusicAlbomRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/MusicRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/MusicRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/PublicationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/PublicationRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/repository/VideoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/VideoRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/AlbomFotoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/AlbomFotoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/AvatarPhotoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/AvatarPhotoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/CityService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/CityService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/CountryService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/CountryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/CustomValidNameAlbom.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/CustomValidNameAlbom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/CustomValidationEmailUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/CustomValidationEmailUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/ValidNameAlbom.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/ValidNameAlbom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/ValidationEmailUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/CustomValidation/ValidationEmailUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/FileDeleteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/FileDeleteService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/FileSaveService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/FileSaveService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/FotoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/FotoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/FrendsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/FrendsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/GrupService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/GrupService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/LanguageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/LanguageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/MailSenderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/MailSenderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/MessageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/MusicAlbomService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/MusicAlbomService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/SystemAuthenticationSuccessHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/SystemAuthenticationSuccessHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/UserDetailsServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/UserDetailsServiceImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/binder/CountryEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/binder/CountryEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/binder/GrupEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/binder/GrupEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/binder/MusicAlbomEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/binder/MusicAlbomEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/binder/UserEditor.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/binder/UserEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/AlbomFotoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/AlbomFotoServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/AvatarPhotoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/AvatarPhotoServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/CityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/CityServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/CountryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/CountryServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/FileDeleteServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/FileDeleteServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/FileSaveServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/FileSaveServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/FotoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/FotoServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/FrendsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/FrendsServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/GrupServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/GrupServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/LanguageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/LanguageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/MailSenderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/MailSenderServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/MessageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/MessageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/MusicAlbomServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/MusicAlbomServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/servise/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/servise/impl/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/db.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/db.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/AdminDaleteUser.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/AdminDaleteUser.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/AdminPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/AdminPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Albom.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Albom.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ErrorEntrance.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ErrorEntrance.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ErrorPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ErrorPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ForgotPassword.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ForgotPassword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Foto.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Foto.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Friends.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Friends.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MainPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MainPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Message.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Message.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Music.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Music.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/NonUser.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/NonUser.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Settings.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Settings.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/StartingPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/StartingPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Footer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Footer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Layout.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Layout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Uvidomlenia.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Uvidomlenia.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Video.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Video.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchOblastByIdCountry.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchOblastByIdCountry.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/js/npm.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/bootstrap-3.3.6-dist/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/MainPage.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/MainPage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForAlbom.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForAlbom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForFooter.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForFooter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForFoto.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForFoto.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForFrend.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForFrend.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForHeadr.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForHeadr.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForMainPage.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForMainPage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForMessege.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForMessege.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForUvedomlenia.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/StyleForUvedomlenia.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/WallForStyle.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/cssForJsp/WallForStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/jsForJsp/jquery.montage.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/jsForJsp/jquery.montage.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/jsForJsp/jsForMessegerJSP.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/allForSite/jsForJsp/jsForMessegerJSP.js" />
+    </list>
+    <ignored path="SiteSpringBoot.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Site" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SiteSpringBoot" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Site" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="Site" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'Site'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'Site'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Cleans all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'Site'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse classpath file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'Site'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'Site'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyManagement" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Repackage existing JAR and WAR archives so that they can be executed from the command line using 'java -jar'" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootRepackage" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run the project with support for auto-detecting main class and reloading static resources" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootRun" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'Site'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'Site'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse JDT settings file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="findMainClass" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse project file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'Site'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../REST API" value="1463995756301" />
+        <entry key="$PROJECT_DIR$/../REST Object" value="1463401882000" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/1.3.5.RELEASE/76bb37c161c450c2b042e3f039e9ec7d018670f6/spring-boot-gradle-plugin-1.3.5.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/1.3.5.RELEASE/76797f836a3fbc1b8bc96f117253d107ee977c59/spring-boot-gradle-plugin-1.3.5.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.3.5.RELEASE/ee203cb3dd90780edf1b1adc5f8ef623e65613d1/spring-boot-loader-tools-1.3.5.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.3.5.RELEASE/e7e55842fc21022945933f3236f8a0d9c915876f/spring-boot-loader-tools-1.3.5.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/0.5.6.RELEASE/ead850728464fa3eb062e3a6ce54619cc322dc67/dependency-management-plugin-0.5.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/0.5.6.RELEASE/b4833216b1cb83ec4a7476ac164843d976f28b4f/dependency-management-plugin-0.5.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.2.6.RELEASE/41491c9e9c55fe0fcab766d905b9fb87463262ac/spring-core-4.2.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.2.6.RELEASE/a1c6ef01f18888f51fc5054c65ef4787b7cf0a1e/spring-core-4.2.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="Site" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/language-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/plugin-development" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/reporting" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/language-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/language-java" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/cli" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/dependency-management" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/resources-s3" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/ide" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/platform-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/code-quality" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/announce" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/internal-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/internal-integ-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/maven" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/messaging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/ear" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/platform-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/language-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/platform-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/tooling-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/osgi" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/build-init" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/build-comparison" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/test-kit" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/platform-play" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/open-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/base-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/ivy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/launcher" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/model-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/resources-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/testing-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/testing-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/plugin-use" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/ui" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/javascript" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/sonar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/plugins" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/antlr" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/tooling-api-builders" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/language-scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/resources" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/resources-sftp" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/base-services-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/wrapper" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/diagnostics" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/ide-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/signing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/jetty" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/jacoco" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/testing-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/model-core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/publish" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-messaging-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-docs-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-core-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-model-core-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/ant-1.9.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-cli-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/ant-launcher-1.9.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-launcher-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-open-api-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-tooling-api-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/groovy-all-2.4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-base-services-groovy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-model-groovy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-ui-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-base-services-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-resources-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/gradle-wrapper-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-testing-base-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-platform-jvm-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-jetty-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-maven-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-antlr-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-osgi-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-scala-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-language-scala-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-plugins-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-testing-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-language-groovy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-dependency-management-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-javascript-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-ear-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-resources-http-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-build-init-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-platform-base-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-diagnostics-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-resources-s3-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-ide-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-ivy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-language-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-testing-jvm-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-tooling-api-builders-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-resources-sftp-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-plugin-development-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-language-jvm-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-platform-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-test-kit-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-sonar-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-platform-play-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-ide-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-code-quality-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-reporting-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-jacoco-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-language-java-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-publish-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-signing-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-announce-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-build-comparison-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/lib/plugins/gradle-plugin-use-2.12.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Footer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Albom.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Foto.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Friends.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Music.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searchOblastByIdCountry.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/config/AutowiredConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/StartingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/config/ApplicationConfigurerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/GreetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/config/ConfigurationForTiles.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Layout.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/StartingPage.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MainPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/entity/Frends.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Settings.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/SettingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servise/AlbomFotoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/AlbomController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servise/impl/FotoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servise/impl/FileSaveServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servise/impl/AlbomFotoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servise/impl/AvatarPhotoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servise/impl/ScheduleTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/servise/impl/UserMonitoringWebSocket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/GuestbookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/config/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webSockets/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webSockets/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webSockets/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webSockets/MessageControllerW.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Video.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserPinger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webSockets/ChatMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/MessageControllerW.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Uvidomlenia.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Message.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets/stomp.js" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="-4" />
+    <option name="width" value="1920" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfgf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfgf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfgf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfgf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfgf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Site" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.2.0/bin/node" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="mes&#9;FILE&#9;file:///home/devds/Downloads/SiteSpringBoot/src/main/webapp/WEB-INF/views/Message.jsp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/Tiles" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/config" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.controller" />
+      <recent name="com.config" />
+      <recent name="com" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/webSockets" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application (1)">
+    <configuration default="false" name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Application" />
+      <module name="SiteSpringBoot_main" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SiteSpringBoot [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="SiteSpringBoot [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Application" />
+      <module name="Site_main" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SiteSpringBoot" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.SiteSpringBoot [clean]" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.SiteSpringBoot [build]" />
+      <item index="3" class="java.lang.String" itemvalue="Spring Boot.Application (1)" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.SiteSpringBoot [build]" />
+        <item index="2" class="java.lang.String" itemvalue="Spring Boot.Application" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.SiteSpringBoot [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="lastUpdateTimestamp" value="1466769554921" />
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d065ef9-278a-4c63-b760-0bfd99e4eafd" name="Default" comment="" />
+      <created>1464174771351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1464174771351</updated>
+      <workItem from="1464174775300" duration="175000" />
+      <workItem from="1466496293217" duration="11568000" />
+      <workItem from="1466507952097" duration="897000" />
+      <workItem from="1466508869590" duration="3138000" />
+      <workItem from="1466512033599" duration="7579000" />
+      <workItem from="1466520854269" duration="874000" />
+      <workItem from="1466576140448" duration="1571000" />
+      <workItem from="1466577739000" duration="1028000" />
+      <workItem from="1466578795953" duration="282000" />
+      <workItem from="1466579112428" duration="5275000" />
+      <workItem from="1466584442814" duration="1668000" />
+      <workItem from="1466586277223" duration="4364000" />
+      <workItem from="1466590678793" duration="4059000" />
+      <workItem from="1466594767537" duration="543000" />
+      <workItem from="1466595339209" duration="4249000" />
+      <workItem from="1466599616271" duration="7395000" />
+      <workItem from="1466661539145" duration="2571000" />
+      <workItem from="1466664186458" duration="568000" />
+      <workItem from="1466664778008" duration="1101000" />
+      <workItem from="1466665901375" duration="4007000" />
+      <workItem from="1466673610171" duration="2779000" />
+      <workItem from="1466676878907" duration="3228000" />
+      <workItem from="1466680171297" duration="6442000" />
+      <workItem from="1466689113844" duration="4339000" />
+      <workItem from="1466693483257" duration="141000" />
+      <workItem from="1466693654734" duration="1386000" />
+      <workItem from="1466746919721" duration="11604000" />
+      <workItem from="1466769428399" duration="239000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="93070000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14376996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29533678" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24663213" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33782384" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19169329" sideWeight="0.4936306" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24707136" sideWeight="0.5063694" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10063898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14376996" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29533678" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24663213" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33829787" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19169329" sideWeight="0.4936306" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24707136" sideWeight="0.5063694" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10063898" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="12" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="83" column="124" selection-start-line="83" selection-start-column="124" selection-end-line="83" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/aa453016/1195cef4-cf36-4c6d-bbe5-238476021c01/wtable.user_likes">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/aa453016/1195cef4-cf36-4c6d-bbe5-238476021c01/wtable.AlbomFotoUser">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/aa453016/1195cef4-cf36-4c6d-bbe5-238476021c01/wtable.AvatarPhoto">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MainPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servise/impl/ScheduleTask.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servise/impl/GrupServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/aa453016/1195cef4-cf36-4c6d-bbe5-238476021c01/wtable.User">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/GreetingController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/FotoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/WebSocket.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-269">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/config/WebSocketConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets/chat.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/Application.java" />
+    <entry file="uml://SpringLocalModels/module=SiteSpringBoot_main">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>SpringLocalModels</ID>
+          <OriginalElement>module=SiteSpringBoot_main</OriginalElement>
+          <nodes>
+            <node x="" y="">module=SiteSpringBoot_main</node>
+            <node x="" y="">fileset=SiteSpringBoot_main/Spring Application Context</node>
+            <node x="" y="">filePath=/home/devds/Downloads/SiteSpringBoot/src/main/webapp/WEB-INF/application-security.xml</node>
+            <node x="" y="">filePath=/home/devds/Downloads/SiteSpringBoot/src/main/webapp/WEB-INF/applicationContext.xml</node>
+            <node x="" y="">com.config.SecurityConfig</node>
+            <node x="" y="">org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity</node>
+            <node x="" y="">com.webSockets.SecurityConfig</node>
+            <node x="" y="">org.springframework.security.config.annotation.web.configuration.EnableWebSecurity</node>
+            <node x="" y="">com.webSockets.WebSocketConfig</node>
+            <node x="" y="">org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker</node>
+            <node x="" y="">com.webSockets.ChatSchedulingConfigurer</node>
+            <node x="" y="">org.springframework.scheduling.annotation.EnableScheduling</node>
+            <node x="" y="">com.config.AutowiredConfiguration</node>
+            <node x="" y="">com.config.ConfigurationForTiles</node>
+            <node x="" y="">com.Application</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.SpringBootApplication</node>
+            <node x="" y="">filePath=/home/devds/Downloads/SiteSpringBoot/src/main/webapp/WEB-INF/servlet-context.xml</node>
+            <node x="" y="">fileset=SiteSpringBoot_main/Application</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9676145339652449" x="623.0" y="190.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Show filesets as groups</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.2.6.RELEASE/f7b3f8f875e055295f6ed2e552187f25b55c6920/spring-messaging-4.2.6.RELEASE.jar!/org/springframework/messaging/simp/config/AbstractMessageBrokerConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="284" column="55" selection-start-line="284" selection-start-column="55" selection-end-line="284" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/MessageControllerW.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/SecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Video.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/GuestbookController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/config/ApplicationConfigurerAdapter.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.2.6.RELEASE/731da3f3bf818b5393bf7b2b994d78088e9524fb/spring-messaging-4.2.6.RELEASE-sources.jar!/org/springframework/messaging/core/AbstractMessageSendingTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2124">
+          <caret line="154" column="45" selection-start-line="154" selection-start-column="45" selection-end-line="154" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#6806#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2316#2317#0" expanded="false" />
+            <element signature="e#2367#2368#0" expanded="false" />
+            <element signature="e#2461#2462#0" expanded="false" />
+            <element signature="e#2498#2499#0" expanded="false" />
+            <element signature="e#3001#3002#0" expanded="false" />
+            <element signature="e#3029#3030#0" expanded="false" />
+            <element signature="e#3082#3083#0" expanded="false" />
+            <element signature="e#3135#3136#0" expanded="false" />
+            <element signature="e#3380#3381#0" expanded="false" />
+            <element signature="e#3415#3416#0" expanded="false" />
+            <element signature="e#6780#6781#0" expanded="false" />
+            <element signature="e#6801#6802#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MessageControllerW.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servise/impl/UserMonitoringWebSocket.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servise/impl/ChatServer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Uvidomlenia.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/aa453016/1195cef4-cf36-4c6d-bbe5-238476021c01/wtable.Messages">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/WebSocketConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="64" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets/sockjs-0.3.4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2808">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserPinger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/ActiveUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.2.6.RELEASE/731da3f3bf818b5393bf7b2b994d78088e9524fb/spring-messaging-4.2.6.RELEASE-sources.jar!/org/springframework/messaging/simp/SimpMessagingTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="199" column="16" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/ChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webSockets/ChatSchedulingConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Message.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="231" column="56" selection-start-line="231" selection-start-column="56" selection-end-line="231" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/config/ConfigurationForTiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Tiles/Layout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/config/AutowiredConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/allForSite/webSockets/stomp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-all/8ywkdai6puj5z81fume4e7njw/gradle-2.12/src/core/org/gradle/api/artifacts/dsl/RepositoryHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1404">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules/SiteSpringBoot.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="gradleExecuteTaskHistory">
+    <option value="" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>SiteSpringBoot:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SiteSpringBoot_main|SiteSpringBoot</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
-
 @Service
-public class FrendsServiceImpl implements FrendsService{
+
+public class FrendsServiceImpl implements FrendsService {
 
     @Autowired
     FrendsRepository frendsRepository;

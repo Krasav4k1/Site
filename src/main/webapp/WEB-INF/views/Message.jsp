@@ -105,17 +105,43 @@
 </div>
 
 
-<h1>JEE7 WebSocket Example</h1>
-
-<div id="container">
-
-</div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+<script src="/resources/allForSite/webSockets/sockjs-0.3.4.js"></script>
+<script src="/resources/allForSite/webSockets/stomp.js"></script>
+<script src="/resources/allForSite/webSockets/jquery-2.1.0.min.js"></script>
 <%--<script src="/resources/allForSite/jsForJsp/jsForMessegerJSP.js"/>--%>
 <script>
+    var stompClient = null;
+    var socket = null;
+    var whoami = null;
+
+    function connect() {
+        socket = new SockJS('/chat');
+        stompClient = Stomp.over(socket);
+        stompClient.connect('', '', function(frame) {
+            whoami = frame.headers['user-name'];
+            stompClient.subscribe('/topic/active', function(activeMembers) {
+                stompClient.send('/app/activeUsers', {}, '');
+            });
+        });
+    }
+
+
+
     $(document).ready(function () {
+        connect();
         var indexUserResivedGlobal;
         var beginCount = 0;
         var chatClient;
@@ -133,7 +159,7 @@
                 $('#hrefUserResived' + a[i].id).click(function () {
                     var indexUserResived = $(this).attr('idResived');
                     indexUserResivedGlobal = $(this).attr('idResived');
-                    chatClient = new WebSocket("ws://localhost:8080/chat/${principal.username}/"+indexUserResivedGlobal);
+                    $('.mainMessegeWindow').html(" ");
                     beginCount = 0;
                     $.get('getDialog-Resived-' + indexUserResived + '-' + beginCount, {}, function (a) {
                         if (a.length == 10) {
@@ -174,8 +200,19 @@
         });
 
         sendMessegEventKey = function () {
-            submitForm();
+            if($('.inputMessegesLable').val().length) {
+                for (var i = 0; i <= $('.inputMessegesLable').val().length; i++) {
+                    if ($('.inputMessegesLable').val().charCodeAt(i) == 32) {
+                        i++;
+                    }
+                    if ($('.inputMessegesLable').val().charCodeAt(i) > 32) {
+                        submitForm();
+                        return;
+                    }
+                }
+            }
         }
+
         function submitForm() {
             var roles = [$('.inputMessegesLable').val(), indexUserResivedGlobal];
             jQuery.ajax({
@@ -188,28 +225,15 @@
                     var firstIndex = 0;
                     $('.mainMessegeWindow').append('<div class="row"> <div class="reciveUserMesseges"> <a href="id' + a[firstIndex].userSentMessager.id + '"><img src="' + a[firstIndex].userSentMessager.foto + '" class="img-rounded photoForUserWhoResiverMessege"></a> <h4>' + a[firstIndex].messager + '</h4> </div> </div>');
 
-
-
-                    chatClient.onmessage = function (evt) {
-                        var p = document.createElement("p");
-                        p.setAttribute("class", "server");
-                        p.innerHTML = evt.data;
-                        var container = document.getElementById("container");
-                        container.appendChild(p);
-                    }
-
                     var input = $('.inputMessegesLable').val();
-                        var userSendMessageObject = {
-                            id: ${userSendMesage.id},
-                            firstName: '${userSendMesage.firstName}',
-                            lastName: '${userSendMesage.lastName}',
-                            userAvatar: '${userSendMesage.foto}',
-                            messager: input
-                        };
-                    chatClient.send(JSON.stringify(userSendMessageObject));
-                    input = "";
+                    if (!input.length) {
+                        return;
+                    }
+                    stompClient.send("/app/chat", {"content-type": "application/json;charset=UTF-8"}, JSON.stringify({
+                        'recipient': indexUserResivedGlobal,
+                        'message' : input
+                    }));
                     $('.inputMessegesLable').val('');
-
 
                     setTimeout('document.getElementById("mainMessegeWindow").scrollTop += 10000', 50);
                 }
@@ -220,7 +244,9 @@
 </script>
 
 
+
+
 </body>
 <script src="/resources/allForSite/bootstrap-3.3.6-dist/jquery/jquery-2.2.3.min.js"></script>
-<script src="/resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="resources/allForSite/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </html>

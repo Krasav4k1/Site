@@ -1,7 +1,5 @@
 package com.entity;
 
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
@@ -19,7 +17,7 @@ public class Country {
 
     private String currency;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "country")
+    @OneToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, fetch = FetchType.LAZY, mappedBy = "country")
     private List<City> citys;
 
     public int getId() {

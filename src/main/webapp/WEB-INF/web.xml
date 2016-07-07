@@ -17,7 +17,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
-				/WEB-INF/servlet-context.xml, /WEB-INF/applicationContext.xml
+				/webapp/WEB-INF/servlet-context.xml, /webapp/WEB-INF/applicationContext.xml
 			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
@@ -38,7 +38,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			/WEB-INF/application-security.xml
+			/webapp/WEB-INF/application-security.xml
 		</param-value>
 	</context-param>
 

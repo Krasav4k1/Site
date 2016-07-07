@@ -3,7 +3,6 @@ package com.entity;
 import com.servise.CustomValidation.CustomValidNameAlbom;
 
 import javax.persistence.*;
-import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
@@ -13,11 +12,10 @@ public class AlbomFotoUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Pattern(regexp = "^/p/(?<secure>[\\w\\-=]+,\\d+),(?<user>[^/]+)(?<file>/.*)$")
     @CustomValidNameAlbom(message = "такий альбом вже існує")
     private String albomName;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "albomFotoUser")
+    @OneToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.EAGER, mappedBy = "albomFotoUser")
     private List<Foto> fotos;
 
     @ManyToOne

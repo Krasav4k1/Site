@@ -51,16 +51,9 @@ public class AlbomFotoServiceImpl implements com.servise.AlbomFotoService{
         return albomFotoUserRepository.findOne(id).getAlbomName();
     }
 
-    public void removeByid(int id, Principal principal) throws IOException {
+    public void removeByid(int id, String path,Principal principal) throws IOException {
         AlbomFotoUser albomFotoUser = albomFotoUserRepository.findOne(id);
-        fileDeleteService.deleteFile("C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources\\uplodateFile\\" + principal.getName() + "\\foto" + "\\albom-"+albomFotoUser.getAlbomName());
-        fileDeleteService.deleteFile("C:\\Program Files\\apache-tomcat-8.0.32\\webapps\\ROOT\\resources\\uplodateFile\\" + principal.getName() + "\\foto" + "\\albom-"+albomFotoUser.getAlbomName());
-        fileDeleteService.deleteFile("C:\\Users\\Andrii\\EclipseP" +
-                "roject\\gfgf\\target\\gfgf-0.0.1-SNAPSHOT\\resources\\uplodateFile\\" + principal.getName() + "\\foto" + "\\albom-"+albomFotoUser.getAlbomName());
-        albomFotoUser.setUser(null);
-        albomFotoUser.setGrup(null);
-        albomFotoUser.setFotos(null);
-        albomFotoUserRepository.delete(albomFotoUser);
+        fileDeleteService.deleteFile(path+"/uplodateFile/" + principal.getName() + "/foto" + "/albom-"+albomFotoUser.getAlbomName());
         albomFotoUserRepository.delete(albomFotoUser.getId());
     }
 

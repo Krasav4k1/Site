@@ -1,28 +1,18 @@
 package com.controller;
 
-import com.entity.Country;
-import com.entity.Role;
 import com.entity.User;
-import com.repository.UserRepository;
 import com.servise.CountryService;
-import com.servise.MailSenderService;
 import com.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Description;
-import org.springframework.data.annotation.Id;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import static org.apache.commons.lang.StringEscapeUtils.escapeHtml;
-
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class RegisterUserController {
@@ -31,14 +21,10 @@ public class RegisterUserController {
     UserService userService;
     @Autowired
     CountryService countryService;
-    @Autowired
-    CityController cityController;
-    @Autowired
-    UserRepository userRepository;
-    @Autowired
+//    @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
-    @Autowired
-    MailSenderService mailSenderService;
+//    @Autowired
+//    MailSenderService mailSenderService;
 
 
     @RequestMapping(value = "/register",method = RequestMethod.GET)
@@ -58,7 +44,7 @@ public class RegisterUserController {
             model.addAttribute("countryModel", countryService.getAll());
             return "Register";
         }
-        mailSenderService.sendMail("register",user.getEmail(),"qwertyasdfghzxcvbn");
+//        mailSenderService.sendMail("register",user.getEmail(),"qwertyasdfghzxcvbn");
         userService.save(user);
         return "redirect:/MainPage";
     }

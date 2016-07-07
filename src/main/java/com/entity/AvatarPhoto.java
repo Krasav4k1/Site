@@ -16,12 +16,12 @@ public class AvatarPhoto {
 
     private String foto;
 
-    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE})
     @JoinColumn
     private User user;
 
 
-    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.LAZY)
     @JoinTable(name = "user_likes", joinColumns =
     @JoinColumn(name = "fk_avatarphoto"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))
@@ -31,7 +31,7 @@ public class AvatarPhoto {
 
     private int countLike;
 
-    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.LAZY)
     @JoinTable(name = "user_disLike", joinColumns =
     @JoinColumn(name = "fk_avatarphoto"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))
@@ -40,7 +40,7 @@ public class AvatarPhoto {
 
     private int countDisLike;
 
-    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.LAZY)
     @JoinTable(name = "user_commentphoto", joinColumns =
     @JoinColumn(name = "fk_avatarphoto"), inverseJoinColumns =
     @JoinColumn(name = "fk_user"))

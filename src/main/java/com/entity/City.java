@@ -24,7 +24,7 @@ public class City {
 
     private String oblast;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "city")
+    @OneToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.LAZY, mappedBy = "city")
     @JsonIgnore
 //    @LazyCollection(LazyCollectionOption.FALSE)
     private List<User> user;

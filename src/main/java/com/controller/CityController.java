@@ -19,7 +19,7 @@ public class CityController {
     public City cityId;
 
     @RequestMapping("/searchRegionyByIdCountry{index}/{id}")
-    public String controlUrlCountry(Model model,@PathVariable String id,@PathVariable String index){
+    public String controlUrlCountry(Model model, @PathVariable String id, @PathVariable String index){
         model.addAttribute("index",index);
 
         if (index.equals("obl")) {
@@ -39,11 +39,11 @@ public class CityController {
         return"searchOblastByIdCountry";
     }
 
-    public void searchOblastByIdCountry(Model model,int id){
+    public void searchOblastByIdCountry(Model model, int id){
         model.addAttribute("oblastCountry",cityService.getOblast(id));
     }
 
-    public void searchRegionByOblast(Model model,String id){
+    public void searchRegionByOblast(Model model, String id){
         model.addAttribute("ragionOblast", cityService.getRegion(id));
     }
 

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gfgf.iml" filepath="$PROJECT_DIR$/gfgf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Site.iml" filepath="$PROJECT_DIR$/.idea/modules/Site.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Site_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Site_main.iml" group="Site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Site_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Site_test.iml" group="Site" />
     </modules>
   </component>
 </project>

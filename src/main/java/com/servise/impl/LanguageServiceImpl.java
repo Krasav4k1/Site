@@ -4,9 +4,8 @@ import com.entity.Language;
 import com.repository.LanguageRepository;
 import com.servise.LanguageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class LanguageServiceImpl implements LanguageService{
 
     @Autowired

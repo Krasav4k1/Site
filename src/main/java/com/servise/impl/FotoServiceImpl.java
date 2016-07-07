@@ -14,8 +14,8 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.security.Principal;
-
 @Service
+
 public class FotoServiceImpl implements FotoService{
 
     @Autowired
@@ -55,13 +55,9 @@ public class FotoServiceImpl implements FotoService{
         if( file.getBytes().length >= 10000000){
             return 1;
         }else {
-            String absolutePath1 = request.getServletContext().getRealPath("resources");
-            String absolutePath2 = "C:\\Users\\Andrii\\EclipseProject\\gfgf\\src\\main\\webapp\\resources";
             String albomeName = albomFotoService.getNameAlbom(id);
-            String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, absolutePath1,albomeName);
-            fileSaveService.saveFile("foto",principal.getName(), file, absolutePath2,albomeName);
-            addFoto(fotoPath.substring(50),albomeName, principal);
-            System.out.println(absolutePath1);
+            String fotoPath = fileSaveService.saveFile("foto",principal.getName(), file, request.getServletContext().getRealPath("resources"),albomeName);
+            addFoto(fotoPath,albomeName, principal);
         }
         return 0;
     }
